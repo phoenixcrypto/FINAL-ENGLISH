@@ -1,0 +1,1076 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Synonyms - IT English Review</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Language System -->
+    <script src="language-system.js"></script>
+    <script src="content-library.js"></script>
+    <script src="progress-tracker.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-brand">
+                <i class="fas fa-arrow-left"></i> <span class="i18n-text" data-i18n="common.back">Back to Home</span>
+            </a>
+            <div class="nav-menu">
+                <a href="#table" class="nav-link"><span class="i18n-text">Synonyms Table</span></a>
+                <a href="#practice" class="nav-link"><span class="i18n-text">Interactive Exercises</span></a>
+                <div class="language-switcher">
+                    <button id="langSwitcherBtn" class="lang-switcher-btn" aria-label="Switch Language Mode" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-language"></i>
+                        <span id="currentModeDisplay">Exam Mode</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div id="langSwitcherDropdown" class="lang-switcher-dropdown" role="menu">
+                        <div class="lang-mode-option active" data-mode="exam" role="menuitem">
+                            <span class="lang-mode-name">Exam Mode</span>
+                            <span class="lang-mode-desc">Pure English - Real exam simulation</span>
+                        </div>
+                        <div class="lang-mode-option" data-mode="study" role="menuitem">
+                            <span class="lang-mode-name">Study Mode</span>
+                            <span class="lang-mode-desc">English with Arabic help tooltips</span>
+                        </div>
+                        <div class="lang-mode-option" data-mode="beginner" role="menuitem">
+                            <span class="lang-mode-name">Beginner Mode</span>
+                            <span class="lang-mode-desc">Bilingual interface - Arabic primary</span>
+                        </div>
+                    </div>
+                </div>
+                <button id="themeToggle" class="icon-btn" aria-label="Toggle Theme"><i class="fas fa-moon"></i></button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+        <header class="page-header">
+            <h1><i class="fas fa-exchange-alt"></i> الجزء 2: المرادفات (Synonyms)</h1>
+            <p class="subtitle">تعلم مرادفات المصطلحات التقنية مع تمارين تطبيقية</p>
+            <div class="header-info">
+                <span class="info-badge"><i class="fas fa-book"></i> 50+ مصطلح</span>
+                <span class="info-badge"><i class="fas fa-gamepad"></i> 3 أنواع تمارين</span>
+                <span class="info-badge"><i class="fas fa-trophy"></i> نظام النقاط</span>
+            </div>
+        </header>
+
+        <!-- جدول المرادفات -->
+        <section id="table" class="content-section">
+            <div class="section-toolbar">
+                <h2><i class="fas fa-table"></i> جدول المرادفات الشامل</h2>
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="searchInput" placeholder="ابحث عن مصطلح أو مرادف...">
+                </div>
+            </div>
+            
+            <div class="table-container">
+                <table class="data-table" id="synonymsTable">
+                    <thead>
+                        <tr>
+                            <th data-sort="term">المصطلح <i class="fas fa-sort"></i></th>
+                            <th data-sort="synonym">المرادف <i class="fas fa-sort"></i></th>
+                            <th data-sort="definition">التعريف <i class="fas fa-sort"></i></th>
+                            <th data-sort="example">مثال <i class="fas fa-sort"></i></th>
+                            <th>الوحدة</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- البيانات سيتم ملؤها بالجافاسكريبت -->
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="table-info">
+                <div class="table-stats">
+                    <span id="totalTerms">0 مصطلح</span>
+                    <span id="filteredTerms">0 معروض</span>
+                </div>
+                <button id="resetSort" class="btn btn-outline btn-sm">
+                    <i class="fas fa-sync"></i> إعادة الترتيب
+                </button>
+            </div>
+        </section>
+
+        <!-- التمارين التفاعلية -->
+        <section id="practice" class="practice-section">
+            <h2><i class="fas fa-puzzle-piece"></i> تمارين تفاعلية</h2>
+            <p class="section-desc">تدرب على معرفة المرادفات من خلال 3 أنواع من التمارين</p>
+            
+            <div class="exercise-tabs">
+                <button class="tab-btn active" data-tab="match">المطابقة</button>
+                <button class="tab-btn" data-tab="multiple">اختيار من متعدد</button>
+                <button class="tab-btn" data-tab="typing">كتابة المرادف</button>
+            </div>
+            
+            <!-- تمرين المطابقة -->
+            <div class="tab-content active" id="match-exercise">
+                <div class="exercise-header">
+                    <h3>تمرين المطابقة: صل المصطلح بمرادفه الصحيح</h3>
+                    <div class="score">النقاط: <span id="matchScore">0</span>/5</div>
+                </div>
+                <div class="matching-game" id="matchingGame">
+                    <!-- سيتم توليده بالجافاسكريبت -->
+                </div>
+                <button id="checkMatch" class="btn btn-primary">
+                    <i class="fas fa-check"></i> تحقق من الإجابات
+                </button>
+                <button id="newMatchGame" class="btn btn-outline">
+                    <i class="fas fa-redo"></i> لعبة جديدة
+                </button>
+            </div>
+            
+            <!-- تمرين الاختيار -->
+            <div class="tab-content" id="multiple-exercise">
+                <div class="exercise-header">
+                    <h3>اختر المرادف الصحيح للمصطلح</h3>
+                    <div class="score">النقاط: <span id="multipleScore">0</span>/5</div>
+                </div>
+                <div class="mcq-exercise" id="mcqExercise">
+                    <!-- سيتم توليده بالجافاسكريبت -->
+                </div>
+                <div class="exercise-actions">
+                    <button id="checkMultiple" class="btn btn-primary">
+                        <i class="fas fa-check"></i> تحقق من الإجابة
+                    </button>
+                    <button id="nextMultiple" class="btn btn-outline">
+                        <i class="fas fa-arrow-left"></i> سؤال تالي
+                    </button>
+                </div>
+            </div>
+            
+            <!-- تمرين الكتابة -->
+            <div class="tab-content" id="typing-exercise">
+                <div class="exercise-header">
+                    <h3>اكتب المرادف الصحيح للمصطلح</h3>
+                    <div class="score">النقاط: <span id="typingScore">0</span>/5</div>
+                </div>
+                <div class="typing-exercise" id="typingExercise">
+                    <!-- سيتم توليده بالجافاسكريبت -->
+                </div>
+                <div class="exercise-actions">
+                    <button id="checkTyping" class="btn btn-primary">
+                        <i class="fas fa-check"></i> تحقق
+                    </button>
+                    <button id="hintTyping" class="btn btn-outline">
+                        <i class="fas fa-lightbulb"></i> تلميح
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- التقدم والإنجاز -->
+        <section class="progress-section">
+            <h2><i class="fas fa-chart-line"></i> تقدمك في تعلم المرادفات</h2>
+            <div class="progress-cards">
+                <div class="progress-card">
+                    <div class="progress-icon" style="background: #4cc9f0;">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <div class="progress-info">
+                        <h3>المصطلحات المستعرضة</h3>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 65%;"></div>
+                        </div>
+                        <span class="progress-text">65% (32/50)</span>
+                    </div>
+                </div>
+                <div class="progress-card">
+                    <div class="progress-icon" style="background: #2ecc71;">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <div class="progress-info">
+                        <h3>التمارين المكتملة</h3>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 40%;"></div>
+                        </div>
+                        <span class="progress-text">40% (6/15)</span>
+                    </div>
+                </div>
+                <div class="progress-card">
+                    <div class="progress-icon" style="background: #f39c12;">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="progress-info">
+                        <h3>الدقة في الإجابات</h3>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 78%;"></div>
+                        </div>
+                        <span class="progress-text">78% دقة</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- التنقل بين الأجزاء -->
+        <div class="page-navigation">
+            <a href="reading.html" class="nav-link-prev">
+                <i class="fas fa-arrow-right"></i> الجزء السابق: فهم المقروء
+            </a>
+            <a href="technical-terms.html" class="nav-link-next">
+                الجزء التالي: المصطلحات التقنية <i class="fas fa-arrow-left"></i>
+            </a>
+        </div>
+    </main>
+
+    <script type="module">
+        import { initTheme, toggleTheme } from './script.js';
+        
+        // بيانات المرادفات
+        const synonymsData = [
+            { term: "Threat", synonym: "Danger", definition: "خطر محتمل يمكن أن يضر بالنظام", example: "A hacker is a cyber threat.", unit: "Unit 1" },
+            { term: "Vulnerability", synonym: "Weakness", definition: "نقطة ضعف في النظام يمكن استغلالها", example: "Weak passwords create a vulnerability.", unit: "Unit 1" },
+            { term: "Hardware", synonym: "Equipment", definition: "الأجزاء المادية للحاسوب", example: "The hardware includes the keyboard.", unit: "Unit 2" },
+            { term: "Software", synonym: "Program", definition: "البرامج التي تتحكم في الحاسوب", example: "Software tells the computer what to do.", unit: "Unit 2" },
+            { term: "Network", synonym: "System", definition: "مجموعة أجهزة متصلة مع بعض", example: "Your computer joins a network.", unit: "Unit 2" },
+            { term: "Browser", synonym: "Web program", definition: "برنامج لتصفح الإنترنت", example: "Chrome is a popular browser.", unit: "Unit 2" },
+            { term: "Firewall", synonym: "Barrier", definition: "نظام أمن يتحكم في حركة الشبكة", example: "Firewall prevents unauthorized access.", unit: "Unit 1" },
+            { term: "Encryption", synonym: "Encoding", definition: "تحويل البيانات إلى شفرة", example: "Encryption protects sensitive data.", unit: "Unit 1" },
+            { term: "Algorithm", synonym: "Procedure", definition: "سلسلة خطوات لحل مشكلة", example: "Search engines use algorithms.", unit: "Unit 1" },
+            { term: "Database", synonym: "Repository", definition: "نظام تخزين منظم للبيانات", example: "Customer data is stored in a database.", unit: "Unit 2" }
+        ];
+
+        document.addEventListener('DOMContentLoaded', () => {
+            initTheme();
+            const themeToggle = document.getElementById('themeToggle');
+            if (themeToggle) {
+                themeToggle.addEventListener('click', toggleTheme);
+            }
+            
+            // عرض الجدول
+            renderTable();
+            setupSearch();
+            setupSorting();
+            setupExercises();
+            setupTabs();
+        });
+
+        function renderTable(filteredData = synonymsData) {
+            const tbody = document.querySelector('#synonymsTable tbody');
+            tbody.innerHTML = '';
+            
+            filteredData.forEach(item => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td><strong>${item.term}</strong></td>
+                    <td><span class="synonym-badge">${item.synonym}</span></td>
+                    <td>${item.definition}</td>
+                    <td><em>${item.example}</em></td>
+                    <td><span class="unit-badge">${item.unit}</span></td>
+                `;
+                tbody.appendChild(row);
+            });
+            
+            updateTableStats(filteredData.length);
+        }
+
+        function setupSearch() {
+            const searchInput = document.getElementById('searchInput');
+            searchInput.addEventListener('input', (e) => {
+                const query = e.target.value.toLowerCase();
+                const filtered = synonymsData.filter(item => 
+                    item.term.toLowerCase().includes(query) ||
+                    item.synonym.toLowerCase().includes(query) ||
+                    item.definition.toLowerCase().includes(query)
+                );
+                renderTable(filtered);
+            });
+        }
+
+        function setupSorting() {
+            const headers = document.querySelectorAll('th[data-sort]');
+            headers.forEach(header => {
+                header.addEventListener('click', () => {
+                    const sortKey = header.dataset.sort;
+                    const isAsc = !header.classList.contains('asc');
+                    
+                    // إزالة التصنيف من كل الرؤوس
+                    headers.forEach(h => {
+                        h.classList.remove('asc', 'desc');
+                        h.querySelector('i').className = 'fas fa-sort';
+                    });
+                    
+                    // إضافة التصنيف للرأس الحالي
+                    header.classList.add(isAsc ? 'asc' : 'desc');
+                    header.querySelector('i').className = isAsc ? 'fas fa-sort-up' : 'fas fa-sort-down';
+                    
+                    // ترتيب البيانات
+                    const sorted = [...synonymsData].sort((a, b) => {
+                        if (a[sortKey] < b[sortKey]) return isAsc ? -1 : 1;
+                        if (a[sortKey] > b[sortKey]) return isAsc ? 1 : -1;
+                        return 0;
+                    });
+                    
+                    renderTable(sorted);
+                });
+            });
+            
+            // زر إعادة الترتيب
+            document.getElementById('resetSort').addEventListener('click', () => {
+                headers.forEach(h => {
+                    h.classList.remove('asc', 'desc');
+                    h.querySelector('i').className = 'fas fa-sort';
+                });
+                renderTable(synonymsData);
+                document.getElementById('searchInput').value = '';
+            });
+        }
+
+        function updateTableStats(filteredCount) {
+            document.getElementById('totalTerms').textContent = `${synonymsData.length} مصطلح`;
+            document.getElementById('filteredTerms').textContent = `${filteredCount} معروض`;
+        }
+
+        function setupExercises() {
+            // تمرين المطابقة
+            setupMatchingGame();
+            document.getElementById('newMatchGame').addEventListener('click', setupMatchingGame);
+            
+            // تمرين الاختيار
+            setupMCQExercise();
+            document.getElementById('nextMultiple').addEventListener('click', setupMCQExercise);
+            
+            // تمرين الكتابة
+            setupTypingExercise();
+        }
+
+        function setupMatchingGame() {
+            const gameContainer = document.getElementById('matchingGame');
+            const shuffled = [...synonymsData].sort(() => Math.random() - 0.5).slice(0, 5);
+            
+            const terms = shuffled.map(item => item.term);
+            const synonyms = shuffled.map(item => item.synonym).sort(() => Math.random() - 0.5);
+            
+            gameContainer.innerHTML = `
+                <div class="matching-columns">
+                    <div class="column">
+                        <h4>المصطلحات</h4>
+                        ${terms.map(term => `
+                            <div class="match-item term-item" data-term="${term}">
+                                ${term}
+                            </div>
+                        `).join('')}
+                    </div>
+                    <div class="column">
+                        <h4>المرادفات</h4>
+                        ${synonyms.map(syn => `
+                            <div class="match-item synonym-item" data-synonym="${syn}">
+                                ${syn}
+                            </div>
+                        `).join('')}
+                    </div>
+                </div>
+                <div class="matches-container" id="matchesContainer"></div>
+            `;
+            
+            setupMatchInteraction();
+        }
+
+        function setupMatchInteraction() {
+            let selectedTerm = null;
+            let selectedSynonym = null;
+            
+            document.querySelectorAll('.term-item').forEach(item => {
+                item.addEventListener('click', function() {
+                    document.querySelectorAll('.term-item').forEach(i => i.classList.remove('selected'));
+                    this.classList.add('selected');
+                    selectedTerm = this.dataset.term;
+                    checkMatch();
+                });
+            });
+            
+            document.querySelectorAll('.synonym-item').forEach(item => {
+                item.addEventListener('click', function() {
+                    document.querySelectorAll('.synonym-item').forEach(i => i.classList.remove('selected'));
+                    this.classList.add('selected');
+                    selectedSynonym = this.dataset.synonym;
+                    checkMatch();
+                });
+            });
+            
+            function checkMatch() {
+                if (selectedTerm && selectedSynonym) {
+                    const correctSynonym = synonymsData.find(item => item.term === selectedTerm)?.synonym;
+                    
+                    if (correctSynonym === selectedSynonym) {
+                        // إضافة خط المطابقة
+                        const matchesContainer = document.getElementById('matchesContainer');
+                        matchesContainer.innerHTML += `
+                            <div class="match-line" data-pair="${selectedTerm}-${selectedSynonym}">
+                                ${selectedTerm} ← ${selectedSynonym} ✓
+                            </div>
+                        `;
+                        
+                        // تحديث النقاط
+                        const scoreElement = document.getElementById('matchScore');
+                        scoreElement.textContent = parseInt(scoreElement.textContent) + 1;
+                    }
+                    
+                    // إعادة تعيين
+                    selectedTerm = null;
+                    selectedSynonym = null;
+                    document.querySelectorAll('.match-item').forEach(i => i.classList.remove('selected'));
+                }
+            }
+        }
+
+        function setupMCQExercise() {
+            const container = document.getElementById('mcqExercise');
+            const randomItem = synonymsData[Math.floor(Math.random() * synonymsData.length)];
+            const wrongSynonyms = synonymsData
+                .filter(item => item.synonym !== randomItem.synonym)
+                .map(item => item.synonym)
+                .sort(() => Math.random() - 0.5)
+                .slice(0, 3);
+            
+            const allOptions = [randomItem.synonym, ...wrongSynonyms].sort(() => Math.random() - 0.5);
+            
+            container.innerHTML = `
+                <div class="mcq-question">
+                    <div class="question-text">ما هو مرادف المصطلح: <strong>${randomItem.term}</strong>؟</div>
+                    <div class="question-definition">${randomItem.definition}</div>
+                    <div class="mcq-options">
+                        ${allOptions.map((option, index) => `
+                            <label class="mcq-option">
+                                <input type="radio" name="mcq" value="${option}">
+                                <span class="option-text">${option}</span>
+                            </label>
+                        `).join('')}
+                    </div>
+                </div>
+            `;
+            
+            // تحقق من الإجابة
+            document.getElementById('checkMultiple').onclick = function() {
+                const selected = document.querySelector('input[name="mcq"]:checked');
+                if (!selected) return alert('اختر إجابة أولاً!');
+                
+                const isCorrect = selected.value === randomItem.synonym;
+                const feedback = isCorrect ? '✓ إجابة صحيحة!' : `✗ إجابة خاطئة. الصحيح هو: ${randomItem.synonym}`;
+                
+                // عرض التغذية الراجعة
+                const feedbackDiv = document.createElement('div');
+                feedbackDiv.className = `feedback ${isCorrect ? 'correct' : 'wrong'}`;
+                feedbackDiv.innerHTML = feedback;
+                container.appendChild(feedbackDiv);
+                
+                // تحديث النقاط
+                if (isCorrect) {
+                    const scoreElement = document.getElementById('multipleScore');
+                    scoreElement.textContent = parseInt(scoreElement.textContent) + 1;
+                }
+            };
+        }
+
+        function setupTypingExercise() {
+            const container = document.getElementById('typingExercise');
+            const randomItem = synonymsData[Math.floor(Math.random() * synonymsData.length)];
+            
+            container.innerHTML = `
+                <div class="typing-question">
+                    <div class="question-header">
+                        <h4>اكتب مرادف المصطلح:</h4>
+                        <div class="hint" id="hintText" style="display: none;">التلميح: ${randomItem.definition}</div>
+                    </div>
+                    <div class="term-to-guess">${randomItem.term}</div>
+                    <div class="example">مثال: ${randomItem.example}</div>
+                    <input type="text" id="typingInput" placeholder="اكتب المرادف هنا...">
+                    <div class="feedback" id="typingFeedback"></div>
+                </div>
+            `;
+            
+            // زر التحقق
+            document.getElementById('checkTyping').onclick = function() {
+                const input = document.getElementById('typingInput');
+                const feedback = document.getElementById('typingFeedback');
+                
+                if (!input.value.trim()) return;
+                
+                const isCorrect = input.value.toLowerCase() === randomItem.synonym.toLowerCase();
+                feedback.innerHTML = isCorrect ? 
+                    '<span class="correct">✓ إجابة صحيحة!</span>' : 
+                    `<span class="wrong">✗ إجابة خاطئة. الصحيح هو: <strong>${randomItem.synonym}</strong></span>`;
+                feedback.className = `feedback ${isCorrect ? 'correct' : 'wrong'}`;
+                
+                if (isCorrect) {
+                    const scoreElement = document.getElementById('typingScore');
+                    scoreElement.textContent = parseInt(scoreElement.textContent) + 1;
+                }
+            };
+            
+            // زر التلميح
+            document.getElementById('hintTyping').onclick = function() {
+                document.getElementById('hintText').style.display = 'block';
+            };
+        }
+
+        function setupTabs() {
+            const tabBtns = document.querySelectorAll('.tab-btn');
+            const tabContents = document.querySelectorAll('.tab-content');
+            
+            tabBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    // إزالة النشاط من الكل
+                    tabBtns.forEach(b => b.classList.remove('active'));
+                    tabContents.forEach(c => c.classList.remove('active'));
+                    
+                    // إضافة النشاط للعنصر المحدد
+                    btn.classList.add('active');
+                    document.getElementById(`${btn.dataset.tab}-exercise`).classList.add('active');
+                });
+            });
+        }
+    </script>
+
+    <style>
+        /* تنسيقات إضافية لصفحة المرادفات */
+        .content-section {
+            background: var(--bg-card);
+            border-radius: var(--radius-lg);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow-md);
+        }
+        
+        .section-toolbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        
+        .section-toolbar h2 {
+            font-size: 1.5rem;
+            color: var(--text-primary);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .search-box {
+            position: relative;
+            width: 300px;
+        }
+        
+        .search-box i {
+            position: absolute;
+            right: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-secondary);
+        }
+        
+        .search-box input {
+            width: 100%;
+            padding: 0.8rem 2.5rem 0.8rem 1rem;
+            border: 2px solid var(--bg-secondary);
+            border-radius: var(--radius-md);
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            font-size: 1rem;
+            transition: all 0.3s;
+        }
+        
+        .search-box input:focus {
+            outline: none;
+            border-color: var(--primary-color);
+        }
+        
+        .table-container {
+            overflow-x: auto;
+            margin-bottom: 1rem;
+        }
+        
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 800px;
+        }
+        
+        .data-table th {
+            background: var(--bg-secondary);
+            padding: 1rem;
+            text-align: right;
+            font-weight: 600;
+            color: var(--text-primary);
+            border-bottom: 2px solid var(--primary-color);
+            cursor: pointer;
+            user-select: none;
+        }
+        
+        .data-table th:hover {
+            background: rgba(67, 97, 238, 0.1);
+        }
+        
+        .data-table th i {
+            margin-right: 0.5rem;
+            font-size: 0.9rem;
+        }
+        
+        .data-table td {
+            padding: 1rem;
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+            vertical-align: top;
+        }
+        
+        .data-table tr:hover {
+            background: rgba(67, 97, 238, 0.05);
+        }
+        
+        .synonym-badge {
+            background: linear-gradient(135deg, #4cc9f0, #4361ee);
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-weight: 600;
+            display: inline-block;
+        }
+        
+        .unit-badge {
+            background: var(--bg-secondary);
+            color: var(--text-secondary);
+            padding: 0.2rem 0.6rem;
+            border-radius: 12px;
+            font-size: 0.8rem;
+        }
+        
+        .table-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 1rem;
+            color: var(--text-secondary);
+        }
+        
+        .table-stats {
+            display: flex;
+            gap: 1rem;
+        }
+        
+        .practice-section {
+            background: var(--bg-card);
+            border-radius: var(--radius-lg);
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .practice-section h2 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-primary);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .section-desc {
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+        }
+        
+        .exercise-tabs {
+            display: flex;
+            gap: 0.5rem;
+            margin-bottom: 2rem;
+            border-bottom: 2px solid var(--bg-secondary);
+            padding-bottom: 0.5rem;
+        }
+        
+        .tab-btn {
+            background: none;
+            border: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: var(--radius-md) var(--radius-md) 0 0;
+            cursor: pointer;
+            font-weight: 600;
+            color: var(--text-secondary);
+            transition: all 0.3s;
+            position: relative;
+        }
+        
+        .tab-btn.active {
+            color: var(--primary-color);
+            background: var(--bg-secondary);
+        }
+        
+        .tab-btn.active::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: var(--primary-color);
+        }
+        
+        .tab-content {
+            display: none;
+        }
+        
+        .tab-content.active {
+            display: block;
+            animation: fadeIn 0.3s;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .exercise-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        
+        .exercise-header h3 {
+            font-size: 1.2rem;
+            color: var(--text-primary);
+        }
+        
+        .score {
+            background: var(--bg-secondary);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+        
+        /* تنسيقات تمرين المطابقة */
+        .matching-game {
+            background: var(--bg-secondary);
+            border-radius: var(--radius-md);
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .matching-columns {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-bottom: 1rem;
+        }
+        
+        @media (max-width: 768px) {
+            .matching-columns {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .matching-columns .column h4 {
+            text-align: center;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+            font-size: 1.1rem;
+        }
+        
+        .match-item {
+            background: var(--bg-primary);
+            padding: 1rem;
+            margin-bottom: 0.8rem;
+            border-radius: var(--radius-md);
+            cursor: pointer;
+            text-align: center;
+            border: 2px solid transparent;
+            transition: all 0.3s;
+            user-select: none;
+        }
+        
+        .match-item:hover {
+            border-color: var(--primary-color);
+        }
+        
+        .match-item.selected {
+            border-color: var(--primary-color);
+            background: rgba(67, 97, 238, 0.1);
+            transform: scale(1.02);
+        }
+        
+        .matches-container {
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(0,0,0,0.1);
+        }
+        
+        .match-line {
+            background: rgba(46, 204, 113, 0.1);
+            padding: 0.8rem;
+            margin-bottom: 0.5rem;
+            border-radius: var(--radius-md);
+            border-right: 3px solid var(--success-color);
+            animation: slideIn 0.3s;
+        }
+        
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateX(-20px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        
+        /* تنسيقات تمرين الاختيار */
+        .mcq-exercise {
+            background: var(--bg-secondary);
+            border-radius: var(--radius-md);
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .mcq-question {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .question-text {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-primary);
+        }
+        
+        .question-definition {
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+            font-style: italic;
+        }
+        
+        .mcq-options {
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+        }
+        
+        .mcq-option {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            padding: 1rem;
+            background: var(--bg-primary);
+            border-radius: var(--radius-md);
+            cursor: pointer;
+            transition: all 0.3s;
+            border: 2px solid transparent;
+        }
+        
+        .mcq-option:hover {
+            border-color: var(--primary-color);
+        }
+        
+        .mcq-option input:checked ~ .option-text {
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+        
+        .feedback {
+            margin-top: 1rem;
+            padding: 1rem;
+            border-radius: var(--radius-md);
+            animation: fadeIn 0.3s;
+        }
+        
+        .feedback.correct {
+            background: rgba(46, 204, 113, 0.1);
+            border-right: 3px solid var(--success-color);
+        }
+        
+        .feedback.wrong {
+            background: rgba(231, 76, 60, 0.1);
+            border-right: 3px solid var(--danger-color);
+        }
+        
+        /* تنسيقات تمرين الكتابة */
+        .typing-exercise {
+            background: var(--bg-secondary);
+            border-radius: var(--radius-md);
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .typing-question {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        
+        .question-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        
+        .hint {
+            background: rgba(243, 156, 18, 0.1);
+            padding: 0.5rem 1rem;
+            border-radius: var(--radius-sm);
+            color: var(--warning-color);
+            font-size: 0.9rem;
+        }
+        
+        .term-to-guess {
+            font-size: 2rem;
+            text-align: center;
+            margin: 1.5rem 0;
+            color: var(--primary-color);
+            font-weight: 700;
+        }
+        
+        .example {
+            text-align: center;
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+            font-style: italic;
+        }
+        
+        #typingInput {
+            width: 100%;
+            padding: 1rem;
+            border: 2px solid var(--bg-secondary);
+            border-radius: var(--radius-md);
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            font-size: 1.1rem;
+            text-align: center;
+            margin-bottom: 1rem;
+            transition: all 0.3s;
+        }
+        
+        #typingInput:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.2);
+        }
+        
+        .exercise-actions {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+        }
+        
+        /* تنسيقات قسم التقدم */
+        .progress-section {
+            background: var(--bg-card);
+            border-radius: var(--radius-lg);
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .progress-section h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--text-primary);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .progress-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .progress-card {
+            background: var(--bg-secondary);
+            border-radius: var(--radius-md);
+            padding: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .progress-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+        }
+        
+        .progress-info {
+            flex: 1;
+        }
+        
+        .progress-info h3 {
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-secondary);
+        }
+        
+        .progress-info .progress-bar {
+            height: 6px;
+            background: rgba(0,0,0,0.1);
+            border-radius: 3px;
+            overflow: hidden;
+            margin-bottom: 0.3rem;
+        }
+        
+        .progress-info .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+            border-radius: 3px;
+        }
+        
+        .progress-text {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+        
+        /* تنسيقات التنقل بين الصفحات */
+        .page-navigation {
+            display: flex;
+            justify-content: space-between;
+            margin: 3rem 0;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(0,0,0,0.1);
+        }
+        
+        .nav-link-prev, .nav-link-next {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.8rem 1.5rem;
+            background: var(--bg-secondary);
+            border-radius: var(--radius-md);
+            text-decoration: none;
+            color: var(--text-primary);
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        
+        .nav-link-prev:hover, .nav-link-next:hover {
+            background: var(--primary-color);
+            color: white;
+        }
+        
+        @media (max-width: 768px) {
+            .page-navigation {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .section-toolbar {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            
+            .search-box {
+                width: 100%;
+            }
+        }
+    </style>
+    
+    <!-- Language Integration -->
+    <script type="module" src="language-integration.js"></script>
+    <script type="module" src="script.js"></script>
+</body>
+</html>

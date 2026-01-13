@@ -1,0 +1,144 @@
+{
+  "synonyms": [
+    {
+      "term": "Threat",
+      "synonyms": ["Danger", "Risk", "Hazard"],
+      "definition": "A potential danger that could harm a system",
+      "example": "A hacker is a cyber threat.",
+      "unit": "Unit 1"
+    },
+    {
+      "term": "Vulnerability",
+      "synonyms": ["Weakness", "Flaw", "Security gap"],
+      "definition": "A weakness in a system that can be exploited",
+      "example": "Weak passwords create a vulnerability.",
+      "unit": "Unit 1"
+    },
+    {
+      "term": "Hardware",
+      "synonyms": ["Equipment", "Components", "Devices"],
+      "definition": "Physical parts of a computer",
+      "example": "The hardware includes the keyboard and monitor.",
+      "unit": "Unit 2"
+    },
+    {
+      "term": "Software",
+      "synonyms": ["Program", "Application", "App"],
+      "definition": "Programs that control a computer",
+      "example": "Software tells the computer what to do.",
+      "unit": "Unit 2"
+    },
+    {
+      "term": "Network",
+      "synonyms": ["System", "Connection", "Web"],
+      "definition": "A group of connected computers",
+      "example": "Your computer joins a network to share data.",
+      "unit": "Unit 2"
+    },
+    {
+      "term": "Browser",
+      "synonyms": ["Web program", "Viewer", "Navigator"],
+      "definition": "A program used to access websites",
+      "example": "Chrome is a popular browser.",
+      "unit": "Unit 2"
+    },
+    {
+      "term": "Firewall",
+      "synonyms": ["Barrier", "Security filter", "Guard"],
+      "definition": "A security system that monitors network traffic",
+      "example": "Firewall prevents unauthorized access.",
+      "unit": "Unit 1"
+    },
+    {
+      "term": "Encryption",
+      "synonyms": ["Encoding", "Cipher", "Scrambling"],
+      "definition": "Process of converting data into code",
+      "example": "Encryption protects sensitive data.",
+      "unit": "Unit 1"
+    },
+    {
+      "term": "Algorithm",
+      "synonyms": ["Procedure", "Process", "Method"],
+      "definition": "A series of steps to solve a problem",
+      "example": "Search engines use algorithms.",
+      "unit": "Unit 1"
+    },
+    {
+      "term": "Database",
+      "synonyms": ["Repository", "Storage system", "Data bank"],
+      "definition": "A structured system for storing information",
+      "example": "Customer data is stored in a database.",
+      "unit": "Unit 2"
+    },
+    {
+      "term": "Server",
+      "synonyms": ["Host", "Data provider", "Mainframe"],
+      "definition": "A computer that stores and provides data",
+      "example": "A server sends web pages to users.",
+      "unit": "Unit 2"
+    },
+    {
+      "term": "Router",
+      "synonyms": ["Network device", "Data guide", "Switch"],
+      "definition": "A device that directs data traffic",
+      "example": "A router sends packets to the right destination.",
+      "unit": "Unit 2"
+    },
+    {
+      "term": "CPU",
+      "synonyms": ["Processor", "Central unit", "Microprocessor"],
+      "definition": "The main chip that processes information",
+      "example": "The CPU controls all computer operations.",
+      "unit": "Unit 2"
+    },
+    {
+      "term": "Operating System",
+      "synonyms": ["OS", "System software", "Platform"],
+      "definition": "Software that manages computer hardware",
+      "example": "Windows is a popular operating system.",
+      "unit": "Unit 2"
+    },
+    {
+      "term": "Malware",
+      "synonyms": ["Virus", "Trojan", "Spyware"],
+      "definition": "Malicious software designed to damage systems",
+      "example": "Antivirus detected malware on my computer.",
+      "unit": "Unit 1"
+    },
+    {
+      "term": "Phishing",
+      "synonyms": ["Scam", "Fraud", "Social engineering"],
+      "definition": "Attack that tricks users into sharing information",
+      "example": "Phishing attacks are common in emails.",
+      "unit": "Unit 1"
+    },
+    {
+      "term": "Patch",
+      "synonyms": ["Update", "Fix", "Security repair"],
+      "definition": "Software update that fixes vulnerabilities",
+      "example": "Installing patches protects against attacks.",
+      "unit": "Unit 1"
+    },
+    {
+      "term": "Cloud Computing",
+      "synonyms": ["Online storage", "Remote servers", "Internet-based computing"],
+      "definition": "Using remote servers to store and process data",
+      "example": "Many companies use cloud computing.",
+      "unit": "Unit 1"
+    },
+    {
+      "term": "AI (Artificial Intelligence)",
+      "synonyms": ["Machine intelligence", "Cognitive computing", "Smart systems"],
+      "definition": "Machines performing human-like tasks",
+      "example": "AI is used in self-driving cars.",
+      "unit": "Unit 1"
+    },
+    {
+      "term": "Data Science",
+      "synonyms": ["Analytics", "Data analysis", "Information science"],
+      "definition": "Study of data to extract useful information",
+      "example": "Data science combines statistics and programming.",
+      "unit": "Unit 1"
+    }
+  ]
+}

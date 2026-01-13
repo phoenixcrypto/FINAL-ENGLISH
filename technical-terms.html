@@ -1,0 +1,1676 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technical Terms - IT English Review</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Language System -->
+    <script src="language-system.js"></script>
+    <script src="content-library.js"></script>
+    <script src="progress-tracker.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-brand">
+                <i class="fas fa-arrow-left"></i> <span class="i18n-text" data-i18n="common.back">Back to Home</span>
+            </a>
+            <div class="nav-menu">
+                <a href="#dictionary" class="nav-link"><span class="i18n-text">Dictionary</span></a>
+                <a href="#flashcards" class="nav-link"><span class="i18n-text">Flashcards</span></a>
+                <a href="#quiz" class="nav-link"><span class="i18n-text">Quiz</span></a>
+                <div class="language-switcher">
+                    <button id="langSwitcherBtn" class="lang-switcher-btn" aria-label="Switch Language Mode" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-language"></i>
+                        <span id="currentModeDisplay">Exam Mode</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div id="langSwitcherDropdown" class="lang-switcher-dropdown" role="menu">
+                        <div class="lang-mode-option active" data-mode="exam" role="menuitem">
+                            <span class="lang-mode-name">Exam Mode</span>
+                            <span class="lang-mode-desc">Pure English - Real exam simulation</span>
+                        </div>
+                        <div class="lang-mode-option" data-mode="study" role="menuitem">
+                            <span class="lang-mode-name">Study Mode</span>
+                            <span class="lang-mode-desc">English with Arabic help tooltips</span>
+                        </div>
+                        <div class="lang-mode-option" data-mode="beginner" role="menuitem">
+                            <span class="lang-mode-name">Beginner Mode</span>
+                            <span class="lang-mode-desc">Bilingual interface - Arabic primary</span>
+                        </div>
+                    </div>
+                </div>
+                <button id="themeToggle" class="icon-btn" aria-label="Toggle Theme"><i class="fas fa-moon"></i></button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+        <header class="page-header">
+            <h1><i class="fas fa-terminal"></i> الجزء 3: المصطلحات التقنية</h1>
+            <p class="subtitle">تعلم المصطلحات التقنية مع التعريفات والأمثلة والتمارين</p>
+            <div class="header-info">
+                <span class="info-badge"><i class="fas fa-book"></i> 70+ مصطلح</span>
+                <span class="info-badge"><i class="fas fa-layer-group"></i> 5 فئات</span>
+                <span class="info-badge"><i class="fas fa-brain"></i> نظام التعلم التكيفي</span>
+            </div>
+        </header>
+
+        <!-- قاموس المصطلحات -->
+        <section id="dictionary" class="content-section">
+            <div class="section-toolbar">
+                <h2><i class="fas fa-book"></i> قاموس المصطلحات التقنية</h2>
+                <div class="filter-controls">
+                    <select id="categoryFilter" class="filter-select">
+                        <option value="all">جميع الفئات</option>
+                        <option value="ai">الذكاء الاصطناعي</option>
+                        <option value="cybersecurity">الأمن السيبراني</option>
+                        <option value="hardware">الهاردوير</option>
+                        <option value="software">السوفتوير</option>
+                        <option value="networking">الشبكات</option>
+                    </select>
+                    <select id="unitFilter" class="filter-select">
+                        <option value="all">جميع الوحدات</option>
+                        <option value="unit1">Unit 1</option>
+                        <option value="unit2">Unit 2</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="terms-grid" id="termsGrid">
+                <!-- سيتم ملؤها بالجافاسكريبت -->
+            </div>
+            
+            <div class="pagination" id="pagination">
+                <!-- سيتم توليده بالجافاسكريبت -->
+            </div>
+        </section>
+
+        <!-- البطاقات التعليمية -->
+        <section id="flashcards" class="content-section">
+            <h2><i class="fas fa-id-card"></i> البطاقات التعليمية (Flashcards)</h2>
+            <p class="section-desc">تدرب على حفظ المصطلحات باستخدام بطاقات تفاعلية</p>
+            
+            <div class="flashcards-container">
+                <div class="flashcard" id="flashcard">
+                    <div class="flashcard-front">
+                        <div class="flashcard-header">
+                            <span class="card-category" id="cardCategory">AI</span>
+                            <span class="card-unit" id="cardUnit">Unit 1</span>
+                        </div>
+                        <div class="flashcard-term" id="cardTerm">Artificial Intelligence</div>
+                        <div class="flashcard-hint">انقر لرؤية التعريف</div>
+                    </div>
+                    <div class="flashcard-back">
+                        <div class="flashcard-definition" id="cardDefinition">
+                            The ability of machines to perform tasks that require human intelligence.
+                        </div>
+                        <div class="flashcard-example" id="cardExample">
+                            <strong>مثال:</strong> AI is used in self-driving cars.
+                        </div>
+                        <div class="flashcard-synonyms" id="cardSynonyms">
+                            <strong>مرادفات:</strong> Machine Intelligence, Cognitive Computing
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="flashcard-controls">
+                    <button id="prevCard" class="card-btn">
+                        <i class="fas fa-arrow-right"></i> السابق
+                    </button>
+                    <div class="card-stats">
+                        <span id="cardCounter">1 / 20</span>
+                        <button id="flipCard" class="card-btn flip-btn">
+                            <i class="fas fa-sync-alt"></i> قلب البطاقة
+                        </button>
+                    </div>
+                    <button id="nextCard" class="card-btn">
+                        التالي <i class="fas fa-arrow-left"></i>
+                    </button>
+                </div>
+                
+                <div class="flashcard-actions">
+                    <button id="markKnown" class="action-btn known-btn">
+                        <i class="fas fa-check-circle"></i> أعرف هذا
+                    </button>
+                    <button id="markReview" class="action-btn review-btn">
+                        <i class="fas fa-redo"></i> أعيد مراجعته
+                    </button>
+                    <button id="shuffleCards" class="action-btn shuffle-btn">
+                        <i class="fas fa-random"></i> خلط البطاقات
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- اختبار المصطلحات -->
+        <section id="quiz" class="content-section">
+            <h2><i class="fas fa-gamepad"></i> اختبار المصطلحات التقنية</h2>
+            <p class="section-desc">اختبر معرفتك بالمصطلحات من خلال اختبار تفاعلي</p>
+            
+            <div class="quiz-container">
+                <div class="quiz-header">
+                    <div class="quiz-info">
+                        <h3 id="quizQuestion">اكتب المصطلح التقني المناسب للتعريف التالي:</h3>
+                        <div class="quiz-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" id="quizProgress"></div>
+                            </div>
+                            <span id="quizCounter">سؤال 1 من 10</span>
+                        </div>
+                    </div>
+                    <div class="quiz-score">
+                        <div class="score-display">
+                            <span class="score-label">النقاط</span>
+                            <span class="score-value" id="quizScore">0</span>
+                        </div>
+                        <div class="timer" id="quizTimer">
+                            <i class="fas fa-clock"></i> <span id="timeLeft">60</span> ثانية
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="quiz-body">
+                    <div class="definition-box" id="quizDefinition">
+                        "The physical parts of a computer that you can touch."
+                    </div>
+                    
+                    <div class="quiz-input-container">
+                        <input type="text" id="termInput" placeholder="اكتب المصطلح هنا...">
+                        <button id="submitAnswer" class="btn btn-primary">
+                            <i class="fas fa-paper-plane"></i> إرسال الإجابة
+                        </button>
+                    </div>
+                    
+                    <div class="quiz-options" id="quizOptions" style="display: none;">
+                        <!-- خيارات الاختيار من متعدد -->
+                    </div>
+                    
+                    <div class="quiz-feedback" id="quizFeedback"></div>
+                </div>
+                
+                <div class="quiz-footer">
+                    <div class="mode-selector">
+                        <button class="mode-btn active" data-mode="typing">كتابة المصطلح</button>
+                        <button class="mode-btn" data-mode="multiple">اختيار من متعدد</button>
+                        <button class="mode-btn" data-mode="matching">المطابقة</button>
+                    </div>
+                    
+                    <div class="quiz-actions">
+                        <button id="hintBtn" class="btn btn-outline">
+                            <i class="fas fa-lightbulb"></i> تلميح
+                        </button>
+                        <button id="nextQuestion" class="btn btn-primary">
+                            السؤال التالي <i class="fas fa-arrow-left"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="quiz-results" id="quizResults" style="display: none;">
+                <h3><i class="fas fa-trophy"></i> نتائج الاختبار</h3>
+                <div class="results-grid">
+                    <div class="result-card correct-card">
+                        <div class="result-icon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <div class="result-content">
+                            <h4 id="correctCount">0</h4>
+                            <p>إجابات صحيحة</p>
+                        </div>
+                    </div>
+                    <div class="result-card wrong-card">
+                        <div class="result-icon">
+                            <i class="fas fa-times-circle"></i>
+                        </div>
+                        <div class="result-content">
+                            <h4 id="wrongCount">0</h4>
+                            <p>إجابات خاطئة</p>
+                        </div>
+                    </div>
+                    <div class="result-card score-card">
+                        <div class="result-icon">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="result-content">
+                            <h4 id="finalScore">0</h4>
+                            <p>النقاط النهائية</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="results-actions">
+                    <button id="restartQuiz" class="btn btn-primary">
+                        <i class="fas fa-redo"></i> إعادة الاختبار
+                    </button>
+                    <button id="reviewWrong" class="btn btn-outline">
+                        <i class="fas fa-book"></i> مراجعة الأخطاء
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- التنقل بين الأجزاء -->
+        <div class="page-navigation">
+            <a href="synonyms.html" class="nav-link-prev">
+                <i class="fas fa-arrow-right"></i> الجزء السابق: المرادفات
+            </a>
+            <a href="grammar.html" class="nav-link-next">
+                الجزء التالي: القواعد <i class="fas fa-arrow-left"></i>
+            </a>
+        </div>
+    </main>
+
+    <script type="module">
+        import { initTheme, toggleTheme } from './script.js';
+        
+        // بيانات المصطلحات التقنية
+        const technicalTerms = [
+            {
+                term: "Artificial Intelligence (AI)",
+                definition: "The ability of machines to perform tasks that require human intelligence.",
+                example: "AI is used in self-driving cars and virtual assistants.",
+                synonyms: ["Machine Intelligence", "Cognitive Computing"],
+                category: "ai",
+                unit: "unit1",
+                difficulty: "medium"
+            },
+            {
+                term: "Cybersecurity",
+                definition: "The practice of protecting computer systems and networks from digital attacks.",
+                example: "Cybersecurity helps prevent unauthorized access to data.",
+                synonyms: ["Information Security", "Cyber Protection"],
+                category: "cybersecurity",
+                unit: "unit1",
+                difficulty: "medium"
+            },
+            {
+                term: "Hardware",
+                definition: "The physical parts of a computer system.",
+                example: "The hardware includes the keyboard, monitor, and CPU.",
+                synonyms: ["Equipment", "Components"],
+                category: "hardware",
+                unit: "unit2",
+                difficulty: "easy"
+            },
+            {
+                term: "Software",
+                definition: "Programs and applications that control computer hardware.",
+                example: "Software tells the computer what to do.",
+                synonyms: ["Program", "Application"],
+                category: "software",
+                unit: "unit2",
+                difficulty: "easy"
+            },
+            {
+                term: "Network",
+                definition: "A group of connected computers that can share data.",
+                example: "Your computer joins a network to share files.",
+                synonyms: ["System", "Connection"],
+                category: "networking",
+                unit: "unit2",
+                difficulty: "easy"
+            },
+            {
+                term: "Firewall",
+                definition: "A security system that monitors and controls network traffic.",
+                example: "Firewall prevents unauthorized access from the internet.",
+                synonyms: ["Barrier", "Security Filter"],
+                category: "cybersecurity",
+                unit: "unit1",
+                difficulty: "medium"
+            },
+            {
+                term: "Encryption",
+                definition: "The process of converting information into code to prevent unauthorized access.",
+                example: "Encryption protects sensitive user data.",
+                synonyms: ["Encoding", "Cipher"],
+                category: "cybersecurity",
+                unit: "unit1",
+                difficulty: "medium"
+            },
+            {
+                term: "Algorithm",
+                definition: "A series of steps used by a computer to solve a problem.",
+                example: "Recommendation systems use algorithms to suggest content.",
+                synonyms: ["Procedure", "Process"],
+                category: "ai",
+                unit: "unit1",
+                difficulty: "medium"
+            },
+            {
+                term: "Cloud Computing",
+                definition: "The use of remote servers on the Internet to store and process data.",
+                example: "Many companies now use cloud computing for flexibility.",
+                synonyms: ["Online Storage", "Remote Servers"],
+                category: "software",
+                unit: "unit1",
+                difficulty: "medium"
+            },
+            {
+                term: "Database",
+                definition: "A structured system for storing and organizing information.",
+                example: "Customer records are saved in a secure database.",
+                synonyms: ["Repository", "Data Bank"],
+                category: "software",
+                unit: "unit2",
+                difficulty: "easy"
+            }
+        ];
+
+        document.addEventListener('DOMContentLoaded', () => {
+            initTheme();
+            const themeToggle = document.getElementById('themeToggle');
+            if (themeToggle) {
+                themeToggle.addEventListener('click', toggleTheme);
+            }
+            
+            // تهيئة جميع الأقسام
+            initDictionary();
+            initFlashcards();
+            initQuiz();
+            setupEventListeners();
+        });
+
+        // === قاموس المصطلحات ===
+        function initDictionary() {
+            const termsGrid = document.getElementById('termsGrid');
+            const categoryFilter = document.getElementById('categoryFilter');
+            const unitFilter = document.getElementById('unitFilter');
+            let currentPage = 1;
+            const termsPerPage = 9;
+            let filteredTerms = [...technicalTerms];
+
+            function renderTerms() {
+                const start = (currentPage - 1) * termsPerPage;
+                const end = start + termsPerPage;
+                const pageTerms = filteredTerms.slice(start, end);
+
+                termsGrid.innerHTML = pageTerms.map(term => `
+                    <div class="term-card" data-category="${term.category}" data-unit="${term.unit}">
+                        <div class="term-card-header">
+                            <span class="term-category ${term.category}">${getCategoryName(term.category)}</span>
+                            <span class="term-unit">${term.unit.toUpperCase()}</span>
+                        </div>
+                        <h3 class="term-title">${term.term}</h3>
+                        <p class="term-definition">${term.definition}</p>
+                        <div class="term-example">
+                            <strong>مثال:</strong> ${term.example}
+                        </div>
+                        <div class="term-synonyms">
+                            <strong>مرادفات:</strong> ${term.synonyms.join(', ')}
+                        </div>
+                        <div class="term-difficulty">
+                            <span class="difficulty-badge ${term.difficulty}">
+                                ${getDifficultyText(term.difficulty)}
+                            </span>
+                        </div>
+                    </div>
+                `).join('');
+
+                renderPagination();
+            }
+
+            function renderPagination() {
+                const totalPages = Math.ceil(filteredTerms.length / termsPerPage);
+                const pagination = document.getElementById('pagination');
+                
+                if (totalPages <= 1) {
+                    pagination.innerHTML = '';
+                    return;
+                }
+
+                let paginationHTML = '';
+                
+                if (currentPage > 1) {
+                    paginationHTML += `<button class="page-btn" onclick="changePage(${currentPage - 1})">
+                        <i class="fas fa-arrow-right"></i> السابق
+                    </button>`;
+                }
+
+                for (let i = 1; i <= totalPages; i++) {
+                    if (i === currentPage) {
+                        paginationHTML += `<span class="page-number active">${i}</span>`;
+                    } else if (i === 1 || i === totalPages || (i >= currentPage - 1 && i <= currentPage + 1)) {
+                        paginationHTML += `<button class="page-number" onclick="changePage(${i})">${i}</button>`;
+                    } else if (i === currentPage - 2 || i === currentPage + 2) {
+                        paginationHTML += `<span class="page-dots">...</span>`;
+                    }
+                }
+
+                if (currentPage < totalPages) {
+                    paginationHTML += `<button class="page-btn" onclick="changePage(${currentPage + 1})">
+                        التالي <i class="fas fa-arrow-left"></i>
+                    </button>`;
+                }
+
+                pagination.innerHTML = paginationHTML;
+            }
+
+            function changePage(page) {
+                currentPage = page;
+                renderTerms();
+                window.scrollTo({ top: termsGrid.offsetTop - 100, behavior: 'smooth' });
+            }
+
+            function filterTerms() {
+                const category = categoryFilter.value;
+                const unit = unitFilter.value;
+                
+                filteredTerms = technicalTerms.filter(term => {
+                    const categoryMatch = category === 'all' || term.category === category;
+                    const unitMatch = unit === 'all' || term.unit === unit;
+                    return categoryMatch && unitMatch;
+                });
+                
+                currentPage = 1;
+                renderTerms();
+            }
+
+            function getCategoryName(category) {
+                const categories = {
+                    ai: 'الذكاء الاصطناعي',
+                    cybersecurity: 'الأمن السيبراني',
+                    hardware: 'الهاردوير',
+                    software: 'السوفتوير',
+                    networking: 'الشبكات'
+                };
+                return categories[category] || category;
+            }
+
+            function getDifficultyText(difficulty) {
+                const difficulties = {
+                    easy: 'سهل',
+                    medium: 'متوسط',
+                    hard: 'صعب'
+                };
+                return difficulties[difficulty] || difficulty;
+            }
+
+            // جعل الدوال متاحة عالمياً
+            window.changePage = changePage;
+
+            // إضافة المستمعين للأحداث
+            categoryFilter.addEventListener('change', filterTerms);
+            unitFilter.addEventListener('change', filterTerms);
+
+            // التهيئة الأولية
+            renderTerms();
+        }
+
+        // === البطاقات التعليمية ===
+        function initFlashcards() {
+            const flashcards = [...technicalTerms];
+            let currentCardIndex = 0;
+            let knownCards = new Set();
+            let reviewCards = [...flashcards];
+
+            const flashcard = document.getElementById('flashcard');
+            const cardTerm = document.getElementById('cardTerm');
+            const cardDefinition = document.getElementById('cardDefinition');
+            const cardExample = document.getElementById('cardExample');
+            const cardSynonyms = document.getElementById('cardSynonyms');
+            const cardCategory = document.getElementById('cardCategory');
+            const cardUnit = document.getElementById('cardUnit');
+            const cardCounter = document.getElementById('cardCounter');
+
+            function updateCard() {
+                if (reviewCards.length === 0) {
+                    // إعادة تعيين إذا انتهت البطاقات
+                    reviewCards = [...flashcards];
+                    knownCards.clear();
+                    currentCardIndex = 0;
+                }
+
+                const card = reviewCards[currentCardIndex];
+                cardTerm.textContent = card.term;
+                cardDefinition.textContent = card.definition;
+                cardExample.innerHTML = `<strong>مثال:</strong> ${card.example}`;
+                cardSynonyms.innerHTML = `<strong>مرادفات:</strong> ${card.synonyms.join(', ')}`;
+                cardCategory.textContent = getCategoryName(card.category);
+                cardUnit.textContent = card.unit.toUpperCase();
+                cardCounter.textContent = `${currentCardIndex + 1} / ${reviewCards.length}`;
+                
+                // إعادة تعيين البطاقة إلى الواجهة الأمامية
+                flashcard.classList.remove('flipped');
+            }
+
+            function flipCard() {
+                flashcard.classList.toggle('flipped');
+            }
+
+            function nextCard() {
+                currentCardIndex = (currentCardIndex + 1) % reviewCards.length;
+                updateCard();
+            }
+
+            function prevCard() {
+                currentCardIndex = (currentCardIndex - 1 + reviewCards.length) % reviewCards.length;
+                updateCard();
+            }
+
+            function markKnown() {
+                const currentCard = reviewCards[currentCardIndex];
+                knownCards.add(currentCard.term);
+                reviewCards.splice(currentCardIndex, 1);
+                
+                if (reviewCards.length === 0) {
+                    alert('🎉 أحسنت! لقد حفظت كل البطاقات!');
+                    reviewCards = [...flashcards];
+                    knownCards.clear();
+                    currentCardIndex = 0;
+                } else if (currentCardIndex >= reviewCards.length) {
+                    currentCardIndex = 0;
+                }
+                
+                updateCard();
+            }
+
+            function shuffleCards() {
+                for (let i = reviewCards.length - 1; i > 0; i--) {
+                    const j = Math.floor(Math.random() * (i + 1));
+                    [reviewCards[i], reviewCards[j]] = [reviewCards[j], reviewCards[i]];
+                }
+                currentCardIndex = 0;
+                updateCard();
+            }
+
+            // إضافة المستمعين للأحداث
+            flashcard.addEventListener('click', flipCard);
+            document.getElementById('flipCard').addEventListener('click', flipCard);
+            document.getElementById('nextCard').addEventListener('click', nextCard);
+            document.getElementById('prevCard').addEventListener('click', prevCard);
+            document.getElementById('markKnown').addEventListener('click', markKnown);
+            document.getElementById('markReview').addEventListener('click', () => {
+                // مجرد الانتقال للبطاقة التالية
+                nextCard();
+            });
+            document.getElementById('shuffleCards').addEventListener('click', shuffleCards);
+
+            // التهيئة الأولية
+            shuffleCards();
+        }
+
+        // === اختبار المصطلحات ===
+        function initQuiz() {
+            let currentQuestion = 0;
+            let score = 0;
+            let timeLeft = 60;
+            let timer;
+            let quizMode = 'typing';
+            const questions = generateQuizQuestions(10);
+
+            const quizQuestion = document.getElementById('quizQuestion');
+            const quizDefinition = document.getElementById('quizDefinition');
+            const quizProgress = document.getElementById('quizProgress');
+            const quizCounter = document.getElementById('quizCounter');
+            const quizScore = document.getElementById('quizScore');
+            const timeLeftDisplay = document.getElementById('timeLeft');
+            const termInput = document.getElementById('termInput');
+            const quizOptions = document.getElementById('quizOptions');
+            const quizFeedback = document.getElementById('quizFeedback');
+            const submitAnswer = document.getElementById('submitAnswer');
+            const hintBtn = document.getElementById('hintBtn');
+            const nextQuestionBtn = document.getElementById('nextQuestion');
+            const modeButtons = document.querySelectorAll('.mode-btn');
+            const quizResults = document.getElementById('quizResults');
+
+            function generateQuizQuestions(count) {
+                const shuffled = [...technicalTerms].sort(() => Math.random() - 0.5);
+                return shuffled.slice(0, count).map(term => ({
+                    term: term.term,
+                    definition: term.definition,
+                    example: term.example,
+                    options: generateWrongOptions(term.term, technicalTerms)
+                }));
+            }
+
+            function generateWrongOptions(correctTerm, allTerms) {
+                const wrongTerms = allTerms
+                    .filter(t => t.term !== correctTerm)
+                    .map(t => t.term)
+                    .sort(() => Math.random() - 0.5)
+                    .slice(0, 3);
+                
+                const allOptions = [correctTerm, ...wrongTerms];
+                return allOptions.sort(() => Math.random() - 0.5);
+            }
+
+            function startQuiz() {
+                currentQuestion = 0;
+                score = 0;
+                timeLeft = 60;
+                clearInterval(timer);
+                
+                quizScore.textContent = '0';
+                timeLeftDisplay.textContent = '60';
+                quizResults.style.display = 'none';
+                document.querySelector('.quiz-container').style.display = 'block';
+                
+                updateQuestion();
+                startTimer();
+            }
+
+            function startTimer() {
+                clearInterval(timer);
+                timer = setInterval(() => {
+                    timeLeft--;
+                    timeLeftDisplay.textContent = timeLeft;
+                    
+                    if (timeLeft <= 0) {
+                        clearInterval(timer);
+                        endQuiz();
+                    }
+                }, 1000);
+            }
+
+            function updateQuestion() {
+                if (currentQuestion >= questions.length) {
+                    endQuiz();
+                    return;
+                }
+
+                const question = questions[currentQuestion];
+                quizQuestion.textContent = `اكتب المصطلح التقني المناسب للتعريف التالي:`;
+                quizDefinition.textContent = `"${question.definition}"`;
+                
+                // تحديث شريط التقدم
+                const progress = ((currentQuestion) / questions.length) * 100;
+                quizProgress.style.width = `${progress}%`;
+                quizCounter.textContent = `سؤال ${currentQuestion + 1} من ${questions.length}`;
+                
+                // إعادة تعيين الحقول
+                termInput.value = '';
+                quizFeedback.innerHTML = '';
+                quizFeedback.className = 'quiz-feedback';
+                quizOptions.style.display = 'none';
+                termInput.style.display = 'block';
+                submitAnswer.style.display = 'block';
+                
+                // عرض الخيارات إذا كان الوضع اختيار من متعدد
+                if (quizMode === 'multiple') {
+                    quizOptions.style.display = 'block';
+                    termInput.style.display = 'none';
+                    submitAnswer.style.display = 'none';
+                    
+                    quizOptions.innerHTML = `
+                        <div class="options-grid">
+                            ${question.options.map((option, index) => `
+                                <button class="option-btn" data-option="${option}">
+                                    ${String.fromCharCode(65 + index)}) ${option}
+                                </button>
+                            `).join('')}
+                        </div>
+                    `;
+                    
+                    // إضافة المستمعين لأزرار الخيارات
+                    document.querySelectorAll('.option-btn').forEach(btn => {
+                        btn.addEventListener('click', function() {
+                            const selectedTerm = this.dataset.option;
+                            checkAnswer(selectedTerm);
+                        });
+                    });
+                }
+                
+                // تمكين الإدخال والأزرار
+                termInput.disabled = false;
+                submitAnswer.disabled = false;
+                hintBtn.disabled = false;
+            }
+
+            function checkAnswer(answer) {
+                const question = questions[currentQuestion];
+                const correct = question.term.toLowerCase().trim();
+                const userAnswer = answer.toLowerCase().trim();
+                
+                const isCorrect = userAnswer === correct;
+                
+                if (isCorrect) {
+                    score += 10;
+                    quizScore.textContent = score;
+                    quizFeedback.innerHTML = `
+                        <div class="correct-feedback">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <strong>إجابة صحيحة!</strong>
+                                <p>${question.term}: ${question.definition}</p>
+                                <p class="example-text"><em>مثال:</em> ${question.example}</p>
+                            </div>
+                        </div>
+                    `;
+                    quizFeedback.className = 'quiz-feedback correct';
+                } else {
+                    quizFeedback.innerHTML = `
+                        <div class="wrong-feedback">
+                            <i class="fas fa-times-circle"></i>
+                            <div>
+                                <strong>إجابة خاطئة</strong>
+                                <p>الإجابة الصحيحة هي: <strong>${question.term}</strong></p>
+                                <p>${question.definition}</p>
+                                <p class="example-text"><em>مثال:</em> ${question.example}</p>
+                            </div>
+                        </div>
+                    `;
+                    quizFeedback.className = 'quiz-feedback wrong';
+                }
+                
+                // تعطيل الإدخال والأزرار
+                termInput.disabled = true;
+                submitAnswer.disabled = true;
+                hintBtn.disabled = true;
+                
+                // إظهار زر السؤال التالي
+                nextQuestionBtn.style.display = 'block';
+            }
+
+            function endQuiz() {
+                clearInterval(timer);
+                
+                // تحديث نتائج الاختبار
+                document.getElementById('correctCount').textContent = Math.floor(score / 10);
+                document.getElementById('wrongCount').textContent = questions.length - Math.floor(score / 10);
+                document.getElementById('finalScore').textContent = score;
+                
+                // إخفاء الاختبار وإظهار النتائج
+                document.querySelector('.quiz-container').style.display = 'none';
+                quizResults.style.display = 'block';
+            }
+
+            function changeMode(mode) {
+                quizMode = mode;
+                
+                // تحديث أزرار الوضع النشط
+                modeButtons.forEach(btn => {
+                    btn.classList.toggle('active', btn.dataset.mode === mode);
+                });
+                
+                // إعادة تشغيل الاختبار
+                startQuiz();
+            }
+
+            // إضافة المستمعين للأحداث
+            submitAnswer.addEventListener('click', () => {
+                if (termInput.value.trim()) {
+                    checkAnswer(termInput.value);
+                }
+            });
+
+            termInput.addEventListener('keypress', (e) => {
+                if (e.key === 'Enter') {
+                    submitAnswer.click();
+                }
+            });
+
+            hintBtn.addEventListener('click', () => {
+                const question = questions[currentQuestion];
+                const hint = question.term.split(' ')[0]; // أول كلمة من المصطلح
+                quizFeedback.innerHTML = `
+                    <div class="hint-feedback">
+                        <i class="fas fa-lightbulb"></i>
+                        <div>
+                            <strong>تلميح:</strong> يبدأ بـ "${hint}..."
+                        </div>
+                    </div>
+                `;
+                quizFeedback.className = 'quiz-feedback hint';
+            });
+
+            nextQuestionBtn.addEventListener('click', () => {
+                currentQuestion++;
+                nextQuestionBtn.style.display = 'none';
+                updateQuestion();
+            });
+
+            modeButtons.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    changeMode(btn.dataset.mode);
+                });
+            });
+
+            document.getElementById('restartQuiz').addEventListener('click', startQuiz);
+            document.getElementById('reviewWrong').addEventListener('click', () => {
+                // يمكن إضافة منطق لمراجعة الأخطاء هنا
+                alert('ستتم إضافة خاصية مراجعة الأخطاء في نسخة لاحقة!');
+            });
+
+            // التهيئة الأولية
+            startQuiz();
+        }
+
+        // === وظائف مساعدة ===
+        function getCategoryName(category) {
+            const categories = {
+                ai: 'الذكاء الاصطناعي',
+                cybersecurity: 'الأمن السيبراني',
+                hardware: 'الهاردوير',
+                software: 'السوفتوير',
+                networking: 'الشبكات'
+            };
+            return categories[category] || category;
+        }
+
+        function setupEventListeners() {
+            // لا حاجة لوظائف إضافية هنا
+        }
+    </script>
+
+    <style>
+        /* تنسيقات إضافية لصفحة المصطلحات التقنية */
+        .content-section {
+            background: var(--bg-card);
+            border-radius: var(--radius-lg);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow-md);
+        }
+
+        .section-toolbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .section-toolbar h2 {
+            font-size: 1.5rem;
+            color: var(--text-primary);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .filter-controls {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .filter-select {
+            padding: 0.6rem 1rem;
+            border: 2px solid var(--bg-secondary);
+            border-radius: var(--radius-md);
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            font-size: 0.9rem;
+            min-width: 150px;
+            cursor: pointer;
+        }
+
+        .filter-select:focus {
+            outline: none;
+            border-color: var(--primary-color);
+        }
+
+        /* تنسيقات شبكة المصطلحات */
+        .terms-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .terms-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .term-card {
+            background: var(--bg-secondary);
+            border-radius: var(--radius-md);
+            padding: 1.5rem;
+            border: 2px solid transparent;
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .term-card:hover {
+            border-color: var(--primary-color);
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .term-card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .term-category {
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: white;
+        }
+
+        .term-category.ai {
+            background: linear-gradient(135deg, #ff6b6b, #ee5a24);
+        }
+
+        .term-category.cybersecurity {
+            background: linear-gradient(135deg, #4361ee, #3a0ca3);
+        }
+
+        .term-category.hardware {
+            background: linear-gradient(135deg, #4cc9f0, #4895ef);
+        }
+
+        .term-category.software {
+            background: linear-gradient(135deg, #2ecc71, #27ae60);
+        }
+
+        .term-category.networking {
+            background: linear-gradient(135deg, #f39c12, #e67e22);
+        }
+
+        .term-unit {
+            background: var(--bg-primary);
+            color: var(--text-secondary);
+            padding: 0.2rem 0.6rem;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .term-title {
+            font-size: 1.3rem;
+            color: var(--text-primary);
+            margin-bottom: 0.8rem;
+            line-height: 1.4;
+        }
+
+        .term-definition {
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+
+        .term-example {
+            background: rgba(67, 97, 238, 0.1);
+            padding: 0.8rem;
+            border-radius: var(--radius-sm);
+            margin-bottom: 0.8rem;
+            font-size: 0.9rem;
+            border-right: 3px solid var(--primary-color);
+        }
+
+        .term-synonyms {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .term-difficulty {
+            text-align: left;
+        }
+
+        .difficulty-badge {
+            padding: 0.3rem 0.8rem;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            display: inline-block;
+        }
+
+        .difficulty-badge.easy {
+            background: rgba(46, 204, 113, 0.2);
+            color: var(--success-color);
+        }
+
+        .difficulty-badge.medium {
+            background: rgba(243, 156, 18, 0.2);
+            color: var(--warning-color);
+        }
+
+        .difficulty-badge.hard {
+            background: rgba(231, 76, 60, 0.2);
+            color: var(--danger-color);
+        }
+
+        /* تنسيقات الترقيم */
+        .pagination {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: 2rem;
+        }
+
+        .page-btn, .page-number {
+            padding: 0.5rem 1rem;
+            border: 2px solid var(--bg-secondary);
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            border-radius: var(--radius-sm);
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .page-btn:hover, .page-number:hover {
+            border-color: var(--primary-color);
+            color: var(--primary-color);
+        }
+
+        .page-number.active {
+            background: var(--primary-color);
+            color: white;
+            border-color: var(--primary-color);
+        }
+
+        .page-dots {
+            padding: 0.5rem;
+            color: var(--text-secondary);
+        }
+
+        /* تنسيقات البطاقات التعليمية */
+        .section-desc {
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+        }
+
+        .flashcards-container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .flashcard {
+            width: 100%;
+            height: 300px;
+            perspective: 1000px;
+            margin-bottom: 2rem;
+            cursor: pointer;
+        }
+
+        .flashcard-front, .flashcard-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border-radius: var(--radius-lg);
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            transition: transform 0.8s;
+            box-shadow: var(--shadow-md);
+        }
+
+        .flashcard-front {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+        }
+
+        .flashcard-back {
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            transform: rotateY(180deg);
+            text-align: center;
+        }
+
+        .flashcard.flipped .flashcard-front {
+            transform: rotateY(180deg);
+        }
+
+        .flashcard.flipped .flashcard-back {
+            transform: rotateY(0);
+        }
+
+        .flashcard-header {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            margin-bottom: 1.5rem;
+        }
+
+        .card-category, .card-unit {
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .card-category {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .card-unit {
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        .flashcard-term {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .flashcard-hint {
+            font-size: 0.9rem;
+            opacity: 0.8;
+            margin-top: 1rem;
+        }
+
+        .flashcard-definition {
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .flashcard-example {
+            background: var(--bg-secondary);
+            padding: 1rem;
+            border-radius: var(--radius-md);
+            margin-bottom: 1rem;
+            width: 100%;
+        }
+
+        .flashcard-synonyms {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        .flashcard-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .card-btn {
+            padding: 0.8rem 1.5rem;
+            background: var(--bg-secondary);
+            border: none;
+            border-radius: var(--radius-md);
+            color: var(--text-primary);
+            cursor: pointer;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.3s;
+        }
+
+        .card-btn:hover {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .flip-btn {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .flip-btn:hover {
+            background: var(--secondary-color);
+        }
+
+        .card-stats {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .flashcard-actions {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .action-btn {
+            padding: 0.8rem 1.5rem;
+            border: none;
+            border-radius: var(--radius-md);
+            cursor: pointer;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.3s;
+        }
+
+        .known-btn {
+            background: rgba(46, 204, 113, 0.2);
+            color: var(--success-color);
+        }
+
+        .known-btn:hover {
+            background: var(--success-color);
+            color: white;
+        }
+
+        .review-btn {
+            background: rgba(243, 156, 18, 0.2);
+            color: var(--warning-color);
+        }
+
+        .review-btn:hover {
+            background: var(--warning-color);
+            color: white;
+        }
+
+        .shuffle-btn {
+            background: rgba(67, 97, 238, 0.2);
+            color: var(--primary-color);
+        }
+
+        .shuffle-btn:hover {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        /* تنسيقات الاختبار */
+        .quiz-container {
+            background: var(--bg-secondary);
+            border-radius: var(--radius-lg);
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .quiz-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .quiz-info {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .quiz-info h3 {
+            font-size: 1.3rem;
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+        }
+
+        .quiz-progress {
+            margin-top: 1rem;
+        }
+
+        .quiz-progress .progress-bar {
+            height: 8px;
+            background: rgba(0,0,0,0.1);
+            border-radius: 4px;
+            overflow: hidden;
+            margin-bottom: 0.5rem;
+        }
+
+        .quiz-progress .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+            border-radius: 4px;
+            transition: width 0.5s;
+        }
+
+        .quiz-score {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .score-display {
+            background: var(--bg-primary);
+            padding: 0.8rem 1.5rem;
+            border-radius: var(--radius-md);
+            text-align: center;
+            min-width: 120px;
+        }
+
+        .score-label {
+            display: block;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            margin-bottom: 0.3rem;
+        }
+
+        .score-value {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
+        .timer {
+            background: var(--bg-primary);
+            padding: 0.6rem 1rem;
+            border-radius: var(--radius-md);
+            color: var(--text-primary);
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .quiz-body {
+            margin-bottom: 2rem;
+        }
+
+        .definition-box {
+            background: var(--bg-primary);
+            padding: 2rem;
+            border-radius: var(--radius-md);
+            font-size: 1.2rem;
+            text-align: center;
+            margin-bottom: 2rem;
+            border-right: 4px solid var(--primary-color);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .quiz-input-container {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        #termInput {
+            flex: 1;
+            padding: 1rem;
+            border: 2px solid var(--bg-secondary);
+            border-radius: var(--radius-md);
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            font-size: 1.1rem;
+            transition: all 0.3s;
+        }
+
+        #termInput:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.2);
+        }
+
+        #termInput:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+
+        .quiz-options {
+            margin-bottom: 1.5rem;
+        }
+
+        .options-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .options-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .option-btn {
+            padding: 1.2rem;
+            border: 2px solid var(--bg-secondary);
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            border-radius: var(--radius-md);
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 600;
+            transition: all 0.3s;
+            text-align: right;
+        }
+
+        .option-btn:hover {
+            border-color: var(--primary-color);
+            background: rgba(67, 97, 238, 0.1);
+        }
+
+        .option-btn:active {
+            transform: scale(0.98);
+        }
+
+        .quiz-feedback {
+            padding: 1.5rem;
+            border-radius: var(--radius-md);
+            margin-top: 1.5rem;
+            animation: fadeIn 0.3s;
+        }
+
+        .quiz-feedback.correct {
+            background: rgba(46, 204, 113, 0.1);
+            border-right: 3px solid var(--success-color);
+        }
+
+        .quiz-feedback.wrong {
+            background: rgba(231, 76, 60, 0.1);
+            border-right: 3px solid var(--danger-color);
+        }
+
+        .quiz-feedback.hint {
+            background: rgba(243, 156, 18, 0.1);
+            border-right: 3px solid var(--warning-color);
+        }
+
+        .correct-feedback, .wrong-feedback, .hint-feedback {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+
+        .correct-feedback i {
+            color: var(--success-color);
+            font-size: 1.5rem;
+        }
+
+        .wrong-feedback i {
+            color: var(--danger-color);
+            font-size: 1.5rem;
+        }
+
+        .hint-feedback i {
+            color: var(--warning-color);
+            font-size: 1.5rem;
+        }
+
+        .example-text {
+            margin-top: 0.5rem;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        .quiz-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .mode-selector {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .mode-btn {
+            padding: 0.6rem 1rem;
+            border: 2px solid var(--bg-secondary);
+            background: var(--bg-primary);
+            color: var(--text-secondary);
+            border-radius: var(--radius-md);
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: all 0.3s;
+        }
+
+        .mode-btn.active {
+            background: var(--primary-color);
+            color: white;
+            border-color: var(--primary-color);
+        }
+
+        .quiz-actions {
+            display: flex;
+            gap: 1rem;
+        }
+
+        /* تنسيقات نتائج الاختبار */
+        .quiz-results {
+            background: var(--bg-card);
+            border-radius: var(--radius-lg);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .quiz-results h3 {
+            font-size: 1.8rem;
+            color: var(--text-primary);
+            margin-bottom: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .result-card {
+            background: var(--bg-secondary);
+            border-radius: var(--radius-md);
+            padding: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .correct-card {
+            border-right: 4px solid var(--success-color);
+        }
+
+        .wrong-card {
+            border-right: 4px solid var(--danger-color);
+        }
+
+        .score-card {
+            border-right: 4px solid var(--primary-color);
+        }
+
+        .result-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+        }
+
+        .correct-card .result-icon {
+            background: rgba(46, 204, 113, 0.2);
+            color: var(--success-color);
+        }
+
+        .wrong-card .result-icon {
+            background: rgba(231, 76, 60, 0.2);
+            color: var(--danger-color);
+        }
+
+        .score-card .result-icon {
+            background: rgba(67, 97, 238, 0.2);
+            color: var(--primary-color);
+        }
+
+        .result-content h4 {
+            font-size: 2rem;
+            color: var(--text-primary);
+            margin-bottom: 0.3rem;
+        }
+
+        .result-content p {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        .results-actions {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        /* تنسيقات التنقل بين الصفحات */
+        .page-navigation {
+            display: flex;
+            justify-content: space-between;
+            margin: 3rem 0;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(0,0,0,0.1);
+        }
+
+        .nav-link-prev, .nav-link-next {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.8rem 1.5rem;
+            background: var(--bg-secondary);
+            border-radius: var(--radius-md);
+            text-decoration: none;
+            color: var(--text-primary);
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .nav-link-prev:hover, .nav-link-next:hover {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            .page-navigation {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .section-toolbar {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            
+            .filter-controls {
+                flex-direction: column;
+            }
+            
+            .quiz-header {
+                flex-direction: column;
+            }
+            
+            .quiz-footer {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            
+            .quiz-input-container {
+                flex-direction: column;
+            }
+        }
+    </style>
+    
+    <!-- Language Integration -->
+    <script type="module" src="language-integration.js"></script>
+    <script type="module" src="script.js"></script>
+</body>
+</html>

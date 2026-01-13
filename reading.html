@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reading Comprehension - IT English Review</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Language System -->
+    <script src="language-system.js"></script>
+    <script src="content-library.js"></script>
+    <script src="progress-tracker.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-brand">
+                <i class="fas fa-arrow-left"></i> <span class="i18n-text" data-i18n="common.back">Back to Home</span>
+            </a>
+            <div class="nav-menu">
+                <a href="#text1" class="nav-link"><span class="i18n-text">Text 1</span></a>
+                <a href="#text2" class="nav-link"><span class="i18n-text">Text 2</span></a>
+                <a href="#text3" class="nav-link"><span class="i18n-text">Text 3</span></a>
+                <div class="language-switcher">
+                    <button id="langSwitcherBtn" class="lang-switcher-btn" aria-label="Switch Language Mode" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-language"></i>
+                        <span id="currentModeDisplay">Exam Mode</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div id="langSwitcherDropdown" class="lang-switcher-dropdown" role="menu">
+                        <div class="lang-mode-option active" data-mode="exam" role="menuitem">
+                            <span class="lang-mode-name">Exam Mode</span>
+                            <span class="lang-mode-desc">Pure English - Real exam simulation</span>
+                        </div>
+                        <div class="lang-mode-option" data-mode="study" role="menuitem">
+                            <span class="lang-mode-name">Study Mode</span>
+                            <span class="lang-mode-desc">English with Arabic help tooltips</span>
+                        </div>
+                        <div class="lang-mode-option" data-mode="beginner" role="menuitem">
+                            <span class="lang-mode-name">Beginner Mode</span>
+                            <span class="lang-mode-desc">Bilingual interface - Arabic primary</span>
+                        </div>
+                    </div>
+                </div>
+                <button id="themeToggle" class="icon-btn" aria-label="Toggle Theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+        <header class="page-header">
+            <h1><i class="fas fa-file-alt"></i> <span class="i18n-text" data-i18n="reading.title">Part 1: Reading Comprehension</span></h1>
+            <p class="subtitle" data-i18n="reading.subtitle">Practice reading passages with multiple choice and true/false questions</p>
+            <div class="header-info">
+                <span class="info-badge"><i class="fas fa-clock"></i> الوقت المقترح: 30 دقيقة</span>
+                <span class="info-badge"><i class="fas fa-question-circle"></i> 30 سؤال</span>
+                <span class="info-badge"><i class="fas fa-chart-line"></i> المستوى: متوسط</span>
+            </div>
+        </header>
+
+        <!-- النص 1 -->
+        <section id="text1" class="reading-section">
+            <div class="section-header">
+                <h2><i class="fas fa-network-wired"></i> النص 1: كيف يعمل الإنترنت</h2>
+                <span class="text-meta">مصدر: Unit 2.4</span>
+            </div>
+            
+            <article class="reading-text">
+                <p>الإنترنت هو أكبر شبكة حاسوبية في العالم. إنه يربط ملايين الأجهزة ليتمكن الناس من التواصل ومشاركة المعلومات والوصول إلى البيانات من أي مكان. لكن كيف يعمل الإنترنت حقًا؟</p>
+                <p>عند الاتصال بالإنترنت، يستخدم جهازك مزود خدمة الإنترنت (ISP) مثل فودافون أو أورانج للوصول إلى الشبكات الأخرى. يرسل جهازك البيانات على شكل حزم (Packets). كل حزمة تحتوي على أجزاء صغيرة من المعلومات تنتقل عبر الشبكة. تتحرك هذه الحزم عبر الموجهات (Routers) - أجهزة خاصة تقرر أفضل مسار لانتقال البيانات.</p>
+                <p>كل جهاز متصل بالإنترنت لديه عنوان IP (عنوان بروتوكول الإنترنت). هذا يشبه العنوان الرقمي الذي يحدد مكان إرسال البيانات. عندما تفتح موقع ويب، يرسل حاسوبك طلبًا إلى الخادم (Server)، وهو حاسوب قوي يخزن ويوفر صفحات الويب.</p>
+                <p>يرسل الخادم البيانات مرة أخرى إلى حاسوبك، حيث يعرض المتصفح (Browser) مثل Chrome الموقع. يعتمد الإنترنت أيضًا على نظام أسماء النطاقات (DNS) الذي يحول أسماء المواقع السهلة التذكر (مثل www.google.com) إلى عناوين IP رقمية.</p>
+                <p>أخيرًا، يستخدم الإنترنت بروتوكولات، أو قواعد اتصال، لإرسال واستقبال البيانات. من أهم هذه البروتوكولات HTTP و HTTPS، اللذان يُستخدمان لفتح صفحات الويب بأمان وكفاءة.</p>
+            </article>
+
+            <!-- أسئلة النص 1 -->
+            <div class="questions-section">
+                <h3><i class="fas fa-question-circle"></i> أسئلة النص 1</h3>
+                
+                <!-- أسئلة اختيار من متعدد -->
+                <div class="mcq-questions">
+                    <h4>اختر الإجابة الصحيحة:</h4>
+                    
+                    <div class="question-card">
+                        <p class="question-text">1. ما هو الوظيفة الرئيسية للموجه (Router)؟</p>
+                        <div class="options">
+                            <label class="option">
+                                <input type="radio" name="q1" value="a">
+                                <span>أ. تخزين صفحات الويب</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q1" value="b">
+                                <span>ب. توجيه حركة البيانات</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q1" value="c">
+                                <span>ج. تحويل أسماء المواقع إلى أرقام</span>
+                            </label>
+                        </div>
+                        <button class="show-answer" data-answer="b">إظهار الإجابة</button>
+                        <div class="answer" id="answer-q1">
+                            <strong>الإجابة الصحيحة:</strong> ب. توجيه حركة البيانات
+                        </div>
+                    </div>
+
+                    <div class="question-card">
+                        <p class="question-text">2. ما هو نظام أسماء النطاقات (DNS)؟</p>
+                        <div class="options">
+                            <label class="option">
+                                <input type="radio" name="q2" value="a">
+                                <span>أ. جهاز يرسل البيانات</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q2" value="b">
+                                <span>ب. نظام يحول أسماء المواقع إلى عناوين IP</span>
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q2" value="c">
+                                <span>ج. نوع من برامج المتصفح</span>
+                            </label>
+                        </div>
+                        <button class="show-answer" data-answer="b">إظهار الإجابة</button>
+                        <div class="answer" id="answer-q2">
+                            <strong>الإجابة الصحيحة:</strong> ب. نظام يحول أسماء المواقع إلى عناوين IP
+                        </div>
+                    </div>
+                </div>
+
+                <!-- أسئلة صح/خطأ -->
+                <div class="tf-questions">
+                    <h4>صح أم خطأ:</h4>
+                    
+                    <div class="question-card">
+                        <p class="question-text">3. الإنترنت يستخدم بروتوكولات مثل HTTP و HTTPS لإرسال البيانات.</p>
+                        <div class="tf-options">
+                            <label class="tf-option">
+                                <input type="radio" name="q3" value="true">
+                                <span class="true-label">صح</span>
+                            </label>
+                            <label class="tf-option">
+                                <input type="radio" name="q3" value="false">
+                                <span class="false-label">خطأ</span>
+                            </label>
+                        </div>
+                        <button class="show-answer" data-answer="true">إظهار الإجابة</button>
+                        <div class="answer" id="answer-q3">
+                            <strong>الإجابة الصحيحة:</strong> صح ✓
+                        </div>
+                    </div>
+
+                    <div class="question-card">
+                        <p class="question-text">4. يمكن لجهازين مختلفين أن يكون لهما نفس عنوان IP.</p>
+                        <div class="tf-options">
+                            <label class="tf-option">
+                                <input type="radio" name="q4" value="true">
+                                <span class="true-label">صح</span>
+                            </label>
+                            <label class="tf-option">
+                                <input type="radio" name="q4" value="false">
+                                <span class="false-label">خطأ</span>
+                            </label>
+                        </div>
+                        <button class="show-answer" data-answer="false">إظهار الإجابة</button>
+                        <div class="answer" id="answer-q4">
+                            <strong>الإجابة الصحيحة:</strong> خطأ ✗ (كل جهاز له عنوان IP فريد)
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- النص 2 -->
+        <section id="text2" class="reading-section">
+            <div class="section-header">
+                <h2><i class="fas fa-shield-alt"></i> النص 2: الأمن السيبراني والمخاطر</h2>
+                <span class="text-meta">مصدر: Unit 1 + مواد إضافية</span>
+            </div>
+            
+            <article class="reading-text">
+                <p>الأمن السيبراني (Cybersecurity) هو ممارسة حماية الأنظمة والشبكات والبيانات من الهجمات الرقمية. في عالم اليوم المتصل، أصبحت التهديدات الإلكترونية أكثر تعقيدًا وخطورة.</p>
+                <p>التهديد (Threat) هو أي خطر محتمل يمكن أن يضر بالنظام. يمكن أن يكون التهديد مخترقًا يحاول سرقة بيانات، أو برنامجًا ضارًا (Malware) يصيب الجهاز. نقطة الضعف (Vulnerability) هي عيب في النظام يمكن استغلاله، مثل كلمات مرور ضعيفة أو برامج غير محدثة.</p>
+                <p>الهجوم (Attack) هو العملية التي يستغل فيها المهاجم نقطة الضعف لتنفيذ التهديد. على سبيل المثال، هجوم التصيد (Phishing) يحاول خداع المستخدمين لكشف معلوماتهم الشخصية عبر رسائل بريد إلكتروني مزيفة.</p>
+                <p>لحماية الأنظمة، يستخدم خبراء الأمن السيبراني أدوات مثل جدران الحماية (Firewalls) التي تراقب وتتحكم في حركة الشبكة، والتشفير (Encryption) الذي يحول البيانات إلى شفرة غير مقروءة.</p>
+                <p>التحديثات (Patches) والتصحيحات الأمنية مهمة لإغلاق الثغرات. بدون تحديث منتظم، يصبح النظام عرضة للاختراق.</p>
+            </article>
+
+            <!-- أسئلة النص 2 (سأضيف 2 فقط كمثال) -->
+            <div class="questions-section">
+                <h3><i class="fas fa-question-circle"></i> أسئلة النص 2</h3>
+                
+                <div class="question-card">
+                    <p class="question-text">5. ما الفرق بين التهديد (Threat) ونقطة الضعف (Vulnerability)؟</p>
+                    <div class="options">
+                        <label class="option">
+                            <input type="radio" name="q5" value="a">
+                            <span>أ. التهديد هو العيب، ونقطة الضعف هي الخطر</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q5" value="b">
+                            <span>ب. التهديد هو الخطر المحتمل، ونقطة الضعف هي العيب الذي يستغله</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q5" value="c">
+                            <span>ج. لا فرق بينهما</span>
+                        </label>
+                    </div>
+                    <button class="show-answer" data-answer="b">إظهار الإجابة</button>
+                    <div class="answer" id="answer-q5">
+                        <strong>الإجابة الصحيحة:</strong> ب. التهديد هو الخطر المحتمل، ونقطة الضعف هي العيب الذي يستغله
+                    </div>
+                </div>
+
+                <div class="question-card">
+                    <p class="question-text">6. جدار الحماية (Firewall) يستخدم لحماية البيانات عن طريق التشفير.</p>
+                    <div class="tf-options">
+                        <label class="tf-option">
+                            <input type="radio" name="q6" value="true">
+                            <span class="true-label">صح</span>
+                        </label>
+                        <label class="tf-option">
+                            <input type="radio" name="q6" value="false">
+                            <span class="false-label">خطأ</span>
+                        </label>
+                    </div>
+                    <button class="show-answer" data-answer="false">إظهار الإجابة</button>
+                    <div class="answer" id="answer-q6">
+                        <strong>الإجابة الصحيحة:</strong> خطأ ✗ (جدار الحماية يتحكم في حركة الشبكة، أما التشفير فهو عملية مختلفة)
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- تذييل الصفحة -->
+        <div class="page-footer">
+            <div class="footer-actions">
+                <button id="checkAll" class="btn btn-primary">
+                    <i class="fas fa-check-double"></i> تصحيح كل الأسئلة
+                </button>
+                <button id="resetAll" class="btn btn-outline">
+                    <i class="fas fa-redo"></i> إعادة تعيين
+                </button>
+                <a href="synonyms.html" class="btn btn-primary">
+                    الانتقال للجزء 2: المرادفات <i class="fas fa-arrow-left"></i>
+                </a>
+            </div>
+            
+            <div class="progress-container">
+                <div class="progress-label">تقدمك في هذا القسم:</div>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="readingProgress"></div>
+                </div>
+                <span class="progress-text" id="progressText">0% مكتمل</span>
+            </div>
+        </div>
+    </main>
+
+    <script type="module">
+        import { initTheme, toggleTheme } from './script.js';
+        
+        document.addEventListener('DOMContentLoaded', () => {
+            try {
+                initTheme();
+                
+                // تبديل السمة
+                const themeToggle = document.getElementById('themeToggle');
+                if (themeToggle) {
+                    themeToggle.addEventListener('click', toggleTheme);
+                }
+            } catch (error) {
+                console.error('Error initializing reading page:', error);
+            }
+            
+            // إظهار الإجابات
+            document.querySelectorAll('.show-answer').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const answerId = `answer-q${this.dataset.answer}`;
+                    const answerElement = this.parentElement.querySelector('.answer');
+                    answerElement.style.display = 'block';
+                    this.style.display = 'none';
+                    
+                    // تحديث التقدم
+                    updateProgress();
+                });
+            });
+            
+            // تصحيح كل الأسئلة
+            document.getElementById('checkAll')?.addEventListener('click', () => {
+                document.querySelectorAll('.show-answer').forEach(btn => btn.click());
+            });
+            
+            // إعادة تعيين
+            document.getElementById('resetAll')?.addEventListener('click', () => {
+                document.querySelectorAll('input[type="radio"]').forEach(input => {
+                    input.checked = false;
+                });
+                document.querySelectorAll('.answer').forEach(ans => {
+                    ans.style.display = 'none';
+                });
+                document.querySelectorAll('.show-answer').forEach(btn => {
+                    btn.style.display = 'inline-block';
+                });
+                updateProgress();
+            });
+            
+            // تحديث شريط التقدم
+            function updateProgress() {
+                const totalQuestions = document.querySelectorAll('.question-card').length;
+                const answered = document.querySelectorAll('.answer[style*="display: block"]').length;
+                const percentage = Math.round((answered / totalQuestions) * 100);
+                
+                document.getElementById('readingProgress').style.width = `${percentage}%`;
+                document.getElementById('progressText').textContent = `${percentage}% مكتمل`;
+            }
+        });
+    </script>
+
+    <style>
+        /* تنسيقات إضافية للصفحة */
+        .page-header {
+            text-align: center;
+            margin: 2rem 0 3rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 2px solid var(--primary-color);
+        }
+        
+        .page-header h1 {
+            font-size: 2.2rem;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+        }
+        
+        .subtitle {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .header-info {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        
+        .info-badge {
+            background: var(--bg-secondary);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .reading-section {
+            background: var(--bg-card);
+            border-radius: var(--radius-lg);
+            padding: 2rem;
+            margin-bottom: 3rem;
+            box-shadow: var(--shadow-md);
+        }
+        
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+        }
+        
+        .section-header h2 {
+            font-size: 1.5rem;
+            color: var(--text-primary);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .text-meta {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            background: var(--bg-secondary);
+            padding: 0.3rem 0.8rem;
+            border-radius: 12px;
+        }
+        
+        .reading-text {
+            line-height: 1.8;
+            margin-bottom: 2rem;
+            text-align: justify;
+        }
+        
+        .reading-text p {
+            margin-bottom: 1rem;
+        }
+        
+        .questions-section {
+            margin-top: 2rem;
+        }
+        
+        .questions-section h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+            color: var(--text-primary);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .questions-section h4 {
+            font-size: 1.1rem;
+            margin: 1.5rem 0 1rem;
+            color: var(--secondary-color);
+        }
+        
+        .question-card {
+            background: var(--bg-secondary);
+            border-radius: var(--radius-md);
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            border-right: 4px solid var(--primary-color);
+        }
+        
+        .question-text {
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+        
+        .options, .tf-options {
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+            margin-bottom: 1rem;
+        }
+        
+        .option, .tf-option {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            cursor: pointer;
+            padding: 0.5rem;
+            border-radius: 8px;
+            transition: background 0.2s;
+        }
+        
+        .option:hover, .tf-option:hover {
+            background: rgba(0,0,0,0.05);
+        }
+        
+        .true-label, .false-label {
+            padding: 0.3rem 1rem;
+            border-radius: 6px;
+            font-weight: 600;
+        }
+        
+        .true-label {
+            color: var(--success-color);
+            border: 1px solid var(--success-color);
+        }
+        
+        .false-label {
+            color: var(--danger-color);
+            border: 1px solid var(--danger-color);
+        }
+        
+        .show-answer {
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 0.6rem 1.2rem;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        
+        .show-answer:hover {
+            background: var(--secondary-color);
+        }
+        
+        .answer {
+            margin-top: 1rem;
+            padding: 1rem;
+            background: rgba(46, 204, 113, 0.1);
+            border-radius: 8px;
+            border-right: 4px solid var(--success-color);
+            display: none;
+        }
+        
+        .page-footer {
+            margin: 3rem 0;
+            text-align: center;
+        }
+        
+        .footer-actions {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+        }
+        
+        .progress-container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .progress-label {
+            margin-bottom: 0.5rem;
+            color: var(--text-secondary);
+        }
+        
+        .progress-bar {
+            height: 10px;
+            background: var(--bg-secondary);
+            border-radius: 5px;
+            overflow: hidden;
+            margin-bottom: 0.5rem;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+            width: 0%;
+            transition: width 0.5s;
+        }
+        
+        .progress-text {
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+        
+        @media (max-width: 768px) {
+            .section-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.5rem;
+            }
+            
+            .header-info {
+                justify-content: flex-start;
+            }
+            
+            .footer-actions {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .footer-actions .btn {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+    </style>
+    
+    <!-- Language Integration -->
+    <script type="module" src="language-integration.js"></script>
+    <script type="module" src="script.js"></script>
+</body>
+</html>

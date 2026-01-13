@@ -1,0 +1,143 @@
+{
+  "Threat": {
+    "english": "A potential danger that could harm a system or network",
+    "arabic": "تهديد محتمل يمكن أن يضر بنظام أو شبكة",
+    "example": "A hacker is a cyber threat.",
+    "exampleAr": "القرصان هو تهديد سيبراني.",
+    "context": "cybersecurity"
+  },
+  "Vulnerability": {
+    "english": "A weakness in a system that can be exploited by attackers",
+    "arabic": "نقطة ضعف في النظام يمكن استغلالها من قبل المهاجمين",
+    "example": "Weak passwords create a vulnerability.",
+    "exampleAr": "كلمات المرور الضعيفة تخلق نقطة ضعف.",
+    "context": "cybersecurity"
+  },
+  "Attack": {
+    "english": "An attempt to damage or gain unauthorized access to a system",
+    "arabic": "محاولة لإلحاق الضرر أو الحصول على وصول غير مصرح به إلى نظام",
+    "example": "The firewall blocked the attack.",
+    "exampleAr": "جدار الحماية منع الهجوم.",
+    "context": "cybersecurity"
+  },
+  "Hardware": {
+    "english": "The physical parts of a computer system",
+    "arabic": "الأجزاء المادية لنظام الحاسوب",
+    "example": "The hardware includes the keyboard and monitor.",
+    "exampleAr": "الأجهزة تشمل لوحة المفاتيح والشاشة.",
+    "context": "computing"
+  },
+  "Software": {
+    "english": "Programs and applications that control a computer",
+    "arabic": "البرامج والتطبيقات التي تتحكم في الحاسوب",
+    "example": "Software tells the computer what to do.",
+    "exampleAr": "البرمجيات تخبر الحاسوب بما يجب فعله.",
+    "context": "computing"
+  },
+  "Artificial Intelligence (AI)": {
+    "english": "The ability of machines to perform tasks that require human intelligence",
+    "arabic": "قدرة الآلات على أداء المهام التي تتطلب ذكاء بشري",
+    "example": "AI is used in self-driving cars and virtual assistants.",
+    "exampleAr": "يستخدم الذكاء الاصطناعي في السيارات ذاتية القيادة والمساعدات الافتراضية.",
+    "context": "ai"
+  },
+  "Cybersecurity": {
+    "english": "The practice of protecting computer systems and networks from digital attacks",
+    "arabic": "ممارسة حماية أنظمة الحاسوب والشبكات من الهجمات الرقمية",
+    "example": "Cybersecurity helps prevent unauthorized access to data.",
+    "exampleAr": "الأمن السيبراني يساعد في منع الوصول غير المصرح به إلى البيانات.",
+    "context": "cybersecurity"
+  },
+  "Data Science": {
+    "english": "The study of data to extract useful information and insights",
+    "arabic": "دراسة البيانات لاستخراج المعلومات والرؤى المفيدة",
+    "example": "Data science combines statistics, programming, and analysis.",
+    "exampleAr": "علم البيانات يجمع بين الإحصاء والبرمجة والتحليل.",
+    "context": "data"
+  },
+  "Machine Learning": {
+    "english": "A branch of AI that allows systems to learn from data",
+    "arabic": "فرع من الذكاء الاصطناعي يسمح للأنظمة بالتعلم من البيانات",
+    "example": "Machine learning models improve automatically over time.",
+    "exampleAr": "نماذج التعلم الآلي تتحسن تلقائيًا مع مرور الوقت.",
+    "context": "ai"
+  },
+  "Encryption": {
+    "english": "The process of converting information into code to prevent unauthorized access",
+    "arabic": "عملية تحويل المعلومات إلى رمز لمنع الوصول غير المصرح به",
+    "example": "Encryption protects sensitive user data.",
+    "exampleAr": "التشفير يحمي بيانات المستخدم الحساسة.",
+    "context": "cybersecurity"
+  },
+  "Big Data": {
+    "english": "Extremely large data sets that are analyzed for patterns and trends",
+    "arabic": "مجموعات بيانات ضخمة للغاية يتم تحليلها للبحث عن الأنماط والاتجاهات",
+    "example": "Big data helps companies make better decisions.",
+    "exampleAr": "البيانات الضخمة تساعد الشركات على اتخاذ قرارات أفضل.",
+    "context": "data"
+  },
+  "Firewall": {
+    "english": "A security system that monitors and controls network traffic",
+    "arabic": "نظام أمني يراقب ويسيطر على حركة المرور على الشبكة",
+    "example": "The firewall blocked suspicious connections.",
+    "exampleAr": "جدار الحماية منع الاتصالات المشبوهة.",
+    "context": "cybersecurity"
+  },
+  "Router": {
+    "english": "A device that directs data traffic between networks",
+    "arabic": "جهاز يوجه حركة البيانات بين الشبكات",
+    "example": "The router decides the best path for data packets.",
+    "exampleAr": "الموجه يقرر أفضل مسار لحزم البيانات.",
+    "context": "networking"
+  },
+  "Server": {
+    "english": "A powerful computer that stores and provides data or services",
+    "arabic": "حاسوب قوي يخزن ويوفر البيانات أو الخدمات",
+    "example": "The server hosts the website files.",
+    "exampleAr": "الخادم يستضيف ملفات الموقع.",
+    "context": "networking"
+  },
+  "Browser": {
+    "english": "A software application used to access and view websites",
+    "arabic": "تطبيق برمجي يُستخدم للوصول إلى المواقع وعرضها",
+    "example": "Chrome and Firefox are popular browsers.",
+    "exampleAr": "Chrome و Firefox متصفحان شائعان.",
+    "context": "computing"
+  },
+  "DNS": {
+    "english": "Domain Name System - converts website names to IP addresses",
+    "arabic": "نظام أسماء النطاقات - يحول أسماء المواقع إلى عناوين IP",
+    "example": "DNS translates www.google.com to an IP address.",
+    "exampleAr": "DNS يحول www.google.com إلى عنوان IP.",
+    "context": "networking"
+  },
+  "IP Address": {
+    "english": "A unique numerical identifier for devices on a network",
+    "arabic": "معرف رقمي فريد للأجهزة على الشبكة",
+    "example": "Every device has a unique IP address.",
+    "exampleAr": "كل جهاز له عنوان IP فريد.",
+    "context": "networking"
+  },
+  "Packet": {
+    "english": "A small unit of data sent over a network",
+    "arabic": "وحدة صغيرة من البيانات يتم إرسالها عبر الشبكة",
+    "example": "Data is sent in packets across the internet.",
+    "exampleAr": "يتم إرسال البيانات في حزم عبر الإنترنت.",
+    "context": "networking"
+  },
+  "Protocol": {
+    "english": "A set of rules for communication between devices",
+    "arabic": "مجموعة من القواعد للاتصال بين الأجهزة",
+    "example": "HTTP and HTTPS are communication protocols.",
+    "exampleAr": "HTTP و HTTPS هما بروتوكولات اتصال.",
+    "context": "networking"
+  },
+  "ISP": {
+    "english": "Internet Service Provider - a company that provides internet access",
+    "arabic": "مزود خدمة الإنترنت - شركة توفر الوصول إلى الإنترنت",
+    "example": "Vodafone and Orange are ISPs.",
+    "exampleAr": "فودافون وأورانج مزودا خدمة إنترنت.",
+    "context": "networking"
+  }
+}
+

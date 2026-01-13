@@ -1,0 +1,184 @@
+{
+  "terms": [
+    {
+      "term": "Artificial Intelligence (AI)",
+      "definition": "The ability of machines to perform tasks that require human intelligence.",
+      "example": "AI is used in self-driving cars and virtual assistants.",
+      "synonyms": ["Machine Intelligence", "Cognitive Computing", "Smart Systems"],
+      "category": "ai",
+      "unit": "unit1",
+      "difficulty": "medium"
+    },
+    {
+      "term": "Cybersecurity",
+      "definition": "The practice of protecting computer systems and networks from digital attacks.",
+      "example": "Cybersecurity helps prevent unauthorized access to data.",
+      "synonyms": ["Information Security", "Cyber Protection", "Network Security"],
+      "category": "cybersecurity",
+      "unit": "unit1",
+      "difficulty": "medium"
+    },
+    {
+      "term": "Data Science",
+      "definition": "The study of data to extract useful information and insights.",
+      "example": "Data science combines statistics, programming, and analysis.",
+      "synonyms": ["Analytics", "Data Analysis", "Information Science"],
+      "category": "ai",
+      "unit": "unit1",
+      "difficulty": "medium"
+    },
+    {
+      "term": "Machine Learning",
+      "definition": "A branch of AI that allows systems to learn from data.",
+      "example": "Machine learning models improve automatically over time.",
+      "synonyms": ["ML", "Predictive Analytics", "Pattern Recognition"],
+      "category": "ai",
+      "unit": "unit1",
+      "difficulty": "hard"
+    },
+    {
+      "term": "Encryption",
+      "definition": "The process of converting information into code to prevent unauthorized access.",
+      "example": "Encryption protects sensitive user data.",
+      "synonyms": ["Encoding", "Cipher", "Scrambling"],
+      "category": "cybersecurity",
+      "unit": "unit1",
+      "difficulty": "medium"
+    },
+    {
+      "term": "Big Data",
+      "definition": "Extremely large data sets that are analyzed for patterns and trends.",
+      "example": "Big data is used to predict customer behavior.",
+      "synonyms": ["Massive Data", "Data Analytics", "Large-scale Data"],
+      "category": "ai",
+      "unit": "unit1",
+      "difficulty": "medium"
+    },
+    {
+      "term": "Algorithm",
+      "definition": "A series of steps used by a computer to solve a problem.",
+      "example": "Recommendation systems use algorithms to suggest content.",
+      "synonyms": ["Procedure", "Process", "Method"],
+      "category": "ai",
+      "unit": "unit1",
+      "difficulty": "medium"
+    },
+    {
+      "term": "Cloud Computing",
+      "definition": "The use of remote servers on the Internet to store and process data.",
+      "example": "Many companies now use cloud computing for flexibility.",
+      "synonyms": ["Online Storage", "Remote Servers", "Internet-based Computing"],
+      "category": "software",
+      "unit": "unit1",
+      "difficulty": "medium"
+    },
+    {
+      "term": "Privacy",
+      "definition": "The right to keep personal information secure and confidential.",
+      "example": "Privacy laws regulate how companies use customer data.",
+      "synonyms": ["Confidentiality", "Secrecy", "Data Protection"],
+      "category": "cybersecurity",
+      "unit": "unit1",
+      "difficulty": "easy"
+    },
+    {
+      "term": "Ethics",
+      "definition": "Principles that define right and wrong behavior.",
+      "example": "Ethics in AI ensures systems are fair and unbiased.",
+      "synonyms": ["Morality", "Principles", "Standards"],
+      "category": "ai",
+      "unit": "unit1",
+      "difficulty": "easy"
+    },
+    {
+      "term": "Hardware",
+      "definition": "The physical parts of a computer system.",
+      "example": "The hardware includes the keyboard, monitor, and CPU.",
+      "synonyms": ["Equipment", "Components", "Devices"],
+      "category": "hardware",
+      "unit": "unit2",
+      "difficulty": "easy"
+    },
+    {
+      "term": "Software",
+      "definition": "Programs and applications that control computer hardware.",
+      "example": "Software tells the computer what to do.",
+      "synonyms": ["Program", "Application", "App"],
+      "category": "software",
+      "unit": "unit2",
+      "difficulty": "easy"
+    },
+    {
+      "term": "CPU",
+      "definition": "The main chip that processes information in a computer.",
+      "example": "The CPU controls all computer operations.",
+      "synonyms": ["Processor", "Central Unit", "Microprocessor"],
+      "category": "hardware",
+      "unit": "unit2",
+      "difficulty": "easy"
+    },
+    {
+      "term": "Operating System (OS)",
+      "definition": "Software that manages computer hardware and runs applications.",
+      "example": "Windows is a popular operating system.",
+      "synonyms": ["OS", "System Software", "Platform"],
+      "category": "software",
+      "unit": "unit2",
+      "difficulty": "easy"
+    },
+    {
+      "term": "Network",
+      "definition": "A group of connected computers that can share data.",
+      "example": "Your computer joins a network to share files.",
+      "synonyms": ["System", "Connection", "Web"],
+      "category": "networking",
+      "unit": "unit2",
+      "difficulty": "easy"
+    },
+    {
+      "term": "Router",
+      "definition": "A device that directs data traffic on a network.",
+      "example": "A router sends packets to the right destination.",
+      "synonyms": ["Network Device", "Data Guide", "Switch"],
+      "category": "networking",
+      "unit": "unit2",
+      "difficulty": "medium"
+    },
+    {
+      "term": "IP Address",
+      "definition": "A unique number for each device on the Internet.",
+      "example": "Every computer has an IP address.",
+      "synonyms": ["Online ID", "Digital Address", "Network Address"],
+      "category": "networking",
+      "unit": "unit2",
+      "difficulty": "medium"
+    },
+    {
+      "term": "Server",
+      "definition": "A computer that stores and provides data to other computers.",
+      "example": "A server sends web pages to users.",
+      "synonyms": ["Host", "Data Provider", "Mainframe"],
+      "category": "networking",
+      "unit": "unit2",
+      "difficulty": "medium"
+    },
+    {
+      "term": "Database",
+      "definition": "A structured system for storing and organizing information.",
+      "example": "Customer records are saved in a secure database.",
+      "synonyms": ["Repository", "Data Bank", "Storage System"],
+      "category": "software",
+      "unit": "unit2",
+      "difficulty": "medium"
+    },
+    {
+      "term": "Firewall",
+      "definition": "A security system that monitors and controls network traffic.",
+      "example": "Firewall prevents unauthorized access from the internet.",
+      "synonyms": ["Barrier", "Security Filter", "Guard"],
+      "category": "cybersecurity",
+      "unit": "unit1",
+      "difficulty": "medium"
+    }
+  ]
+}

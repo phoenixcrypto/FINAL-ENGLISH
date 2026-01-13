@@ -1,0 +1,2577 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam Simulator - IT English Review</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Language System -->
+    <script src="language-system.js"></script>
+    <script src="content-library.js"></script>
+    <script src="progress-tracker.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-brand">
+                <i class="fas fa-arrow-left"></i> <span class="i18n-text" data-i18n="common.back">Back to Home</span>
+            </a>
+            <div class="nav-menu">
+                <span class="nav-status" id="examStatus" data-i18n="exam.examScreen.currentSection">Exam Mode</span>
+                <div class="language-switcher" id="examLangSwitcher">
+                    <button id="langSwitcherBtn" class="lang-switcher-btn" aria-label="Switch Language Mode" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-language"></i>
+                        <span id="currentModeDisplay">Exam Mode</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div id="langSwitcherDropdown" class="lang-switcher-dropdown" role="menu">
+                        <div class="lang-mode-option active" data-mode="exam" role="menuitem">
+                            <span class="lang-mode-name">Exam Mode</span>
+                            <span class="lang-mode-desc">Pure English - Real exam simulation</span>
+                        </div>
+                        <div class="lang-mode-option" data-mode="study" role="menuitem">
+                            <span class="lang-mode-name">Study Mode</span>
+                            <span class="lang-mode-desc">English with Arabic help tooltips</span>
+                        </div>
+                        <div class="lang-mode-option" data-mode="beginner" role="menuitem">
+                            <span class="lang-mode-name">Beginner Mode</span>
+                            <span class="lang-mode-desc">Bilingual interface - Arabic primary</span>
+                        </div>
+                    </div>
+                </div>
+                <button id="themeToggle" class="icon-btn" aria-label="Toggle Theme"><i class="fas fa-moon"></i></button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+        <!-- شاشة البدء -->
+        <section id="startScreen" class="exam-section">
+            <div class="start-container">
+                <div class="start-header">
+                    <h1><i class="fas fa-graduation-cap"></i> <span class="i18n-text" data-i18n="exam.startScreen.title">Full Exam Simulation</span></h1>
+                    <p class="subtitle" data-i18n="exam.startScreen.subtitle">Test your knowledge of all IT English exam sections</p>
+                </div>
+                
+                <div class="exam-info">
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="info-content">
+                            <h3 data-i18n="exam.startScreen.totalTime">Total Time</h3>
+                            <p class="info-value">90 <span class="i18n-text" data-i18n="exam.startScreen.minutes">minutes</span></p>
+                            <p class="info-desc" data-i18n="exam.startScreen.perSection">Approximately 20 minutes per section</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-question-circle"></i>
+                        </div>
+                        <div class="info-content">
+                            <h3 data-i18n="exam.startScreen.totalQuestions">Total Questions</h3>
+                            <p class="info-value">50 <span class="i18n-text" data-i18n="exam.startScreen.questions">questions</span></p>
+                            <p class="info-desc" data-i18n="exam.startScreen.perSectionQuestions">10 questions per section</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-tasks"></i>
+                        </div>
+                        <div class="info-content">
+                            <h3 data-i18n="exam.startScreen.sections">Exam Sections</h3>
+                            <p class="info-value">5 <span class="i18n-text" data-i18n="exam.startScreen.sectionCount">sections</span></p>
+                            <p class="info-desc">Reading, Synonyms, Technical Terms, Grammar, Writing</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="info-content">
+                            <h3 data-i18n="exam.startScreen.passingScore">Passing Score</h3>
+                            <p class="info-value">60<span class="i18n-text" data-i18n="exam.startScreen.percent">%</span></p>
+                            <p class="info-desc" data-i18n="exam.startScreen.correctAnswers">30 correct answers out of 50</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="exam-sections">
+                    <h2><i class="fas fa-list-ol"></i> أقسام الامتحان</h2>
+                    <div class="sections-list">
+                        <div class="section-item">
+                            <div class="section-number">1</div>
+                            <div class="section-info">
+                                <h4>فهم المقروء (Reading)</h4>
+                                <p>نص تقني + 10 أسئلة (5 اختياري، 5 صح/خطأ)</p>
+                            </div>
+                            <div class="section-time">20 دقيقة</div>
+                        </div>
+                        
+                        <div class="section-item">
+                            <div class="section-number">2</div>
+                            <div class="section-info">
+                                <h4>المرادفات (Synonyms)</h4>
+                                <p>10 أسئلة اختيار مرادف للكلمة</p>
+                            </div>
+                            <div class="section-time">15 دقيقة</div>
+                        </div>
+                        
+                        <div class="section-item">
+                            <div class="section-number">3</div>
+                            <div class="section-info">
+                                <h4>المصطلحات التقنية</h4>
+                                <p>10 أسئلة كتابة المصطلح المناسب للتعريف</p>
+                            </div>
+                            <div class="section-time">15 دقيقة</div>
+                        </div>
+                        
+                        <div class="section-item">
+                            <div class="section-number">4</div>
+                            <div class="section-info">
+                                <h4>القواعد (Grammar)</h4>
+                                <p>10 أسئلة على الأزمنة والأسماء</p>
+                            </div>
+                            <div class="section-time">15 دقيقة</div>
+                        </div>
+                        
+                        <div class="section-item">
+                            <div class="section-number">5</div>
+                            <div class="section-info">
+                                <h4>الكتابة (Writing)</h4>
+                                <p>كتابة براجراف من 5-6 جمل</p>
+                            </div>
+                            <div class="section-time">25 دقيقة</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="exam-instructions">
+                    <h3><i class="fas fa-info-circle"></i> <span class="i18n-text" data-i18n="exam.startScreen.instructions">Exam Instructions</span></h3>
+                    <ul>
+                        <li data-i18n="exam.startScreen.instruction1">The exam is timed, and you cannot return to previous questions.</li>
+                        <li data-i18n="exam.startScreen.instruction2">You must complete each section within the allocated time.</li>
+                        <li data-i18n="exam.startScreen.instruction3">The exam will be automatically graded upon completion.</li>
+                        <li data-i18n="exam.startScreen.instruction4">Try to use technical terms in the writing section.</li>
+                        <li data-i18n="exam.startScreen.instruction5">You can save and download results at the end.</li>
+                    </ul>
+                </div>
+                
+                <div class="start-actions">
+                    <button id="startExam" class="btn btn-primary btn-lg" data-i18n="exam.startScreen.startButton">
+                        <i class="fas fa-play-circle"></i> <span class="i18n-text">Start Exam</span>
+                    </button>
+                    <button id="loadPrevious" class="btn btn-outline btn-lg" data-i18n="exam.startScreen.loadPrevious">
+                        <i class="fas fa-history"></i> <span class="i18n-text">Load Previous Attempt</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- شاشة الامتحان -->
+        <section id="examScreen" class="exam-section" style="display: none;">
+            <div class="exam-header">
+                <div class="exam-progress">
+                    <div class="progress-info">
+                        <h2 id="currentSection" data-i18n="exam.examScreen.currentSection">Section 1: Reading</h2>
+                        <p class="progress-text" id="progressText" data-i18n="exam.examScreen.question">Question 1 of 10</p>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="sectionProgress"></div>
+                    </div>
+                </div>
+                
+                <div class="exam-timer">
+                    <div class="timer-container">
+                        <div class="timer-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="timer-display">
+                            <div class="timer-label" data-i18n="exam.examScreen.timeRemaining">Time Remaining</div>
+                            <div class="timer-value" id="examTimer">20:00</div>
+                        </div>
+                    </div>
+                    <div class="section-time">
+                        <span id="timePerQuestion">02:00</span> <span class="i18n-text" data-i18n="exam.examScreen.perQuestion">per question</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="exam-content">
+                <!-- محتوى الامتحان سيتم توليده ديناميكيًا -->
+                <div id="examQuestions"></div>
+                
+                <!-- قسم الكتابة -->
+                <div id="writingSection" style="display: none;">
+                    <div class="writing-instructions">
+                        <h3><i class="fas fa-pen-fancy"></i> قسم الكتابة</h3>
+                        <p>اكتب براجراف من 5-6 جمل عن الموضوع التالي:</p>
+                        <div class="writing-topic" id="writingTopic">
+                            <p><strong>الموضوع:</strong> اشرح العلاقة بين التهديدات (Threats) ونقاط الضعف (Vulnerabilities) والهجمات (Attacks) في الأمن السيبراني.</p>
+                            <p><strong>المتطلبات:</strong> استخدم 3 مصطلحات تقنية على الأقل، واكتب 5-6 جمل مترابطة.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="writing-area">
+                        <textarea id="examWriting" placeholder="اكتب براجرافك هنا..." rows="10"></textarea>
+                        
+                        <div class="writing-tools">
+                            <div class="word-counter">
+                                <i class="fas fa-ruler"></i>
+                                <span id="writingWordCount">0</span> كلمة
+                            </div>
+                            <div class="term-counter">
+                                <i class="fas fa-book"></i>
+                                <span id="writingTermCount">0</span> مصطلحات
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="writing-suggestions">
+                        <h4><i class="fas fa-lightbulb"></i> اقتراحات للمصطلحات:</h4>
+                        <div class="suggestions-list">
+                            <span class="suggestion">Threat</span>
+                            <span class="suggestion">Vulnerability</span>
+                            <span class="suggestion">Attack</span>
+                            <span class="suggestion">Cybersecurity</span>
+                            <span class="suggestion">Firewall</span>
+                            <span class="suggestion">Encryption</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="exam-controls">
+                <div class="controls-left">
+                    <button id="prevQuestion" class="control-btn" disabled>
+                        <i class="fas fa-arrow-right"></i> السابق
+                    </button>
+                    <button id="nextQuestion" class="control-btn">
+                        التالي <i class="fas fa-arrow-left"></i>
+                    </button>
+                </div>
+                
+                <div class="controls-center">
+                    <div class="question-nav">
+                        <button class="nav-btn" data-question="1">1</button>
+                        <button class="nav-btn" data-question="2">2</button>
+                        <button class="nav-btn" data-question="3">3</button>
+                        <button class="nav-btn" data-question="4">4</button>
+                        <button class="nav-btn" data-question="5">5</button>
+                        <span class="nav-dots">...</span>
+                        <button class="nav-btn" data-question="50">50</button>
+                    </div>
+                </div>
+                
+                <div class="controls-right">
+                    <button id="flagQuestion" class="control-btn flag-btn" data-i18n="exam.examScreen.flagQuestion">
+                        <i class="far fa-flag"></i> <span class="i18n-text">Flag Question</span>
+                    </button>
+                    <button id="submitSection" class="control-btn submit-btn" data-i18n="exam.examScreen.endSection">
+                        <span class="i18n-text">End Section</span> <i class="fas fa-check"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="exam-footer">
+                <div class="footer-info">
+                    <div class="info-item">
+                        <span class="info-label">الأسئلة المجابة:</span>
+                        <span class="info-value" id="answeredCount">0</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">الأسئلة المعلّمة:</span>
+                        <span class="info-value" id="flaggedCount">0</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">القسم الحالي:</span>
+                        <span class="info-value" id="currentSectionNumber">1/5</span>
+                    </div>
+                </div>
+                
+                <div class="footer-warning">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <span>انتبه! لا يمكنك العودة للقسم بعد إنهائه.</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- شاشة النتائج -->
+        <section id="resultsScreen" class="exam-section" style="display: none;">
+            <div class="results-container">
+                <div class="results-header">
+                    <h1><i class="fas fa-trophy"></i> نتائج الامتحان</h1>
+                    <p class="subtitle">أداؤك في امتحان المحاكاة الكامل</p>
+                    
+                    <div class="overall-score">
+                        <div class="score-circle-large">
+                            <svg width="150" height="150">
+                                <circle cx="75" cy="75" r="65" stroke="#e0e0e0" stroke-width="10" fill="none"></circle>
+                                <circle cx="75" cy="75" r="65" stroke="#4cc9f0" stroke-width="10" fill="none" 
+                                        stroke-dasharray="408.4" stroke-dashoffset="163.36" stroke-linecap="round" 
+                                        id="finalScoreCircle"></circle>
+                            </svg>
+                            <div class="score-text-large" id="finalOverallScore">70%</div>
+                        </div>
+                        <div class="score-info">
+                            <h2 id="resultTitle">جيد جدًا!</h2>
+                            <p id="resultMessage">أنت على الطريق الصحيح، لكن تحتاج إلى تحسين بعض النقاط.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="results-details">
+                    <h3><i class="fas fa-chart-bar"></i> النتائج التفصيلية</h3>
+                    
+                    <div class="section-results">
+                        <!-- نتائج القسم 1 -->
+                        <div class="section-result-card">
+                            <div class="section-result-header">
+                                <div class="section-name">
+                                    <span class="section-number">1</span>
+                                    <h4>فهم المقروء</h4>
+                                </div>
+                                <div class="section-score">
+                                    <span class="score-value" id="readingScore">7/10</span>
+                                    <span class="score-percent" id="readingPercent">70%</span>
+                                </div>
+                            </div>
+                            <div class="section-progress">
+                                <div class="progress-bar">
+                                    <div class="progress-fill" id="readingProgressBar" style="width: 70%;"></div>
+                                </div>
+                            </div>
+                            <div class="section-feedback" id="readingFeedback">
+                                تحتاج إلى تحسين مهارات الفهم السريع للنصوص التقنية.
+                            </div>
+                        </div>
+                        
+                        <!-- نتائج القسم 2 -->
+                        <div class="section-result-card">
+                            <div class="section-result-header">
+                                <div class="section-name">
+                                    <span class="section-number">2</span>
+                                    <h4>المرادفات</h4>
+                                </div>
+                                <div class="section-score">
+                                    <span class="score-value" id="synonymsScore">8/10</span>
+                                    <span class="score-percent" id="synonymsPercent">80%</span>
+                                </div>
+                            </div>
+                            <div class="section-progress">
+                                <div class="progress-bar">
+                                    <div class="progress-fill" id="synonymsProgressBar" style="width: 80%;"></div>
+                                </div>
+                            </div>
+                            <div class="section-feedback" id="synonymsFeedback">
+                                معرفة جيدة بالمرادفات، استمر في المراجعة.
+                            </div>
+                        </div>
+                        
+                        <!-- نتائج القسم 3 -->
+                        <div class="section-result-card">
+                            <div class="section-result-header">
+                                <div class="section-name">
+                                    <span class="section-number">3</span>
+                                    <h4>المصطلحات التقنية</h4>
+                                </div>
+                                <div class="section-score">
+                                    <span class="score-value" id="termsScore">6/10</span>
+                                    <span class="score-percent" id="termsPercent">60%</span>
+                                </div>
+                            </div>
+                            <div class="section-progress">
+                                <div class="progress-bar">
+                                    <div class="progress-fill" id="termsProgressBar" style="width: 60%;"></div>
+                                </div>
+                            </div>
+                            <div class="section-feedback" id="termsFeedback">
+                                تحتاج إلى مراجعة المصطلحات التقنية والتعريفات.
+                            </div>
+                        </div>
+                        
+                        <!-- نتائج القسم 4 -->
+                        <div class="section-result-card">
+                            <div class="section-result-header">
+                                <div class="section-name">
+                                    <span class="section-number">4</span>
+                                    <h4>القواعد</h4>
+                                </div>
+                                <div class="section-score">
+                                    <span class="score-value" id="grammarScore">9/10</span>
+                                    <span class="score-percent" id="grammarPercent">90%</span>
+                                </div>
+                            </div>
+                            <div class="section-progress">
+                                <div class="progress-bar">
+                                    <div class="progress-fill" id="grammarProgressBar" style="width: 90%;"></div>
+                                </div>
+                            </div>
+                            <div class="section-feedback" id="grammarFeedback">
+                                ممتاز! لديك فهم قوي للقواعد الإنجليزية.
+                            </div>
+                        </div>
+                        
+                        <!-- نتائج القسم 5 -->
+                        <div class="section-result-card">
+                            <div class="section-result-header">
+                                <div class="section-name">
+                                    <span class="section-number">5</span>
+                                    <h4>الكتابة</h4>
+                                </div>
+                                <div class="section-score">
+                                    <span class="score-value" id="writingScore">8/10</span>
+                                    <span class="score-percent" id="writingPercent">80%</span>
+                                </div>
+                            </div>
+                            <div class="section-progress">
+                                <div class="progress-bar">
+                                    <div class="progress-fill" id="writingProgressBar" style="width: 80%;"></div>
+                                </div>
+                            </div>
+                            <div class="section-feedback" id="writingFeedback">
+                                كتابة جيدة، حاول استخدام المزيد من المصطلحات التقنية.
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- ملخص النتائج -->
+                    <div class="results-summary">
+                        <h3><i class="fas fa-clipboard-check"></i> ملخص النتائج</h3>
+                        <div class="summary-grid">
+                            <div class="summary-card correct-card">
+                                <div class="summary-icon">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <div class="summary-content">
+                                    <h4 id="correctAnswersCount">38</h4>
+                                    <p>إجابات صحيحة</p>
+                                </div>
+                            </div>
+                            
+                            <div class="summary-card wrong-card">
+                                <div class="summary-icon">
+                                    <i class="fas fa-times-circle"></i>
+                                </div>
+                                <div class="summary-content">
+                                    <h4 id="wrongAnswersCount">12</h4>
+                                    <p>إجابات خاطئة</p>
+                                </div>
+                            </div>
+                            
+                            <div class="summary-card time-card">
+                                <div class="summary-icon">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                                <div class="summary-content">
+                                    <h4 id="timeTaken">78:30</h4>
+                                    <p>الوقت المستغرق</p>
+                                </div>
+                            </div>
+                            
+                            <div class="summary-card rank-card">
+                                <div class="summary-icon">
+                                    <i class="fas fa-medal"></i>
+                                </div>
+                                <div class="summary-content">
+                                    <h4 id="examRank">B+</h4>
+                                    <p>التقدير</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- التحليل والنصائح -->
+                    <div class="analysis-section">
+                        <h3><i class="fas fa-chart-line"></i> تحليل الأداء</h3>
+                        <div class="analysis-content">
+                            <div class="strengths">
+                                <h4><i class="fas fa-thumbs-up"></i> نقاط القوة</h4>
+                                <ul id="strengthsList">
+                                    <li>ممتاز في القواعد الإنجليزية</li>
+                                    <li>معرفة جيدة بالمرادفات</li>
+                                    <li>مهارات كتابية جيدة</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="improvements">
+                                <h4><i class="fas fa-tools"></i> مجالات التحسين</h4>
+                                <ul id="improvementsList">
+                                    <li>تحسين فهم النصوص التقنية</li>
+                                    <li>زيادة حفظ المصطلحات التقنية</li>
+                                    <li>السرعة في الإجابة على الأسئلة</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="recommendations">
+                                <h4><i class="fas fa-lightbulb"></i> توصيات للمراجعة</h4>
+                                <ul id="recommendationsList">
+                                    <li>راجع جدول المصطلحات التقنية</li>
+                                    <li>تمرن على نصوص قرائية إضافية</li>
+                                    <li>أكتب براجرافات يوميًا</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- مراجعة الأخطاء -->
+                    <div class="review-section">
+                        <h3><i class="fas fa-search"></i> مراجعة الأخطاء</h3>
+                        <div class="review-questions" id="reviewQuestions">
+                            <!-- سيتم ملؤها بالأسئلة الخاطئة -->
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="results-actions">
+                    <button id="retakeExam" class="btn btn-primary">
+                        <i class="fas fa-redo"></i> إعادة الامتحان
+                    </button>
+                    <button id="downloadResults" class="btn btn-outline">
+                        <i class="fas fa-download"></i> تحميل النتائج
+                    </button>
+                    <button id="shareResults" class="btn btn-outline">
+                        <i class="fas fa-share-alt"></i> مشاركة النتائج
+                    </button>
+                    <a href="index.html" class="btn btn-outline">
+                        <i class="fas fa-home"></i> العودة للرئيسية
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script type="module">
+        import { initTheme, toggleTheme } from './script.js';
+
+        // بيانات الامتحان
+        const examData = {
+            sections: [
+                {
+                    id: 1,
+                    name: "فهم المقروء",
+                    time: 20, // دقائق
+                    questions: [
+                        {
+                            id: 1,
+                            type: "reading",
+                            text: "اقرأ النص التالي ثم أجب على الأسئلة:",
+                            content: `The Internet is the largest network in the world. It connects millions of computers so that people can communicate, share information, and access data from anywhere. When you connect to the Internet, your device sends data in the form of packets. These packets move through routers - special devices that decide the best path for data to travel. Every device connected to the Internet has an IP address, which is like a digital home address.`,
+                            questions: [
+                                {
+                                    type: "mcq",
+                                    text: "What is the main function of a router?",
+                                    options: [
+                                        "Storing web pages",
+                                        "Directing data traffic",
+                                        "Translating website names",
+                                        "Protecting from viruses"
+                                    ],
+                                    correct: 1,
+                                    explanation: "Routers direct data traffic by choosing the best path for packets."
+                                },
+                                {
+                                    type: "tf",
+                                    text: "Every device on the Internet has a unique IP address.",
+                                    correct: true,
+                                    explanation: "True. Each device has a unique IP address for identification."
+                                }
+                            ]
+                        },
+                        // يمكن إضافة المزيد من الأسئلة هنا
+                    ]
+                },
+                {
+                    id: 2,
+                    name: "المرادفات",
+                    time: 15,
+                    questions: [
+                        {
+                            id: 11,
+                            type: "synonym",
+                            text: "What is a synonym for 'Threat'?",
+                            options: ["Danger", "Protection", "Solution", "Network"],
+                            correct: 0,
+                            explanation: "Threat means a potential danger or risk."
+                        },
+                        {
+                            id: 12,
+                            type: "synonym",
+                            text: "What is a synonym for 'Vulnerability'?",
+                            options: ["Strength", "Weakness", "Protection", "Solution"],
+                            correct: 1,
+                            explanation: "Vulnerability means a weakness that can be exploited."
+                        }
+                    ]
+                },
+                {
+                    id: 3,
+                    name: "المصطلحات التقنية",
+                    time: 15,
+                    questions: [
+                        {
+                            id: 21,
+                            type: "term",
+                            text: "What is the term for 'The physical parts of a computer'?",
+                            answer: "Hardware",
+                            explanation: "Hardware refers to physical computer components."
+                        },
+                        {
+                            id: 22,
+                            type: "term",
+                            text: "What is the term for 'Programs that control a computer'?",
+                            answer: "Software",
+                            explanation: "Software includes programs and applications."
+                        }
+                    ]
+                },
+                {
+                    id: 4,
+                    name: "القواعد",
+                    time: 15,
+                    questions: [
+                        {
+                            id: 31,
+                            type: "grammar",
+                            text: "The AI model usually __________ (analyze) data from multiple sources.",
+                            options: ["analyzes", "is analyzing", "analyzed", "has analyzed"],
+                            correct: 0,
+                            explanation: "Present Simple is used for regular functions."
+                        },
+                        {
+                            id: 32,
+                            type: "grammar",
+                            text: "We need __________ (much/many) storage for our data.",
+                            options: ["much", "many"],
+                            correct: 0,
+                            explanation: "'storage' is uncountable, so we use 'much'."
+                        }
+                    ]
+                },
+                {
+                    id: 5,
+                    name: "الكتابة",
+                    time: 25,
+                    writingPrompt: "Explain the relationship between threats, vulnerabilities, and attacks in cybersecurity. Use at least 3 technical terms and write 5-6 sentences."
+                }
+            ]
+        };
+
+        // حالة الامتحان
+        let examState = {
+            currentSection: 0,
+            currentQuestion: 0,
+            answers: {},
+            flaggedQuestions: new Set(),
+            startTime: null,
+            sectionStartTime: null,
+            timers: {},
+            writingContent: ""
+        };
+
+        document.addEventListener('DOMContentLoaded', () => {
+            try {
+                initTheme();
+                const themeToggle = document.getElementById('themeToggle');
+                if (themeToggle) {
+                    themeToggle.addEventListener('click', toggleTheme);
+                }
+                
+                // إعداد شاشة البدء
+                setupStartScreen();
+                
+                // إعداد مستمعي الأحداث
+                setupEventListeners();
+            } catch (error) {
+                console.error('Error initializing exam simulator:', error);
+            }
+        });
+
+        // === إعداد شاشة البدء ===
+        function setupStartScreen() {
+            try {
+                const startExamBtn = document.getElementById('startExam');
+                const loadPreviousBtn = document.getElementById('loadPrevious');
+                
+                if (startExamBtn) {
+                    startExamBtn.addEventListener('click', startExam);
+                }
+                
+                if (loadPreviousBtn) {
+                    loadPreviousBtn.addEventListener('click', loadPreviousAttempt);
+                }
+            } catch (error) {
+                console.error('Error setting up start screen:', error);
+            }
+        }
+
+        // === بدء الامتحان ===
+        function startExam() {
+            // إعادة تعيين حالة الامتحان
+            examState = {
+                currentSection: 0,
+                currentQuestion: 0,
+                answers: {},
+                flaggedQuestions: new Set(),
+                startTime: Date.now(),
+                sectionStartTime: Date.now(),
+                timers: {},
+                writingContent: ""
+            };
+            
+            // حفظ حالة البدء
+            saveExamState();
+            
+            // الانتقال لشاشة الامتحان
+            document.getElementById('startScreen').style.display = 'none';
+            document.getElementById('examScreen').style.display = 'block';
+            document.getElementById('resultsScreen').style.display = 'none';
+            
+            // تحميل القسم الأول
+            loadSection(0);
+        }
+
+        // === تحميل القسم ===
+        function loadSection(sectionIndex) {
+            const section = examData.sections[sectionIndex];
+            examState.currentSection = sectionIndex;
+            examState.currentQuestion = 0;
+            examState.sectionStartTime = Date.now();
+            
+            // تحديث واجهة المستخدم
+            document.getElementById('currentSection').textContent = 
+                `القسم ${section.id}: ${section.name}`;
+            document.getElementById('currentSectionNumber').textContent = 
+                `${section.id}/5`;
+            
+            // إعادة تعيين عداد الوقت
+            updateTimer(section.time * 60);
+            startSectionTimer(section.time * 60);
+            
+            // إخفاء قسم الكتابة إذا لم يكن القسم الحالي هو قسم الكتابة
+            const writingSection = document.getElementById('writingSection');
+            if (sectionIndex === 4) { // قسم الكتابة
+                writingSection.style.display = 'block';
+                document.getElementById('examQuestions').innerHTML = '';
+                loadWritingSection();
+            } else {
+                writingSection.style.display = 'none';
+                loadQuestions(section.questions);
+            }
+            
+            // تحديث شريط التقدم
+            updateProgress();
+            
+            // تحديث حالة الأزرار
+            updateNavigationButtons();
+            
+            // حفظ الحالة
+            saveExamState();
+        }
+
+        // === تحميل الأسئلة ===
+        function loadQuestions(questions) {
+            const container = document.getElementById('examQuestions');
+            container.innerHTML = '';
+            
+            // عرض السؤال الحالي فقط (للمحاكاة الحقيقية، سيعرض كل الأسئلة مع إخفاء)
+            if (questions && questions.length > 0) {
+                const question = questions[0];
+                const questionElement = createQuestionElement(question, 0);
+                container.appendChild(questionElement);
+            }
+            
+            // إنشاء أزرار التنقل بين الأسئلة
+            createQuestionNavigation(questions.length);
+        }
+
+        function createQuestionElement(question, index) {
+            const element = document.createElement('div');
+            element.className = 'question-container';
+            element.dataset.questionId = question.id;
+            
+            let questionHTML = `
+                <div class="question-header">
+                    <h3>سؤال ${index + 1}</h3>
+                    <div class="question-type">${getQuestionTypeName(question.type)}</div>
+                </div>
+                <div class="question-content">
+                    <p class="question-text">${question.text}</p>
+            `;
+            
+            if (question.content) {
+                questionHTML += `<div class="reading-content">${question.content}</div>`;
+            }
+            
+            if (question.type === 'reading' && question.questions) {
+                // عرض أسئلة القراءة
+                question.questions.forEach((q, i) => {
+                    questionHTML += createSubQuestionElement(q, i);
+                });
+            } else if (question.options) {
+                // أسئلة الاختيار من متعدد
+                questionHTML += `
+                    <div class="options-container">
+                        ${question.options.map((option, i) => `
+                            <label class="option-label">
+                                <input type="radio" name="q${question.id}" value="${i}">
+                                <span class="option-text">${option}</span>
+                            </label>
+                        `).join('')}
+                    </div>
+                `;
+            } else if (question.type === 'term') {
+                // أسئلة كتابة المصطلح
+                questionHTML += `
+                    <div class="term-input-container">
+                        <input type="text" class="term-input" 
+                               placeholder="اكتب المصطلح هنا..." 
+                               data-question-id="${question.id}">
+                    </div>
+                `;
+            }
+            
+            element.innerHTML = questionHTML;
+            
+            // استعادة الإجابة إذا كانت موجودة
+            if (examState.answers[question.id] !== undefined) {
+                if (question.type === 'term') {
+                    element.querySelector('.term-input').value = examState.answers[question.id];
+                } else {
+                    const radio = element.querySelector(`input[value="${examState.answers[question.id]}"]`);
+                    if (radio) radio.checked = true;
+                }
+            }
+            
+            // التحقق من السؤال المعلّم
+            if (examState.flaggedQuestions.has(question.id)) {
+                element.classList.add('flagged');
+            }
+            
+            return element;
+        }
+
+        function createSubQuestionElement(subQuestion, index) {
+            return `
+                <div class="sub-question">
+                    <p class="sub-question-text">${index + 1}. ${subQuestion.text}</p>
+                    <div class="sub-question-options">
+                        ${subQuestion.type === 'mcq' ? 
+                            subQuestion.options.map((option, i) => `
+                                <label class="option-label">
+                                    <input type="radio" name="subq${index}" value="${i}">
+                                    <span class="option-text">${option}</span>
+                                </label>
+                            `).join('') :
+                            `
+                            <div class="tf-options">
+                                <label class="tf-option">
+                                    <input type="radio" name="subq${index}" value="true">
+                                    <span class="true-label">صح</span>
+                                </label>
+                                <label class="tf-option">
+                                    <input type="radio" name="subq${index}" value="false">
+                                    <span class="false-label">خطأ</span>
+                                </label>
+                            </div>
+                            `
+                        }
+                    </div>
+                </div>
+            `;
+        }
+
+        function getQuestionTypeName(type) {
+            const typeNames = {
+                'reading': 'فهم المقروء',
+                'synonym': 'مرادفات',
+                'term': 'مصطلحات تقنية',
+                'grammar': 'قواعد'
+            };
+            return typeNames[type] || type;
+        }
+
+        // === تحميل قسم الكتابة ===
+        function loadWritingSection() {
+            const section = examData.sections[4];
+            
+            // تحديث موضوع الكتابة
+            document.getElementById('writingTopic').innerHTML = `
+                <p><strong>الموضوع:</strong> ${section.writingPrompt}</p>
+                <p><strong>المتطلبات:</strong> استخدم 3 مصطلحات تقنية على الأقل، واكتب 5-6 جمل مترابطة.</p>
+            `;
+            
+            // استعادة المحتوى إذا كان موجودًا
+            const editor = document.getElementById('examWriting');
+            editor.value = examState.writingContent || '';
+            
+            // تحديث عداد الكلمات والمصطلحات
+            updateWritingCounters();
+            
+            // إضافة مستمع الأحداث لتحديث العداد
+            editor.addEventListener('input', () => {
+                examState.writingContent = editor.value;
+                updateWritingCounters();
+                saveExamState();
+            });
+        }
+
+        function updateWritingCounters() {
+            const text = document.getElementById('examWriting').value;
+            const words = text.trim().split(/\s+/).filter(w => w.length > 0);
+            const wordCount = words.length;
+            
+            // حساب المصطلحات التقنية
+            const technicalTerms = ['threat', 'vulnerability', 'attack', 'cybersecurity', 'firewall', 'encryption'];
+            let termCount = 0;
+            technicalTerms.forEach(term => {
+                if (text.toLowerCase().includes(term)) {
+                    termCount++;
+                }
+            });
+            
+            document.getElementById('writingWordCount').textContent = wordCount;
+            document.getElementById('writingTermCount').textContent = termCount;
+        }
+
+        // === إنشاء أزرار التنقل بين الأسئلة ===
+        function createQuestionNavigation(totalQuestions) {
+            // هذا مثال مبسط، في التطبيق الحقيقي سيكون هناك تنقل كامل
+        }
+
+        // === إدارة المؤقت ===
+        function startSectionTimer(totalSeconds) {
+            clearInterval(examState.timers.sectionTimer);
+            
+            examState.timers.sectionTimer = setInterval(() => {
+                totalSeconds--;
+                updateTimer(totalSeconds);
+                
+                if (totalSeconds <= 0) {
+                    clearInterval(examState.timers.sectionTimer);
+                    autoSubmitSection();
+                }
+            }, 1000);
+        }
+
+        function updateTimer(seconds) {
+            const minutes = Math.floor(seconds / 60);
+            const remainingSeconds = seconds % 60;
+            document.getElementById('examTimer').textContent = 
+                `${minutes.toString().padStart(2, '0')}:${remainingSeconds.toString().padStart(2, '0')}`;
+            
+            // تغيير اللون عند اقتراب النهاية
+            if (seconds <= 300) { // 5 دقائق
+                document.getElementById('examTimer').style.color = '#e74c3c';
+            } else if (seconds <= 600) { // 10 دقائق
+                document.getElementById('examTimer').style.color = '#f39c12';
+            } else {
+                document.getElementById('examTimer').style.color = '';
+            }
+        }
+
+        // === تحديث شريط التقدم ===
+        function updateProgress() {
+            const section = examData.sections[examState.currentSection];
+            const progress = ((examState.currentQuestion + 1) / section.questions.length) * 100;
+            document.getElementById('sectionProgress').style.width = `${progress}%`;
+            document.getElementById('progressText').textContent = 
+                `سؤال ${examState.currentQuestion + 1} من ${section.questions.length}`;
+        }
+
+        // === تحديث أزرار التنقل ===
+        function updateNavigationButtons() {
+            const section = examData.sections[examState.currentSection];
+            const prevBtn = document.getElementById('prevQuestion');
+            const nextBtn = document.getElementById('nextQuestion');
+            
+            // زر السابق
+            prevBtn.disabled = examState.currentQuestion === 0;
+            
+            // زر التالي
+            if (examState.currentSection === 4) { // قسم الكتابة
+                nextBtn.textContent = 'إنهاء الامتحان';
+                nextBtn.innerHTML = 'إنهاء الامتحان <i class="fas fa-check"></i>';
+            } else if (examState.currentQuestion === section.questions.length - 1) {
+                nextBtn.textContent = 'القسم التالي';
+                nextBtn.innerHTML = 'القسم التالي <i class="fas fa-arrow-left"></i>';
+            } else {
+                nextBtn.textContent = 'التالي';
+                nextBtn.innerHTML = 'التالي <i class="fas fa-arrow-left"></i>';
+            }
+        }
+
+        // === إرسال القسم تلقائيًا عند انتهاء الوقت ===
+        function autoSubmitSection() {
+            if (confirm('انتهى وقت القسم! سيتم الانتقال للقسم التالي.')) {
+                submitSection();
+            }
+        }
+
+        // === إرسال القسم ===
+        function submitSection() {
+            // حفظ إجابات القسم الحالي
+            saveCurrentAnswers();
+            
+            // الانتقال للقسم التالي أو إنهاء الامتحان
+            if (examState.currentSection < examData.sections.length - 1) {
+                loadSection(examState.currentSection + 1);
+            } else {
+                finishExam();
+            }
+        }
+
+        // === حفظ الإجابات الحالية ===
+        function saveCurrentAnswers() {
+            // حفظ إجابات قسم الكتابة
+            if (examState.currentSection === 4) {
+                examState.writingContent = document.getElementById('examWriting').value;
+            }
+            
+            // في التطبيق الحقيقي، سيتم حفظ جميع إجابات الأسئلة
+            saveExamState();
+        }
+
+        // === إنهاء الامتحان ===
+        function finishExam() {
+            // إيقاف جميع المؤقتات
+            clearInterval(examState.timers.sectionTimer);
+            
+            // حساب النتائج
+            calculateResults();
+            
+            // الانتقال لشاشة النتائج
+            document.getElementById('startScreen').style.display = 'none';
+            document.getElementById('examScreen').style.display = 'none';
+            document.getElementById('resultsScreen').style.display = 'block';
+            
+            // عرض النتائج
+            displayResults();
+        }
+
+        // === حساب النتائج ===
+        function calculateResults() {
+            // هذا مثال مبسط، في التطبيق الحقيقي سيتم حساب النقاط بدقة
+            
+            // نتائج عشوائية للعرض (في التطبيق الحقيقي، سيتم حسابها من الإجابات)
+            const results = {
+                reading: { score: 7, total: 10, percent: 70 },
+                synonyms: { score: 8, total: 10, percent: 80 },
+                terms: { score: 6, total: 10, percent: 60 },
+                grammar: { score: 9, total: 10, percent: 90 },
+                writing: { score: 8, total: 10, percent: 80 }
+            };
+            
+            // حساب المجموع
+            const totalScore = Object.values(results).reduce((sum, section) => sum + section.score, 0);
+            const totalPercent = Math.round((totalScore / 50) * 100);
+            
+            examState.results = {
+                ...results,
+                total: totalScore,
+                totalPercent: totalPercent,
+                timeTaken: '78:30'
+            };
+        }
+
+        // === عرض النتائج ===
+        function displayResults() {
+            const results = examState.results;
+            
+            if (!results) return;
+            
+            // النتيجة العامة
+            document.getElementById('finalOverallScore').textContent = `${results.totalPercent}%`;
+            
+            // تحديث دائرة النتيجة
+            const circle = document.getElementById('finalScoreCircle');
+            const circumference = 408.4;
+            const offset = circumference - (results.totalPercent / 100) * circumference;
+            circle.style.strokeDashoffset = offset;
+            
+            // عنوان النتيجة
+            const title = document.getElementById('resultTitle');
+            const message = document.getElementById('resultMessage');
+            
+            if (results.totalPercent >= 90) {
+                title.textContent = 'ممتاز!';
+                message.textContent = 'أداء رائع! أنت مستعد تمامًا للامتحان.';
+            } else if (results.totalPercent >= 80) {
+                title.textContent = 'جيد جدًا!';
+                message.textContent = 'أداء قوي، لكن هناك بعض النقاط للتحسين.';
+            } else if (results.totalPercent >= 70) {
+                title.textContent = 'جيد!';
+                message.textContent = 'أداء مقبول، تحتاج للمراجعة في بعض المجالات.';
+            } else if (results.totalPercent >= 60) {
+                title.textContent = 'مقبول';
+                message.textContent = 'اجتزت الامتحان، لكن تحتاج لمزيد من التحضير.';
+            } else {
+                title.textContent = 'يحتاج للتحسين';
+                message.textContent = 'تحتاج للمراجعة الشاملة قبل الامتحان الحقيقي.';
+            }
+            
+            // تحديث نتائج الأقسام
+            updateSectionResults('reading', results.reading);
+            updateSectionResults('synonyms', results.synonyms);
+            updateSectionResults('terms', results.terms);
+            updateSectionResults('grammar', results.grammar);
+            updateSectionResults('writing', results.writing);
+            
+            // تحديث ملخص النتائج
+            document.getElementById('correctAnswersCount').textContent = results.total;
+            document.getElementById('wrongAnswersCount').textContent = 50 - results.total;
+            document.getElementById('timeTaken').textContent = results.timeTaken;
+            
+            // حساب التقدير
+            const grade = calculateGrade(results.totalPercent);
+            document.getElementById('examRank').textContent = grade;
+        }
+
+        function updateSectionResults(sectionId, sectionResults) {
+            document.getElementById(`${sectionId}Score`).textContent = 
+                `${sectionResults.score}/${sectionResults.total}`;
+            document.getElementById(`${sectionId}Percent`).textContent = 
+                `${sectionResults.percent}%`;
+            document.getElementById(`${sectionId}ProgressBar`).style.width = 
+                `${sectionResults.percent}%`;
+            
+            // تحديث التغذية الراجعة
+            const feedback = document.getElementById(`${sectionId}Feedback`);
+            if (sectionResults.percent >= 90) {
+                feedback.textContent = 'ممتاز! أداء رائع في هذا القسم.';
+            } else if (sectionResults.percent >= 80) {
+                feedback.textContent = 'جيد جدًا! أداء قوي مع إمكانية التحسين.';
+            } else if (sectionResults.percent >= 70) {
+                feedback.textContent = 'جيد، ولكن هناك مجال للتحسين.';
+            } else if (sectionResults.percent >= 60) {
+                feedback.textContent = 'مقبول، تحتاج للمزيد من المراجعة.';
+            } else {
+                feedback.textContent = 'يحتاج للتحسين، راجع هذا القسم بعناية.';
+            }
+        }
+
+        function calculateGrade(percent) {
+            if (percent >= 95) return 'A+';
+            if (percent >= 90) return 'A';
+            if (percent >= 85) return 'B+';
+            if (percent >= 80) return 'B';
+            if (percent >= 75) return 'C+';
+            if (percent >= 70) return 'C';
+            if (percent >= 65) return 'D+';
+            if (percent >= 60) return 'D';
+            return 'F';
+        }
+
+        // === إعداد مستمعي الأحداث ===
+        function setupEventListeners() {
+            try {
+                // زر السابق
+                const prevQuestionBtn = document.getElementById('prevQuestion');
+                if (prevQuestionBtn) {
+                    prevQuestionBtn.addEventListener('click', () => {
+                        if (examState.currentQuestion > 0) {
+                            examState.currentQuestion--;
+                            // في التطبيق الحقيقي، سيتم تحديث عرض السؤال
+                            updateProgress();
+                            updateNavigationButtons();
+                        }
+                    });
+                }
+                
+                // زر التالي
+                const nextQuestionBtn = document.getElementById('nextQuestion');
+                if (nextQuestionBtn) {
+                    nextQuestionBtn.addEventListener('click', () => {
+                        const section = examData.sections[examState.currentSection];
+                        
+                        if (examState.currentSection === 4) {
+                            // قسم الكتابة - إنهاء الامتحان
+                            finishExam();
+                        } else if (examState.currentQuestion < section.questions.length - 1) {
+                            examState.currentQuestion++;
+                            // في التطبيق الحقيقي، سيتم تحديث عرض السؤال
+                            updateProgress();
+                            updateNavigationButtons();
+                        } else {
+                            // الانتقال للقسم التالي
+                            submitSection();
+                        }
+                    });
+                }
+                
+                // زر وضع علامة
+                const flagQuestionBtn = document.getElementById('flagQuestion');
+                if (flagQuestionBtn) {
+                    flagQuestionBtn.addEventListener('click', toggleFlagQuestion);
+                }
+                
+                // زر إنهاء القسم
+                const submitSectionBtn = document.getElementById('submitSection');
+                if (submitSectionBtn) {
+                    submitSectionBtn.addEventListener('click', submitSection);
+                }
+                
+                // زر إعادة الامتحان
+                const retakeExamBtn = document.getElementById('retakeExam');
+                if (retakeExamBtn) {
+                    retakeExamBtn.addEventListener('click', () => {
+                        if (confirm('هل تريد إعادة الامتحان؟ سيتم مسح النتائج الحالية.')) {
+                            startExam();
+                        }
+                    });
+                }
+                
+                // زر تحميل النتائج
+                const downloadResultsBtn = document.getElementById('downloadResults');
+                if (downloadResultsBtn) {
+                    downloadResultsBtn.addEventListener('click', downloadResults);
+                }
+                
+                // زر مشاركة النتائج
+                const shareResultsBtn = document.getElementById('shareResults');
+                if (shareResultsBtn) {
+                    shareResultsBtn.addEventListener('click', shareResults);
+                }
+                
+                // مستمعي أحداث أزرار التنقل بين الأسئلة
+                document.addEventListener('click', (e) => {
+                    if (e.target.classList.contains('nav-btn')) {
+                        const questionIndex = parseInt(e.target.dataset.question) - 1;
+                        // في التطبيق الحقيقي، سيتم الانتقال للسؤال المحدد
+                    }
+                });
+                
+                // حفظ الإجابات عند التغيير
+                document.addEventListener('change', (e) => {
+                    if (e.target.type === 'radio' || e.target.classList.contains('term-input')) {
+                        saveAnswer(e.target);
+                    }
+                });
+            } catch (error) {
+                console.error('Error setting up event listeners:', error);
+            }
+        }
+
+        function toggleFlagQuestion() {
+            const section = examData.sections[examState.currentSection];
+            const question = section.questions[examState.currentQuestion];
+            
+            if (examState.flaggedQuestions.has(question.id)) {
+                examState.flaggedQuestions.delete(question.id);
+                document.getElementById('flagQuestion').innerHTML = 
+                    '<i class="far fa-flag"></i> وضع علامة';
+            } else {
+                examState.flaggedQuestions.add(question.id);
+                document.getElementById('flagQuestion').innerHTML = 
+                    '<i class="fas fa-flag"></i> إزالة العلامة';
+            }
+            
+            // تحديث العداد
+            document.getElementById('flaggedCount').textContent = examState.flaggedQuestions.size;
+            
+            saveExamState();
+        }
+
+        function saveAnswer(input) {
+            let questionId;
+            let answer;
+            
+            if (input.classList.contains('term-input')) {
+                questionId = input.dataset.questionId;
+                answer = input.value.trim();
+            } else {
+                // البحث عن معرف السؤال من الاسم
+                const name = input.name;
+                if (name.startsWith('q')) {
+                    questionId = parseInt(name.substring(1));
+                    answer = input.value;
+                }
+            }
+            
+            if (questionId) {
+                examState.answers[questionId] = answer;
+                
+                // تحديث عداد الأسئلة المجابة
+                const answeredCount = Object.keys(examState.answers).length;
+                document.getElementById('answeredCount').textContent = answeredCount;
+                
+                saveExamState();
+            }
+        }
+
+        // === حفظ/تحميل حالة الامتحان ===
+        function saveExamState() {
+            localStorage.setItem('examState', JSON.stringify(examState));
+        }
+
+        function loadPreviousAttempt() {
+            const saved = localStorage.getItem('examState');
+            if (saved) {
+                try {
+                    examState = JSON.parse(saved);
+                    
+                    // الانتقال لشاشة النتائج إذا كان الامتحان منتهيًا
+                    if (examState.results) {
+                        document.getElementById('startScreen').style.display = 'none';
+                        document.getElementById('examScreen').style.display = 'none';
+                        document.getElementById('resultsScreen').style.display = 'block';
+                        displayResults();
+                    } else {
+                        // استئناف الامتحان
+                        document.getElementById('startScreen').style.display = 'none';
+                        document.getElementById('examScreen').style.display = 'block';
+                        document.getElementById('resultsScreen').style.display = 'none';
+                        loadSection(examState.currentSection);
+                    }
+                } catch (e) {
+                    alert('تعذر تحميل المحاولة السابقة.');
+                }
+            } else {
+                alert('لا توجد محاولات سابقة.');
+            }
+        }
+
+        // === تحميل النتائج ===
+        function downloadResults() {
+            const results = examState.results;
+            if (!results) return;
+            
+            const content = `
+نتائج امتحان المحاكاة - الإنجليزية التقنية
+========================================
+
+النتيجة العامة: ${results.totalPercent}%
+التقدير: ${calculateGrade(results.totalPercent)}
+
+تفاصيل النتائج:
+--------------
+1. فهم المقروء: ${results.reading.score}/${results.reading.total} (${results.reading.percent}%)
+2. المرادفات: ${results.synonyms.score}/${results.synonyms.total} (${results.synonyms.percent}%)
+3. المصطلحات التقنية: ${results.terms.score}/${results.terms.total} (${results.terms.percent}%)
+4. القواعد: ${results.grammar.score}/${results.grammar.total} (${results.grammar.percent}%)
+5. الكتابة: ${results.writing.score}/${results.writing.total} (${results.writing.percent}%)
+
+الوقت المستغرق: ${results.timeTaken}
+تاريخ الامتحان: ${new Date().toLocaleDateString('ar-SA')}
+
+توصيات:
+--------
+${getRecommendations(results)}
+            `.trim();
+            
+            const blob = new Blob([content], { type: 'text/plain' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `exam_results_${Date.now()}.txt`;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+        }
+
+        function getRecommendations(results) {
+            let recommendations = [];
+            
+            if (results.reading.percent < 70) {
+                recommendations.push('- راجع نصوص القراءة في Unit 2.4');
+            }
+            if (results.terms.percent < 70) {
+                recommendations.push('- راجع جداول المصطلحات التقنية');
+            }
+            if (results.grammar.percent < 70) {
+                recommendations.push('- تمرن على الأزمنة والأسماء المعدودة/غير المعدودة');
+            }
+            if (results.synonyms.percent < 70) {
+                recommendations.push('- راجع جدول المرادفات');
+            }
+            if (results.writing.percent < 70) {
+                recommendations.push('- أكتب براجراف يوميًا باستخدام المصطلحات التقنية');
+            }
+            
+            if (recommendations.length === 0) {
+                recommendations.push('- استمر في المراجعة المنتظمة');
+                recommendations.push('- حل المزيد من التمارين');
+            }
+            
+            return recommendations.join('\n');
+        }
+
+        function shareResults() {
+            const results = examState.results;
+            if (!results) return;
+            
+            const text = `حصلت على ${results.totalPercent}% في امتحان المحاكاة للغة الإنجليزية التقنية!`;
+            
+            if (navigator.share) {
+                navigator.share({
+                    title: 'نتائج امتحان الإنجليزية التقنية',
+                    text: text,
+                    url: window.location.href
+                });
+            } else {
+                // نسخ النص للحافظة
+                navigator.clipboard.writeText(text)
+                    .then(() => alert('تم نسخ النتائج للحافظة!'))
+                    .catch(() => alert('تعذر نسخ النتائج.'));
+            }
+        }
+    </script>
+
+    <style>
+        /* تنسيقات خاصة بصفحة الامتحان */
+        .exam-section {
+            min-height: calc(100vh - 100px);
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* شاشة البدء */
+        .start-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .start-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .start-header h1 {
+            font-size: 2.5rem;
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .subtitle {
+            color: var(--text-secondary);
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .exam-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .info-card {
+            background: var(--bg-secondary);
+            border-radius: var(--radius-lg);
+            padding: 1.5rem;
+            text-align: center;
+            border: 2px solid transparent;
+            transition: all 0.3s;
+        }
+
+        .info-card:hover {
+            border-color: var(--primary-color);
+            transform: translateY(-5px);
+        }
+
+        .info-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            color: white;
+            font-size: 1.5rem;
+        }
+
+        .info-content h3 {
+            font-size: 1.1rem;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .info-value {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: block;
+            margin-bottom: 0.3rem;
+        }
+
+        .info-desc {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            line-height: 1.4;
+        }
+
+        .exam-sections {
+            margin-bottom: 3rem;
+        }
+
+        .exam-sections h2 {
+            font-size: 1.5rem;
+            color: var(--text-primary);
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .sections-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .section-item {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            padding: 1.2rem;
+            background: var(--bg-secondary);
+            border-radius: var(--radius-md);
+            border-right: 4px solid var(--primary-color);
+        }
+
+        .section-number {
+            width: 40px;
+            height: 40px;
+            background: var(--primary-color);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+
+        .section-info {
+            flex: 1;
+        }
+
+        .section-info h4 {
+            font-size: 1.1rem;
+            color: var(--text-primary);
+            margin-bottom: 0.3rem;
+        }
+
+        .section-info p {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        .section-time {
+            background: var(--bg-primary);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-weight: 600;
+            color: var(--primary-color);
+            white-space: nowrap;
+        }
+
+        .exam-instructions {
+            background: var(--bg-secondary);
+            border-radius: var(--radius-lg);
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            border-right: 4px solid var(--warning-color);
+        }
+
+        .exam-instructions h3 {
+            font-size: 1.2rem;
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .exam-instructions ul {
+            padding-right: 1.5rem;
+            margin: 0;
+        }
+
+        .exam-instructions li {
+            margin-bottom: 0.8rem;
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+
+        .start-actions {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .btn-lg {
+            padding: 1rem 2rem;
+            font-size: 1.1rem;
+            min-width: 200px;
+        }
+
+        /* شاشة الامتحان */
+        .exam-header {
+            background: var(--bg-card);
+            border-radius: var(--radius-lg);
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            box-shadow: var(--shadow-md);
+        }
+
+        .exam-progress {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .exam-progress h2 {
+            font-size: 1.3rem;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .progress-text {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .progress-bar {
+            height: 8px;
+            background: var(--bg-secondary);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+            border-radius: 4px;
+            transition: width 0.3s;
+        }
+
+        .exam-timer {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .timer-container {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .timer-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #e74c3c, #c0392b);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.3rem;
+        }
+
+        .timer-display {
+            text-align: center;
+        }
+
+        .timer-label {
+            display: block;
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            margin-bottom: 0.2rem;
+        }
+
+        .timer-value {
+            font-family: 'Courier New', monospace;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--text-primary);
+        }
+
+        .section-time {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            background: var(--bg-secondary);
+            padding: 0.3rem 0.8rem;
+            border-radius: 12px;
+        }
+
+        .exam-content {
+            flex: 1;
+            background: var(--bg-card);
+            border-radius: var(--radius-lg);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow-md);
+        }
+
+        .question-container {
+            background: var(--bg-secondary);
+            border-radius: var(--radius-md);
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .question-container.flagged {
+            border-right: 4px solid var(--warning-color);
+        }
+
+        .question-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+        }
+
+        .question-header h3 {
+            font-size: 1.2rem;
+            color: var(--text-primary);
+            margin: 0;
+        }
+
+        .question-type {
+            background: var(--bg-primary);
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+
+        .question-text {
+            font-size: 1.1rem;
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+
+        .reading-content {
+            background: var(--bg-primary);
+            padding: 1.5rem;
+            border-radius: var(--radius-md);
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+            color: var(--text-secondary);
+            border-right: 3px solid var(--primary-color);
+        }
+
+        .sub-question {
+            background: var(--bg-primary);
+            padding: 1.2rem;
+            border-radius: var(--radius-md);
+            margin-bottom: 1rem;
+        }
+
+        .sub-question-text {
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+        }
+
+        .options-container, .sub-question-options {
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+        }
+
+        .option-label {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem;
+            background: var(--bg-primary);
+            border: 2px solid var(--bg-secondary);
+            border-radius: var(--radius-md);
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .option-label:hover {
+            border-color: var(--primary-color);
+            background: rgba(67, 97, 238, 0.05);
+        }
+
+        .option-label input:checked + .option-text {
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        .option-text {
+            color: var(--text-primary);
+            flex: 1;
+        }
+
+        .tf-options {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .tf-option {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            cursor: pointer;
+        }
+
+        .true-label, .false-label {
+            padding: 0.5rem 1.5rem;
+            border-radius: var(--radius-md);
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .true-label {
+            background: rgba(46, 204, 113, 0.1);
+            color: var(--success-color);
+            border: 2px solid var(--success-color);
+        }
+
+        .false-label {
+            background: rgba(231, 76, 60, 0.1);
+            color: var(--danger-color);
+            border: 2px solid var(--danger-color);
+        }
+
+        .tf-option input:checked + .true-label {
+            background: var(--success-color);
+            color: white;
+        }
+
+        .tf-option input:checked + .false-label {
+            background: var(--danger-color);
+            color: white;
+        }
+
+        .term-input-container {
+            margin-top: 1rem;
+        }
+
+        .term-input {
+            width: 100%;
+            padding: 1rem;
+            border: 2px solid var(--bg-secondary);
+            border-radius: var(--radius-md);
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            font-size: 1.1rem;
+            transition: all 0.3s;
+        }
+
+        .term-input:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.2);
+        }
+
+        /* قسم الكتابة في الامتحان */
+        .writing-instructions {
+            background: var(--bg-secondary);
+            border-radius: var(--radius-md);
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .writing-instructions h3 {
+            font-size: 1.2rem;
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .writing-topic {
+            background: var(--bg-primary);
+            padding: 1.2rem;
+            border-radius: var(--radius-sm);
+            margin-top: 1rem;
+        }
+
+        .writing-topic p {
+            margin: 0.5rem 0;
+            color: var(--text-primary);
+        }
+
+        .writing-area {
+            margin-bottom: 1.5rem;
+        }
+
+        #examWriting {
+            width: 100%;
+            min-height: 200px;
+            padding: 1.5rem;
+            border: 2px solid var(--bg-secondary);
+            border-radius: var(--radius-md);
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            font-size: 1rem;
+            line-height: 1.6;
+            resize: vertical;
+            transition: all 0.3s;
+        }
+
+        #examWriting:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.2);
+        }
+
+        .writing-tools {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 1rem;
+            padding: 0.8rem 1rem;
+            background: var(--bg-secondary);
+            border-radius: var(--radius-md);
+        }
+
+        .word-counter, .term-counter {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+
+        .writing-suggestions {
+            background: var(--bg-secondary);
+            border-radius: var(--radius-md);
+            padding: 1.2rem;
+        }
+
+        .writing-suggestions h4 {
+            font-size: 1rem;
+            color: var(--text-primary);
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .suggestions-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .suggestion {
+            background: rgba(67, 97, 238, 0.1);
+            color: var(--primary-color);
+            padding: 0.4rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            border: 1px solid transparent;
+        }
+
+        .suggestion:hover {
+            background: var(--primary-color);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        /* عناصر التحكم في الامتحان */
+        .exam-controls {
+            background: var(--bg-card);
+            border-radius: var(--radius-lg);
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            box-shadow: var(--shadow-md);
+        }
+
+        .controls-left, .controls-center, .controls-right {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .control-btn {
+            padding: 0.8rem 1.5rem;
+            border: 2px solid var(--bg-secondary);
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            border-radius: var(--radius-md);
+            cursor: pointer;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.3s;
+            min-width: 120px;
+            justify-content: center;
+        }
+
+        .control-btn:hover:not(:disabled) {
+            border-color: var(--primary-color);
+            background: rgba(67, 97, 238, 0.1);
+        }
+
+        .control-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        .flag-btn {
+            border-color: var(--warning-color);
+            color: var(--warning-color);
+        }
+
+        .flag-btn:hover:not(:disabled) {
+            background: var(--warning-color);
+            color: white;
+        }
+
+        .submit-btn {
+            border-color: var(--success-color);
+            color: var(--success-color);
+        }
+
+        .submit-btn:hover:not(:disabled) {
+            background: var(--success-color);
+            color: white;
+        }
+
+        .question-nav {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        .nav-btn {
+            width: 40px;
+            height: 40px;
+            border: 2px solid var(--bg-secondary);
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            border-radius: 50%;
+            cursor: pointer;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
+        }
+
+        .nav-btn:hover {
+            border-color: var(--primary-color);
+            background: rgba(67, 97, 238, 0.1);
+        }
+
+        .nav-dots {
+            padding: 0.5rem;
+            color: var(--text-secondary);
+        }
+
+        .exam-footer {
+            background: var(--bg-card);
+            border-radius: var(--radius-lg);
+            padding: 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            box-shadow: var(--shadow-md);
+        }
+
+        .footer-info {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .info-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.3rem;
+        }
+
+        .info-label {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+        }
+
+        .info-value {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
+        .footer-warning {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--warning-color);
+            font-weight: 600;
+            background: rgba(243, 156, 18, 0.1);
+            padding: 0.8rem 1.2rem;
+            border-radius: var(--radius-md);
+        }
+
+        /* شاشة النتائج */
+        .results-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .results-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .results-header h1 {
+            font-size: 2.2rem;
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .overall-score {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 3rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .score-circle-large {
+            position: relative;
+            width: 150px;
+            height: 150px;
+        }
+
+        .score-circle-large svg {
+            transform: rotate(-90deg);
+        }
+
+        .score-text-large {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--text-primary);
+        }
+
+        .score-info {
+            text-align: right;
+            max-width: 300px;
+        }
+
+        .score-info h2 {
+            font-size: 2rem;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .score-info p {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            line-height: 1.5;
+        }
+
+        .results-details {
+            margin-bottom: 3rem;
+        }
+
+        .results-details h3 {
+            font-size: 1.5rem;
+            color: var(--text-primary);
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .section-results {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .section-result-card {
+            background: var(--bg-secondary);
+            border-radius: var(--radius-md);
+            padding: 1.5rem;
+        }
+
+        .section-result-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .section-name {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .section-number {
+            width: 35px;
+            height: 35px;
+            background: var(--primary-color);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+
+        .section-name h4 {
+            font-size: 1.1rem;
+            color: var(--text-primary);
+            margin: 0;
+        }
+
+        .section-score {
+            text-align: left;
+        }
+
+        .score-value {
+            display: block;
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--text-primary);
+        }
+
+        .score-percent {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .section-progress {
+            margin-bottom: 0.8rem;
+        }
+
+        .section-progress .progress-bar {
+            height: 6px;
+        }
+
+        .section-feedback {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            font-style: italic;
+        }
+
+        .results-summary {
+            margin-bottom: 2rem;
+        }
+
+        .summary-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .summary-card {
+            background: var(--bg-secondary);
+            border-radius: var(--radius-md);
+            padding: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            border-top: 4px solid transparent;
+        }
+
+        .summary-card.correct-card {
+            border-top-color: var(--success-color);
+        }
+
+        .summary-card.wrong-card {
+            border-top-color: var(--danger-color);
+        }
+
+        .summary-card.time-card {
+            border-top-color: var(--primary-color);
+        }
+
+        .summary-card.rank-card {
+            border-top-color: var(--warning-color);
+        }
+
+        .summary-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+
+        .correct-card .summary-icon {
+            background: rgba(46, 204, 113, 0.2);
+            color: var(--success-color);
+        }
+
+        .wrong-card .summary-icon {
+            background: rgba(231, 76, 60, 0.2);
+            color: var(--danger-color);
+        }
+
+        .time-card .summary-icon {
+            background: rgba(67, 97, 238, 0.2);
+            color: var(--primary-color);
+        }
+
+        .rank-card .summary-icon {
+            background: rgba(243, 156, 18, 0.2);
+            color: var(--warning-color);
+        }
+
+        .summary-content h4 {
+            font-size: 1.8rem;
+            color: var(--text-primary);
+            margin-bottom: 0.3rem;
+        }
+
+        .summary-content p {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        .analysis-section {
+            background: var(--bg-secondary);
+            border-radius: var(--radius-lg);
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .analysis-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .strengths, .improvements, .recommendations {
+            background: var(--bg-primary);
+            border-radius: var(--radius-md);
+            padding: 1.5rem;
+        }
+
+        .strengths h4, .improvements h4, .recommendations h4 {
+            font-size: 1.1rem;
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .strengths h4 {
+            color: var(--success-color);
+        }
+
+        .improvements h4 {
+            color: var(--warning-color);
+        }
+
+        .recommendations h4 {
+            color: var(--primary-color);
+        }
+
+        .strengths ul, .improvements ul, .recommendations ul {
+            padding-right: 1.2rem;
+            margin: 0;
+        }
+
+        .strengths li, .improvements li, .recommendations li {
+            margin-bottom: 0.5rem;
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+
+        .review-section {
+            background: var(--bg-secondary);
+            border-radius: var(--radius-lg);
+            padding: 1.5rem;
+        }
+
+        .review-questions {
+            margin-top: 1.5rem;
+        }
+
+        .results-actions {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        @media (max-width: 768px) {
+            .start-header h1 {
+                font-size: 2rem;
+            }
+            
+            .exam-header {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            
+            .exam-progress {
+                min-width: auto;
+            }
+            
+            .exam-controls {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .controls-left, .controls-center, .controls-right {
+                width: 100%;
+                justify-content: center;
+            }
+            
+            .exam-footer {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .footer-info {
+                justify-content: center;
+            }
+            
+            .overall-score {
+                flex-direction: column;
+                gap: 2rem;
+            }
+            
+            .score-info {
+                text-align: center;
+            }
+            
+            .results-actions {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .results-actions .btn {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .start-container {
+                padding: 1rem;
+            }
+            
+            .info-card {
+                padding: 1rem;
+            }
+            
+            .section-item {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 1rem;
+            }
+            
+            .section-time {
+                align-self: flex-end;
+            }
+            
+            .control-btn {
+                min-width: 100px;
+                padding: 0.6rem 1rem;
+            }
+            
+            .summary-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .analysis-content {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+    
+    <!-- Language Integration for Exam Simulator -->
+    <script type="module" src="language-integration.js"></script>
+    <script type="module">
+        // Exam-specific language handling
+        document.addEventListener('DOMContentLoaded', async () => {
+            try {
+                // Wait for language system to initialize
+                if (window.LanguageSystem) {
+                    await window.LanguageSystem.init();
+                    
+                    // Hide language switcher during active exam in exam mode
+                    const langSwitcher = document.getElementById('examLangSwitcher');
+                    const examScreen = document.getElementById('examScreen');
+                    
+                    if (window.LanguageSystem.isExamMode() && examScreen && examScreen.style.display !== 'none') {
+                        if (langSwitcher) {
+                            langSwitcher.style.display = 'none';
+                        }
+                    }
+                    
+                    // Subscribe to mode changes
+                    window.LanguageSystem.subscribe((state) => {
+                        try {
+                            // In exam mode during active exam, hide language switcher
+                            if (state && state.isExamMode && examScreen && examScreen.style.display !== 'none') {
+                                if (langSwitcher) {
+                                    langSwitcher.style.display = 'none';
+                                }
+                            } else {
+                                if (langSwitcher) {
+                                    langSwitcher.style.display = '';
+                                }
+                            }
+                        } catch (error) {
+                            console.error('Error in language system subscription:', error);
+                        }
+                    });
+                }
+            } catch (error) {
+                console.error('Error initializing exam language system:', error);
+            }
+        });
+    </script>
+</body>
+</html>

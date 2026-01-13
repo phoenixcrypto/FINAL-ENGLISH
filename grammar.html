@@ -1,0 +1,1709 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grammar - IT English Review</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Language System -->
+    <script src="language-system.js"></script>
+    <script src="content-library.js"></script>
+    <script src="progress-tracker.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-brand">
+                <i class="fas fa-arrow-left"></i> <span class="i18n-text" data-i18n="common.back">Back to Home</span>
+            </a>
+            <div class="nav-menu">
+                <a href="#tenses" class="nav-link"><span class="i18n-text">Tenses</span></a>
+                <a href="#nouns" class="nav-link"><span class="i18n-text">Nouns</span></a>
+                <a href="#practice" class="nav-link"><span class="i18n-text">Exercises</span></a>
+                <div class="language-switcher">
+                    <button id="langSwitcherBtn" class="lang-switcher-btn" aria-label="Switch Language Mode" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-language"></i>
+                        <span id="currentModeDisplay">Exam Mode</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div id="langSwitcherDropdown" class="lang-switcher-dropdown" role="menu">
+                        <div class="lang-mode-option active" data-mode="exam" role="menuitem">
+                            <span class="lang-mode-name">Exam Mode</span>
+                            <span class="lang-mode-desc">Pure English - Real exam simulation</span>
+                        </div>
+                        <div class="lang-mode-option" data-mode="study" role="menuitem">
+                            <span class="lang-mode-name">Study Mode</span>
+                            <span class="lang-mode-desc">English with Arabic help tooltips</span>
+                        </div>
+                        <div class="lang-mode-option" data-mode="beginner" role="menuitem">
+                            <span class="lang-mode-name">Beginner Mode</span>
+                            <span class="lang-mode-desc">Bilingual interface - Arabic primary</span>
+                        </div>
+                    </div>
+                </div>
+                <button id="themeToggle" class="icon-btn" aria-label="Toggle Theme"><i class="fas fa-moon"></i></button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+        <header class="page-header">
+            <h1><i class="fas fa-language"></i> الجزء 4: القواعد (Grammar)</h1>
+            <p class="subtitle">مراجعة الأزمنة والأسماء المعدودة وغير المعدودة في السياق التقني</p>
+            <div class="header-info">
+                <span class="info-badge"><i class="fas fa-clock"></i> 6 أزمنة</span>
+                <span class="info-badge"><i class="fas fa-cubes"></i> نوعان من الأسماء</span>
+                <span class="info-badge"><i class="fas fa-edit"></i> 40+ تمرين</span>
+            </div>
+        </header>
+
+        <!-- قسم الأزمنة -->
+        <section id="tenses" class="content-section">
+            <h2><i class="fas fa-clock"></i> مراجعة الأزمنة في السياق التقني</h2>
+            <p class="section-desc">تعلم كيفية استخدام الأزمنة الإنجليزية لوصف الأنظمة التقنية والإجراءات</p>
+            
+            <div class="tenses-grid">
+                <!-- Present Simple -->
+                <div class="tense-card">
+                    <div class="tense-header">
+                        <h3>المضارع البسيط</h3>
+                        <span class="tense-label present">Present Simple</span>
+                    </div>
+                    <div class="tense-content">
+                        <div class="tense-usage">
+                            <h4>الاستخدام:</h4>
+                            <ul>
+                                <li>وصف الحقائق العلمية والتقنية</li>
+                                <li>وظائف الأنظمة الثابتة</li>
+                                <li>العادات والروتين</li>
+                            </ul>
+                        </div>
+                        <div class="tense-examples">
+                            <h4>أمثلة تقنية:</h4>
+                            <div class="example-item">
+                                <p class="example-text">"The CPU <strong>processes</strong> data."</p>
+                                <p class="example-translation">(المعالج يـُعالج البيانات)</p>
+                            </div>
+                            <div class="example-item">
+                                <p class="example-text">"AI systems <strong>analyze</strong> large datasets."</p>
+                                <p class="example-translation">(أنظمة الذكاء الاصطناعي تحلل مجموعات البيانات الكبيرة)</p>
+                            </div>
+                        </div>
+                        <div class="tense-formula">
+                            <h4>الصيغة:</h4>
+                            <code>Subject + base verb (add 's' for he/she/it)</code>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Present Continuous -->
+                <div class="tense-card">
+                    <div class="tense-header">
+                        <h3>المضارع المستمر</h3>
+                        <span class="tense-label present-cont">Present Continuous</span>
+                    </div>
+                    <div class="tense-content">
+                        <div class="tense-usage">
+                            <h4>الاستخدام:</h4>
+                            <ul>
+                                <li>الأحداث الجارية الآن</li>
+                                <li>المشاريع قيد التنفيذ</li>
+                                <li>التغييرات المؤقتة</li>
+                            </ul>
+                        </div>
+                        <div class="tense-examples">
+                            <h4>أمثلة تقنية:</h4>
+                            <div class="example-item">
+                                <p class="example-text">"The system <strong>is updating</strong> now."</p>
+                                <p class="example-translation">(النظام يتم تحديثه الآن)</p>
+                            </div>
+                            <div class="example-item">
+                                <p class="example-text">"We <strong>are testing</strong> the new algorithm."</p>
+                                <p class="example-translation">(نحن نختبر الخوارزمية الجديدة)</p>
+                            </div>
+                        </div>
+                        <div class="tense-formula">
+                            <h4>الصيغة:</h4>
+                            <code>Subject + am/is/are + verb-ing</code>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Past Simple -->
+                <div class="tense-card">
+                    <div class="tense-header">
+                        <h3>الماضي البسيط</h3>
+                        <span class="tense-label past">Past Simple</span>
+                    </div>
+                    <div class="tense-content">
+                        <div class="tense-usage">
+                            <h4>الاستخدام:</h4>
+                            <ul>
+                                <li>الأحداث المكتملة في الماضي</li>
+                                <li>التجارب والاختبارات السابقة</li>
+                                <li>إصدارات البرامج السابقة</li>
+                            </ul>
+                        </div>
+                        <div class="tense-examples">
+                            <h4>أمثلة تقنية:</h4>
+                            <div class="example-item">
+                                <p class="example-text">"The software <strong>was released</strong> last year."</p>
+                                <p class="example-translation">(البرنامج أُطلق العام الماضي)</p>
+                            </div>
+                            <div class="example-item">
+                                <p class="example-text">"The team <strong>completed</strong> the project on time."</p>
+                                <p class="example-translation">(الفريق أكمل المشروع في الوقت المحدد)</p>
+                            </div>
+                        </div>
+                        <div class="tense-formula">
+                            <h4>الصيغة:</h4>
+                            <code>Subject + past verb (verb+ed or irregular)</code>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Present Perfect -->
+                <div class="tense-card">
+                    <div class="tense-header">
+                        <h3>المضارع التام</h3>
+                        <span class="tense-label perfect">Present Perfect</span>
+                    </div>
+                    <div class="tense-content">
+                        <div class="tense-usage">
+                            <h4>الاستخدام:</h4>
+                            <ul>
+                                <li>الخبرة حتى الآن</li>
+                                <li>التطورات والإنجازات</li>
+                                <li>الإجراءات المكتملة مؤخرًا</li>
+                            </ul>
+                        </div>
+                        <div class="tense-examples">
+                            <h4>أمثلة تقنية:</h4>
+                            <div class="example-item">
+                                <p class="example-text">"The algorithm <strong>has improved</strong> accuracy by 20%."</p>
+                                <p class="example-translation">(الخوارزمية حسّنت الدقة بنسبة 20٪)</p>
+                            </div>
+                            <div class="example-item">
+                                <p class="example-text">"I <strong>have worked</strong> with AI for 3 years."</p>
+                                <p class="example-translation">(لقد عملت مع الذكاء الاصطناعي لمدة 3 سنوات)</p>
+                            </div>
+                        </div>
+                        <div class="tense-formula">
+                            <h4>الصيغة:</h4>
+                            <code>Subject + have/has + past participle</code>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Future -->
+                <div class="tense-card">
+                    <div class="tense-header">
+                        <h3>المستقبل</h3>
+                        <span class="tense-label future">Future</span>
+                    </div>
+                    <div class="tense-content">
+                        <div class="tense-usage">
+                            <h4>الاستخدام:</h4>
+                            <ul>
+                                <li>التنبؤات والتوقعات</li>
+                                <li>الخطط المستقبلية</li>
+                                <li>التطورات المتوقعة</li>
+                            </ul>
+                        </div>
+                        <div class="tense-examples">
+                            <h4>أمثلة تقنية:</h4>
+                            <div class="example-item">
+                                <p class="example-text">"AI <strong>will transform</strong> healthcare."</p>
+                                <p class="example-translation">(الذكاء الاصطناعي سيحول الرعاية الصحية)</p>
+                            </div>
+                            <div class="example-item">
+                                <p class="example-text">"We <strong>are going to implement</strong> the update next week."</p>
+                                <p class="example-translation">(سننفذ التحديث الأسبوع القادم)</p>
+                            </div>
+                        </div>
+                        <div class="tense-formula">
+                            <h4>الصيغة:</h4>
+                            <code>will + base verb<br>OR<br>am/is/are going to + base verb</code>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Past Continuous -->
+                <div class="tense-card">
+                    <div class="tense-header">
+                        <h3>الماضي المستمر</h3>
+                        <span class="tense-label past-cont">Past Continuous</span>
+                    </div>
+                    <div class="tense-content">
+                        <div class="tense-usage">
+                            <h4>الاستخدام:</h4>
+                            <ul>
+                                <li>الأحداث الطويلة في الماضي</li>
+                                <li>الأحداث المقاطعة</li>
+                                <li>العمليات الجارية في وقت محدد</li>
+                            </ul>
+                        </div>
+                        <div class="tense-examples">
+                            <h4>أمثلة تقنية:</h4>
+                            <div class="example-item">
+                                <p class="example-text">"The server <strong>was running</strong> when the power failed."</p>
+                                <p class="example-translation">(الخادم كان يعمل عندما انقطع التيار الكهربائي)</p>
+                            </div>
+                            <div class="example-item">
+                                <p class="example-text">"While we <strong>were testing</strong> the system, an error occurred."</p>
+                                <p class="example-translation">(بينما كنا نختبر النظام، حدث خطأ)</p>
+                            </div>
+                        </div>
+                        <div class="tense-formula">
+                            <h4>الصيغة:</h4>
+                            <code>Subject + was/were + verb-ing</code>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- قسم الأسماء -->
+        <section id="nouns" class="content-section">
+            <h2><i class="fas fa-cubes"></i> الأسماء المعدودة وغير المعدودة</h2>
+            <p class="section-desc">تعلم الفرق بين الأسماء المعدودة وغير المعدودة في اللغة التقنية</p>
+            
+            <div class="nouns-comparison">
+                <div class="nouns-card countable">
+                    <div class="nouns-header">
+                        <h3><i class="fas fa-list-ol"></i> الأسماء المعدودة</h3>
+                        <span class="nouns-badge">Countable Nouns</span>
+                    </div>
+                    <div class="nouns-content">
+                        <div class="nouns-definition">
+                            <p>أسماء يمكن عدها ويمكن أن تأتي بصيغة المفرد والجمع.</p>
+                        </div>
+                        <div class="nouns-examples">
+                            <h4>أمثلة تقنية:</h4>
+                            <ul>
+                                <li>computer → computers</li>
+                                <li>device → devices</li>
+                                <li>server → servers</li>
+                                <li>application → applications</li>
+                                <li>router → routers</li>
+                            </ul>
+                        </div>
+                        <div class="nouns-usage">
+                            <h4>كلمات الكمية المستخدمة:</h4>
+                            <div class="quantifiers">
+                                <span class="quantifier-badge">a/an</span>
+                                <span class="quantifier-badge">many</span>
+                                <span class="quantifier-badge">few</span>
+                                <span class="quantifier-badge">several</span>
+                                <span class="quantifier-badge">number of</span>
+                            </div>
+                        </div>
+                        <div class="nouns-sentences">
+                            <h4>جمل تقنية:</h4>
+                            <div class="sentence-example">
+                                <p>"We have <strong>three servers</strong> in the data center."</p>
+                                <p class="translation">(لدينا ثلاث خوادم في مركز البيانات)</p>
+                            </div>
+                            <div class="sentence-example">
+                                <p>"The office needs <strong>new computers</strong>."</p>
+                                <p class="translation">(المكتب يحتاج إلى حواسيب جديدة)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="nouns-card uncountable">
+                    <div class="nouns-header">
+                        <h3><i class="fas fa-infinity"></i> الأسماء غير المعدودة</h3>
+                        <span class="nouns-badge">Uncountable Nouns</span>
+                    </div>
+                    <div class="nouns-content">
+                        <div class="nouns-definition">
+                            <p>أسماء لا يمكن عدها ولا تأتي بصيغة الجمع.</p>
+                        </div>
+                        <div class="nouns-examples">
+                            <h4>أمثلة تقنية:</h4>
+                            <ul>
+                                <li>software (ليس softwares)</li>
+                                <li>hardware (ليس hardwares)</li>
+                                <li>information (ليس informations)</li>
+                                <li>data (غالبًا مفرد في الإنجليزية الحديثة)</li>
+                                <li>equipment</li>
+                                <li>storage</li>
+                            </ul>
+                        </div>
+                        <div class="nouns-usage">
+                            <h4>كلمات الكمية المستخدمة:</h4>
+                            <div class="quantifiers">
+                                <span class="quantifier-badge">some</span>
+                                <span class="quantifier-badge">much</span>
+                                <span class="quantifier-badge">little</span>
+                                <span class="quantifier-badge">a piece of</span>
+                                <span class="quantifier-badge">a lot of</span>
+                            </div>
+                        </div>
+                        <div class="nouns-sentences">
+                            <h4>جمل تقنية:</h4>
+                            <div class="sentence-example">
+                                <p>"We need <strong>more storage</strong> for our data."</p>
+                                <p class="translation">(نحتاج إلى مساحة تخزين أكبر لبياناتنا)</p>
+                            </div>
+                            <div class="sentence-example">
+                                <p>"This <strong>software is</strong> very useful."</p>
+                                <p class="translation">(هذا البرنامج مفيد جدًا)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- أخطاء شائعة -->
+            <div class="common-errors">
+                <h3><i class="fas fa-exclamation-triangle"></i> أخطاء شائعة</h3>
+                <div class="errors-grid">
+                    <div class="error-item wrong">
+                        <div class="error-icon">
+                            <i class="fas fa-times-circle"></i>
+                        </div>
+                        <div class="error-content">
+                            <h4>خطأ</h4>
+                            <p>"I have many softwares on my computer."</p>
+                        </div>
+                    </div>
+                    <div class="error-item correct">
+                        <div class="error-icon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <div class="error-content">
+                            <h4>صحيح</h4>
+                            <p>"I have <strong>a lot of software</strong> on my computer."</p>
+                        </div>
+                    </div>
+                    <div class="error-item wrong">
+                        <div class="error-icon">
+                            <i class="fas fa-times-circle"></i>
+                        </div>
+                        <div class="error-content">
+                            <h4>خطأ</h4>
+                            <p>"The informations are important."</p>
+                        </div>
+                    </div>
+                    <div class="error-item correct">
+                        <div class="error-icon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <div class="error-content">
+                            <h4>صحيح</h4>
+                            <p>"The <strong>information is</strong> important."</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- قسم التمارين -->
+        <section id="practice" class="content-section">
+            <h2><i class="fas fa-dumbbell"></i> تمارين القواعد</h2>
+            <p class="section-desc">تدرب على القواعد من خلال تمارين تفاعلية متنوعة</p>
+            
+            <div class="exercise-tabs">
+                <button class="tab-btn active" data-tab="tense-exercises">تمارين الأزمنة</button>
+                <button class="tab-btn" data-tab="noun-exercises">تمارين الأسماء</button>
+                <button class="tab-btn" data-tab="mixed-exercises">تمارين مختلطة</button>
+            </div>
+            
+            <!-- تمارين الأزمنة -->
+            <div class="tab-content active" id="tense-exercises">
+                <div class="exercise-container">
+                    <div class="exercise-instructions">
+                        <h3>تمرين 1: اختر الزمن الصحيح</h3>
+                        <p>اختر الزمن المناسب للجملة التقنية التالية:</p>
+                    </div>
+                    
+                    <div class="exercise-question" id="tenseQuestion1">
+                        <p class="question-text">"The AI model usually __________ (analyze) data from multiple sources."</p>
+                        <div class="options-grid">
+                            <label class="option-radio">
+                                <input type="radio" name="tenseQ1" value="present">
+                                <span class="option-content">
+                                    <span class="option-letter">أ</span>
+                                    <span class="option-text">analyzes (Present Simple)</span>
+                                </span>
+                            </label>
+                            <label class="option-radio">
+                                <input type="radio" name="tenseQ1" value="continuous">
+                                <span class="option-content">
+                                    <span class="option-letter">ب</span>
+                                    <span class="option-text">is analyzing (Present Continuous)</span>
+                                </span>
+                            </label>
+                            <label class="option-radio">
+                                <input type="radio" name="tenseQ1" value="past">
+                                <span class="option-content">
+                                    <span class="option-letter">ج</span>
+                                    <span class="option-text">analyzed (Past Simple)</span>
+                                </span>
+                            </label>
+                            <label class="option-radio">
+                                <input type="radio" name="tenseQ1" value="perfect">
+                                <span class="option-content">
+                                    <span class="option-letter">د</span>
+                                    <span class="option-text">has analyzed (Present Perfect)</span>
+                                </span>
+                            </label>
+                        </div>
+                        <button class="check-answer" data-question="tenseQ1" data-answer="present">تحقق من الإجابة</button>
+                        <div class="answer-feedback" id="feedbackTenseQ1"></div>
+                    </div>
+
+                    <div class="exercise-question" id="tenseQuestion2">
+                        <p class="question-text">"Yesterday, the cybersecurity team __________ (detect) a serious threat."</p>
+                        <div class="options-grid">
+                            <label class="option-radio">
+                                <input type="radio" name="tenseQ2" value="present">
+                                <span class="option-content">
+                                    <span class="option-letter">أ</span>
+                                    <span class="option-text">detects (Present Simple)</span>
+                                </span>
+                            </label>
+                            <label class="option-radio">
+                                <input type="radio" name="tenseQ2" value="continuous">
+                                <span class="option-content">
+                                    <span class="option-letter">ب</span>
+                                    <span class="option-text">is detecting (Present Continuous)</span>
+                                </span>
+                            </label>
+                            <label class="option-radio">
+                                <input type="radio" name="tenseQ2" value="past">
+                                <span class="option-content">
+                                    <span class="option-letter">ج</span>
+                                    <span class="option-text">detected (Past Simple)</span>
+                                </span>
+                            </label>
+                            <label class="option-radio">
+                                <input type="radio" name="tenseQ2" value="perfect">
+                                <span class="option-content">
+                                    <span class="option-letter">د</span>
+                                    <span class="option-text">has detected (Present Perfect)</span>
+                                </span>
+                            </label>
+                        </div>
+                        <button class="check-answer" data-question="tenseQ2" data-answer="past">تحقق من الإجابة</button>
+                        <div class="answer-feedback" id="feedbackTenseQ2"></div>
+                    </div>
+
+                    <div class="exercise-question" id="tenseQuestion3">
+                        <p class="question-text">"By next year, machine learning __________ (transform) many industries."</p>
+                        <div class="options-grid">
+                            <label class="option-radio">
+                                <input type="radio" name="tenseQ3" value="present">
+                                <span class="option-content">
+                                    <span class="option-letter">أ</span>
+                                    <span class="option-text">transforms (Present Simple)</span>
+                                </span>
+                            </label>
+                            <label class="option-radio">
+                                <input type="radio" name="tenseQ3" value="continuous">
+                                <span class="option-content">
+                                    <span class="option-letter">ب</span>
+                                    <span class="option-text">is transforming (Present Continuous)</span>
+                                </span>
+                            </label>
+                            <label class="option-radio">
+                                <input type="radio" name="tenseQ3" value="future">
+                                <span class="option-content">
+                                    <span class="option-letter">ج</span>
+                                    <span class="option-text">will transform (Future)</span>
+                                </span>
+                            </label>
+                            <label class="option-radio">
+                                <input type="radio" name="tenseQ3" value="perfect">
+                                <span class="option-content">
+                                    <span class="option-letter">د</span>
+                                    <span class="option-text">has transformed (Present Perfect)</span>
+                                </span>
+                            </label>
+                        </div>
+                        <button class="check-answer" data-question="tenseQ3" data-answer="future">تحقق من الإجابة</button>
+                        <div class="answer-feedback" id="feedbackTenseQ3"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- تمارين الأسماء -->
+            <div class="tab-content" id="noun-exercises">
+                <div class="exercise-container">
+                    <div class="exercise-instructions">
+                        <h3>تمرين 2: صحح الخطأ في الجملة</h3>
+                        <p>صحح الخطأ في استخدام الأسماء في الجمل التالية:</p>
+                    </div>
+                    
+                    <div class="exercise-question" id="nounQuestion1">
+                        <div class="sentence-correction">
+                            <p class="sentence-wrong">"I need to buy new <strong>equipments</strong> for the lab."</p>
+                            <div class="correction-input">
+                                <label>اكتب الجملة الصحيحة:</label>
+                                <input type="text" id="correction1" placeholder="I need to buy new equipment for the lab.">
+                            </div>
+                        </div>
+                        <button class="check-correction" data-question="nounQ1" data-answer="I need to buy new equipment for the lab.">تحقق من الإجابة</button>
+                        <div class="answer-feedback" id="feedbackNounQ1"></div>
+                    </div>
+
+                    <div class="exercise-question" id="nounQuestion2">
+                        <div class="sentence-correction">
+                            <p class="sentence-wrong">"We have many important <strong>informations</strong> to analyze."</p>
+                            <div class="correction-input">
+                                <label>اكتب الجملة الصحيحة:</label>
+                                <input type="text" id="correction2" placeholder="We have a lot of important information to analyze.">
+                            </div>
+                        </div>
+                        <button class="check-correction" data-question="nounQ2" data-answer="We have a lot of important information to analyze.">تحقق من الإجابة</button>
+                        <div class="answer-feedback" id="feedbackNounQ2"></div>
+                    </div>
+
+                    <div class="exercise-question" id="nounQuestion3">
+                        <div class="sentence-correction">
+                            <p class="sentence-wrong">"This <strong>softwares are</strong> very expensive."</p>
+                            <div class="correction-input">
+                                <label>اكتب الجملة الصحيحة:</label>
+                                <input type="text" id="correction3" placeholder="This software is very expensive.">
+                            </div>
+                        </div>
+                        <button class="check-correction" data-question="nounQ3" data-answer="This software is very expensive.">تحقق من الإجابة</button>
+                        <div class="answer-feedback" id="feedbackNounQ3"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- تمارين مختلطة -->
+            <div class="tab-content" id="mixed-exercises">
+                <div class="exercise-container">
+                    <div class="exercise-instructions">
+                        <h3>تمرين 3: أملأ الفراغات بالكلمة المناسبة</h3>
+                        <p>اختر الكمية المناسبة للكلمة في الجملة:</p>
+                    </div>
+                    
+                    <div class="fill-blank-exercise">
+                        <div class="blank-question">
+                            <p>We need __________ (much/many) storage for our data.</p>
+                            <div class="blank-options">
+                                <label class="blank-option">
+                                    <input type="radio" name="blankQ1" value="much">
+                                    <span>much</span>
+                                </label>
+                                <label class="blank-option">
+                                    <input type="radio" name="blankQ1" value="many">
+                                    <span>many</span>
+                                </label>
+                            </div>
+                            <button class="check-blank" data-question="blankQ1" data-answer="much">تحقق</button>
+                            <div class="blank-feedback" id="feedbackBlankQ1"></div>
+                        </div>
+
+                        <div class="blank-question">
+                            <p>There are __________ (a few/a little) computers in the classroom.</p>
+                            <div class="blank-options">
+                                <label class="blank-option">
+                                    <input type="radio" name="blankQ2" value="a few">
+                                    <span>a few</span>
+                                </label>
+                                <label class="blank-option">
+                                    <input type="radio" name="blankQ2" value="a little">
+                                    <span>a little</span>
+                                </label>
+                            </div>
+                            <button class="check-blank" data-question="blankQ2" data-answer="a few">تحقق</button>
+                            <div class="blank-feedback" id="feedbackBlankQ2"></div>
+                        </div>
+
+                        <div class="blank-question">
+                            <p>I installed __________ (some/a) new software yesterday.</p>
+                            <div class="blank-options">
+                                <label class="blank-option">
+                                    <input type="radio" name="blankQ3" value="some">
+                                    <span>some</span>
+                                </label>
+                                <label class="blank-option">
+                                    <input type="radio" name="blankQ3" value="a">
+                                    <span>a</span>
+                                </label>
+                            </div>
+                            <button class="check-blank" data-question="blankQ3" data-answer="some">تحقق</button>
+                            <div class="blank-feedback" id="feedbackBlankQ3"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- نتائج التمارين -->
+            <div class="exercise-results">
+                <h3><i class="fas fa-chart-bar"></i> نتائج التمارين</h3>
+                <div class="results-summary">
+                    <div class="result-item">
+                        <span class="result-label">التمارين المكتملة:</span>
+                        <span class="result-value" id="completedExercises">0</span>
+                    </div>
+                    <div class="result-item">
+                        <span class="result-label">الإجابات الصحيحة:</span>
+                        <span class="result-value" id="correctAnswers">0</span>
+                    </div>
+                    <div class="result-item">
+                        <span class="result-label">الدقة:</span>
+                        <span class="result-value" id="accuracyRate">0%</span>
+                    </div>
+                </div>
+                <button id="resetExercises" class="btn btn-outline">
+                    <i class="fas fa-redo"></i> إعادة تعيين جميع التمارين
+                </button>
+            </div>
+        </section>
+
+        <!-- التنقل بين الأجزاء -->
+        <div class="page-navigation">
+            <a href="technical-terms.html" class="nav-link-prev">
+                <i class="fas fa-arrow-right"></i> الجزء السابق: المصطلحات التقنية
+            </a>
+            <a href="writing.html" class="nav-link-next">
+                الجزء التالي: الكتابة <i class="fas fa-arrow-left"></i>
+            </a>
+        </div>
+    </main>
+
+    <script type="module">
+        import { initTheme, toggleTheme } from './script.js';
+
+        document.addEventListener('DOMContentLoaded', () => {
+            initTheme();
+            const themeToggle = document.getElementById('themeToggle');
+            if (themeToggle) {
+                themeToggle.addEventListener('click', toggleTheme);
+            }
+            
+            // تهيئة الألسنة (Tabs)
+            setupTabs();
+            
+            // تهيئة تمارين الأزمنة
+            setupTenseExercises();
+            
+            // تهيئة تمارين الأسماء
+            setupNounExercises();
+            
+            // تهيئة تمارين الفراغات
+            setupBlankExercises();
+            
+            // تهيئة زر إعادة التعيين
+            document.getElementById('resetExercises').addEventListener('click', resetAllExercises);
+        });
+
+        // === إعداد الألسنة ===
+        function setupTabs() {
+            const tabBtns = document.querySelectorAll('.tab-btn');
+            const tabContents = document.querySelectorAll('.tab-content');
+            
+            tabBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    // إزالة النشاط من الكل
+                    tabBtns.forEach(b => b.classList.remove('active'));
+                    tabContents.forEach(c => c.classList.remove('active'));
+                    
+                    // إضافة النشاط للعنصر المحدد
+                    btn.classList.add('active');
+                    document.getElementById(`${btn.dataset.tab}`).classList.add('active');
+                });
+            });
+        }
+
+        // === تمارين الأزمنة ===
+        function setupTenseExercises() {
+            const checkButtons = document.querySelectorAll('.check-answer[data-question^="tense"]');
+            
+            checkButtons.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const questionName = this.dataset.question;
+                    const correctAnswer = this.dataset.answer;
+                    const selected = document.querySelector(`input[name="${questionName}"]:checked`);
+                    const feedback = document.getElementById(`feedback${questionName.replace('Q', 'Q')}`);
+                    
+                    if (!selected) {
+                        feedback.innerHTML = '<div class="warning">⚠️ الرجاء اختيار إجابة أولاً!</div>';
+                        feedback.className = 'answer-feedback warning';
+                        return;
+                    }
+                    
+                    const isCorrect = selected.value === correctAnswer;
+                    
+                    if (isCorrect) {
+                        feedback.innerHTML = `
+                            <div class="correct">
+                                <i class="fas fa-check-circle"></i>
+                                <div>
+                                    <strong>إجابة صحيحة! ✓</strong>
+                                    <p>${getTenseExplanation(correctAnswer)}</p>
+                                </div>
+                            </div>
+                        `;
+                        feedback.className = 'answer-feedback correct';
+                        updateExerciseStats(true);
+                    } else {
+                        feedback.innerHTML = `
+                            <div class="wrong">
+                                <i class="fas fa-times-circle"></i>
+                                <div>
+                                    <strong>إجابة خاطئة ✗</strong>
+                                    <p>الإجابة الصحيحة هي: <strong>${getTenseName(correctAnswer)}</strong></p>
+                                    <p>${getTenseExplanation(correctAnswer)}</p>
+                                </div>
+                            </div>
+                        `;
+                        feedback.className = 'answer-feedback wrong';
+                        updateExerciseStats(false);
+                    }
+                });
+            });
+        }
+
+        function getTenseName(tense) {
+            const tenseNames = {
+                present: 'المضارع البسيط (Present Simple)',
+                continuous: 'المضارع المستمر (Present Continuous)',
+                past: 'الماضي البسيط (Past Simple)',
+                perfect: 'المضارع التام (Present Perfect)',
+                future: 'المستقبل (Future)'
+            };
+            return tenseNames[tense] || tense;
+        }
+
+        function getTenseExplanation(tense) {
+            const explanations = {
+                present: 'يستخدم المضارع البسيط لوصف الحقائق والوظائف الثابتة للأنظمة التقنية.',
+                continuous: 'يستخدم المضارع المستمر للأحداث الجارية الآن أو المشاريع قيد التنفيذ.',
+                past: 'يستخدم الماضي البسيط للأحداث المكتملة في وقت محدد في الماضي.',
+                perfect: 'يستخدم المضارع التام للخبرة أو الإنجازات حتى الآن.',
+                future: 'يستخدم المستقبل للتنبؤات أو الخطط المستقبلية.'
+            };
+            return explanations[tense] || '';
+        }
+
+        // === تمارين الأسماء ===
+        function setupNounExercises() {
+            const checkButtons = document.querySelectorAll('.check-correction');
+            
+            checkButtons.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const questionId = this.dataset.question.replace('nounQ', 'correction');
+                    const userAnswer = document.getElementById(questionId).value.trim().toLowerCase();
+                    const correctAnswer = this.dataset.answer.trim().toLowerCase();
+                    const feedback = document.getElementById(`feedback${this.dataset.question}`);
+                    
+                    if (!userAnswer) {
+                        feedback.innerHTML = '<div class="warning">⚠️ الرجاء كتابة التصحيح أولاً!</div>';
+                        feedback.className = 'answer-feedback warning';
+                        return;
+                    }
+                    
+                    // مقارنة متساهلة (تجاهل الفراغات الزائدة وعلامات الترقيم)
+                    const normalizedUser = userAnswer.replace(/[.,]/g, '').replace(/\s+/g, ' ');
+                    const normalizedCorrect = correctAnswer.replace(/[.,]/g, '').replace(/\s+/g, ' ');
+                    
+                    const isCorrect = normalizedUser === normalizedCorrect;
+                    
+                    if (isCorrect) {
+                        feedback.innerHTML = `
+                            <div class="correct">
+                                <i class="fas fa-check-circle"></i>
+                                <div>
+                                    <strong>إجابة صحيحة! ✓</strong>
+                                    <p>التصحيح: "${this.dataset.answer}"</p>
+                                    <p class="explanation">${getNounExplanation(this.dataset.question)}</p>
+                                </div>
+                            </div>
+                        `;
+                        feedback.className = 'answer-feedback correct';
+                        updateExerciseStats(true);
+                    } else {
+                        feedback.innerHTML = `
+                            <div class="wrong">
+                                <i class="fas fa-times-circle"></i>
+                                <div>
+                                    <strong>إجابة خاطئة ✗</strong>
+                                    <p>التصحيح الصحيح هو: <strong>"${this.dataset.answer}"</strong></p>
+                                    <p class="explanation">${getNounExplanation(this.dataset.question)}</p>
+                                </div>
+                            </div>
+                        `;
+                        feedback.className = 'answer-feedback wrong';
+                        updateExerciseStats(false);
+                    }
+                });
+            });
+        }
+
+        function getNounExplanation(questionId) {
+            const explanations = {
+                nounQ1: "'equipment' اسم غير معدود، لا يأتي بصيغة الجمع.",
+                nounQ2: "'information' اسم غير معدود، يستخدم مع 'a lot of' بدلاً من 'many'.",
+                nounQ3: "'software' اسم غير معدود، يستخدم مع الفعل المفرد 'is'."
+            };
+            return explanations[questionId] || '';
+        }
+
+        // === تمارين الفراغات ===
+        function setupBlankExercises() {
+            const checkButtons = document.querySelectorAll('.check-blank');
+            
+            checkButtons.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const questionName = this.dataset.question;
+                    const correctAnswer = this.dataset.answer;
+                    const selected = document.querySelector(`input[name="${questionName}"]:checked`);
+                    const feedback = document.getElementById(`feedback${questionName}`);
+                    
+                    if (!selected) {
+                        feedback.innerHTML = '<div class="warning">⚠️ الرجاء اختيار إجابة أولاً!</div>';
+                        feedback.className = 'blank-feedback warning';
+                        return;
+                    }
+                    
+                    const isCorrect = selected.value === correctAnswer;
+                    
+                    if (isCorrect) {
+                        feedback.innerHTML = `
+                            <div class="correct">
+                                <i class="fas fa-check-circle"></i>
+                                <strong>إجابة صحيحة! ✓</strong>
+                                <p>${getBlankExplanation(questionName, correctAnswer)}</p>
+                            </div>
+                        `;
+                        feedback.className = 'blank-feedback correct';
+                        updateExerciseStats(true);
+                    } else {
+                        feedback.innerHTML = `
+                            <div class="wrong">
+                                <i class="fas fa-times-circle"></i>
+                                <strong>إجابة خاطئة ✗</strong>
+                                <p>الإجابة الصحيحة هي: <strong>${correctAnswer}</strong></p>
+                                <p>${getBlankExplanation(questionName, correctAnswer)}</p>
+                            </div>
+                        `;
+                        feedback.className = 'blank-feedback wrong';
+                        updateExerciseStats(false);
+                    }
+                });
+            });
+        }
+
+        function getBlankExplanation(questionId, answer) {
+            const explanations = {
+                blankQ1: "'storage' اسم غير معدود، يستخدم مع 'much'.",
+                blankQ2: "'computers' اسم معدود، يستخدم مع 'a few'.",
+                blankQ3: "'software' اسم غير معدود، يستخدم مع 'some'."
+            };
+            return explanations[questionId] || '';
+        }
+
+        // === إحصائيات التمارين ===
+        let exerciseStats = {
+            total: 0,
+            correct: 0,
+            completed: 0
+        };
+
+        function updateExerciseStats(isCorrect) {
+            exerciseStats.total++;
+            exerciseStats.completed++;
+            if (isCorrect) exerciseStats.correct++;
+            
+            updateStatsDisplay();
+        }
+
+        function updateStatsDisplay() {
+            document.getElementById('completedExercises').textContent = exerciseStats.completed;
+            document.getElementById('correctAnswers').textContent = exerciseStats.correct;
+            
+            const accuracy = exerciseStats.total > 0 ? 
+                Math.round((exerciseStats.correct / exerciseStats.total) * 100) : 0;
+            document.getElementById('accuracyRate').textContent = `${accuracy}%`;
+        }
+
+        function resetAllExercises() {
+            // إعادة تعيين جميع المدخلات
+            document.querySelectorAll('input[type="radio"]').forEach(input => {
+                input.checked = false;
+            });
+            
+            document.querySelectorAll('input[type="text"]').forEach(input => {
+                input.value = '';
+            });
+            
+            // إعادة تعيين جميع التغذية الراجعة
+            document.querySelectorAll('.answer-feedback, .blank-feedback').forEach(feedback => {
+                feedback.innerHTML = '';
+                feedback.className = feedback.className.split(' ')[0]; // إزالة جميع الفئات باستثناء الأولى
+            });
+            
+            // إعادة تعيين الإحصائيات
+            exerciseStats = { total: 0, correct: 0, completed: 0 };
+            updateStatsDisplay();
+            
+            // عرض رسالة تأكيد
+            alert('تم إعادة تعيين جميع التمارين!');
+        }
+    </script>
+
+    <style>
+        /* تنسيقات إضافية لصفحة القواعد */
+        .content-section {
+            background: var(--bg-card);
+            border-radius: var(--radius-lg);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow-md);
+        }
+
+        .section-desc {
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        /* تنسيقات بطاقات الأزمنة */
+        .tenses-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .tenses-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .tense-card {
+            background: var(--bg-secondary);
+            border-radius: var(--radius-md);
+            padding: 1.5rem;
+            border: 2px solid transparent;
+            transition: all 0.3s;
+        }
+
+        .tense-card:hover {
+            border-color: var(--primary-color);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .tense-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+            padding-bottom: 0.8rem;
+            border-bottom: 2px solid rgba(0,0,0,0.1);
+        }
+
+        .tense-header h3 {
+            font-size: 1.3rem;
+            color: var(--text-primary);
+            margin: 0;
+        }
+
+        .tense-label {
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: white;
+        }
+
+        .tense-label.present {
+            background: linear-gradient(135deg, #2ecc71, #27ae60);
+        }
+
+        .tense-label.present-cont {
+            background: linear-gradient(135deg, #3498db, #2980b9);
+        }
+
+        .tense-label.past {
+            background: linear-gradient(135deg, #9b59b6, #8e44ad);
+        }
+
+        .tense-label.perfect {
+            background: linear-gradient(135deg, #f39c12, #e67e22);
+        }
+
+        .tense-label.future {
+            background: linear-gradient(135deg, #e74c3c, #c0392b);
+        }
+
+        .tense-label.past-cont {
+            background: linear-gradient(135deg, #1abc9c, #16a085);
+        }
+
+        .tense-content {
+            line-height: 1.6;
+        }
+
+        .tense-usage, .tense-examples, .tense-formula {
+            margin-bottom: 1.2rem;
+        }
+
+        .tense-usage h4, .tense-examples h4, .tense-formula h4 {
+            font-size: 1rem;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .tense-usage h4:before {
+            content: '🎯';
+        }
+
+        .tense-examples h4:before {
+            content: '💡';
+        }
+
+        .tense-formula h4:before {
+            content: '📝';
+        }
+
+        .tense-usage ul {
+            padding-right: 1.2rem;
+            margin: 0;
+        }
+
+        .tense-usage li {
+            margin-bottom: 0.3rem;
+            color: var(--text-secondary);
+        }
+
+        .example-item {
+            background: var(--bg-primary);
+            padding: 0.8rem;
+            border-radius: var(--radius-sm);
+            margin-bottom: 0.8rem;
+            border-right: 3px solid var(--primary-color);
+        }
+
+        .example-text {
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 0.3rem;
+        }
+
+        .example-translation {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            font-style: italic;
+        }
+
+        .tense-formula code {
+            display: block;
+            background: var(--bg-primary);
+            padding: 0.8rem;
+            border-radius: var(--radius-sm);
+            font-family: 'Courier New', monospace;
+            color: var(--primary-color);
+            font-weight: 600;
+            text-align: center;
+            margin-top: 0.5rem;
+        }
+
+        /* تنسيقات قسم الأسماء */
+        .nouns-comparison {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        @media (max-width: 992px) {
+            .nouns-comparison {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .nouns-card {
+            background: var(--bg-secondary);
+            border-radius: var(--radius-md);
+            padding: 1.5rem;
+            border-top: 5px solid transparent;
+        }
+
+        .nouns-card.countable {
+            border-top-color: var(--success-color);
+        }
+
+        .nouns-card.uncountable {
+            border-top-color: var(--primary-color);
+        }
+
+        .nouns-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.2rem;
+            padding-bottom: 0.8rem;
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+        }
+
+        .nouns-header h3 {
+            font-size: 1.2rem;
+            color: var(--text-primary);
+            margin: 0;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .nouns-badge {
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+        }
+
+        .nouns-content {
+            line-height: 1.6;
+        }
+
+        .nouns-definition {
+            color: var(--text-secondary);
+            margin-bottom: 1.2rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px dashed rgba(0,0,0,0.1);
+        }
+
+        .nouns-examples h4, .nouns-usage h4, .nouns-sentences h4 {
+            font-size: 1rem;
+            color: var(--text-primary);
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .nouns-examples h4:before {
+            content: '📋';
+        }
+
+        .nouns-usage h4:before {
+            content: '⚖️';
+        }
+
+        .nouns-sentences h4:before {
+            content: '✍️';
+        }
+
+        .nouns-examples ul {
+            padding-right: 1.2rem;
+            margin-bottom: 1.2rem;
+        }
+
+        .nouns-examples li {
+            margin-bottom: 0.5rem;
+            color: var(--text-secondary);
+            font-family: 'Courier New', monospace;
+        }
+
+        .quantifiers {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1.2rem;
+        }
+
+        .quantifier-badge {
+            background: var(--bg-primary);
+            padding: 0.3rem 0.8rem;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            border: 1px solid rgba(0,0,0,0.1);
+        }
+
+        .sentence-example {
+            background: var(--bg-primary);
+            padding: 0.8rem;
+            border-radius: var(--radius-sm);
+            margin-bottom: 0.8rem;
+        }
+
+        .sentence-example p {
+            margin: 0;
+        }
+
+        .sentence-example .translation {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-top: 0.3rem;
+            font-style: italic;
+        }
+
+        /* تنسيقات الأخطاء الشائعة */
+        .common-errors {
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 2px solid var(--bg-secondary);
+        }
+
+        .common-errors h3 {
+            font-size: 1.3rem;
+            color: var(--text-primary);
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .errors-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .errors-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .error-item {
+            display: flex;
+            gap: 1rem;
+            padding: 1rem;
+            border-radius: var(--radius-md);
+            align-items: flex-start;
+        }
+
+        .error-item.wrong {
+            background: rgba(231, 76, 60, 0.1);
+            border-right: 3px solid var(--danger-color);
+        }
+
+        .error-item.correct {
+            background: rgba(46, 204, 113, 0.1);
+            border-right: 3px solid var(--success-color);
+        }
+
+        .error-icon {
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+
+        .error-item.wrong .error-icon {
+            color: var(--danger-color);
+        }
+
+        .error-item.correct .error-icon {
+            color: var(--success-color);
+        }
+
+        .error-content h4 {
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-primary);
+        }
+
+        .error-content p {
+            margin: 0;
+            color: var(--text-secondary);
+            font-family: 'Courier New', monospace;
+        }
+
+        /* تنسيقات التمارين */
+        .exercise-tabs {
+            display: flex;
+            gap: 0.5rem;
+            margin-bottom: 2rem;
+            border-bottom: 2px solid var(--bg-secondary);
+            padding-bottom: 0.5rem;
+        }
+
+        .tab-btn {
+            background: none;
+            border: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: var(--radius-md) var(--radius-md) 0 0;
+            cursor: pointer;
+            font-weight: 600;
+            color: var(--text-secondary);
+            transition: all 0.3s;
+            position: relative;
+        }
+
+        .tab-btn.active {
+            color: var(--primary-color);
+            background: var(--bg-secondary);
+        }
+
+        .tab-btn.active::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: var(--primary-color);
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+            animation: fadeIn 0.3s;
+        }
+
+        .exercise-container {
+            background: var(--bg-secondary);
+            border-radius: var(--radius-lg);
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .exercise-instructions {
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .exercise-instructions h3 {
+            font-size: 1.3rem;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .exercise-instructions p {
+            color: var(--text-secondary);
+        }
+
+        .exercise-question {
+            background: var(--bg-primary);
+            border-radius: var(--radius-md);
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-right: 3px solid var(--primary-color);
+        }
+
+        .question-text {
+            font-size: 1.1rem;
+            color: var(--text-primary);
+            margin-bottom: 1.2rem;
+            line-height: 1.5;
+        }
+
+        .options-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 0.8rem;
+            margin-bottom: 1.2rem;
+        }
+
+        .option-radio {
+            display: block;
+            cursor: pointer;
+        }
+
+        .option-radio input {
+            display: none;
+        }
+
+        .option-content {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem;
+            border: 2px solid var(--bg-secondary);
+            border-radius: var(--radius-md);
+            background: var(--bg-primary);
+            transition: all 0.3s;
+        }
+
+        .option-radio input:checked + .option-content {
+            border-color: var(--primary-color);
+            background: rgba(67, 97, 238, 0.1);
+        }
+
+        .option-letter {
+            width: 30px;
+            height: 30px;
+            background: var(--primary-color);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            flex-shrink: 0;
+        }
+
+        .option-text {
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+
+        .check-answer, .check-correction, .check-blank {
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: var(--radius-md);
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .check-answer:hover, .check-correction:hover, .check-blank:hover {
+            background: var(--secondary-color);
+            transform: translateY(-2px);
+        }
+
+        .answer-feedback, .blank-feedback {
+            margin-top: 1.2rem;
+            padding: 1rem;
+            border-radius: var(--radius-md);
+            animation: fadeIn 0.3s;
+        }
+
+        .answer-feedback.correct, .blank-feedback.correct {
+            background: rgba(46, 204, 113, 0.1);
+            border-right: 3px solid var(--success-color);
+        }
+
+        .answer-feedback.wrong, .blank-feedback.wrong {
+            background: rgba(231, 76, 60, 0.1);
+            border-right: 3px solid var(--danger-color);
+        }
+
+        .answer-feedback.warning, .blank-feedback.warning {
+            background: rgba(243, 156, 18, 0.1);
+            border-right: 3px solid var(--warning-color);
+        }
+
+        .answer-feedback .correct, .answer-feedback .wrong, 
+        .blank-feedback .correct, .blank-feedback .wrong {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+
+        .answer-feedback i, .blank-feedback i {
+            font-size: 1.5rem;
+            flex-shrink: 0;
+            margin-top: 0.2rem;
+        }
+
+        .answer-feedback .correct i {
+            color: var(--success-color);
+        }
+
+        .answer-feedback .wrong i {
+            color: var(--danger-color);
+        }
+
+        .explanation {
+            margin-top: 0.5rem;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* تمارين التصحيح */
+        .sentence-correction {
+            margin-bottom: 1.2rem;
+        }
+
+        .sentence-wrong {
+            background: rgba(231, 76, 60, 0.1);
+            padding: 1rem;
+            border-radius: var(--radius-sm);
+            color: var(--danger-color);
+            font-weight: 600;
+            margin-bottom: 1rem;
+            border-right: 3px solid var(--danger-color);
+        }
+
+        .correction-input {
+            margin-top: 1rem;
+        }
+
+        .correction-input label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+
+        .correction-input input {
+            width: 100%;
+            padding: 0.8rem;
+            border: 2px solid var(--bg-secondary);
+            border-radius: var(--radius-md);
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            font-size: 1rem;
+            transition: all 0.3s;
+        }
+
+        .correction-input input:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.2);
+        }
+
+        /* تمارين الفراغات */
+        .fill-blank-exercise {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .blank-question {
+            background: var(--bg-primary);
+            padding: 1.5rem;
+            border-radius: var(--radius-md);
+            border-right: 3px solid var(--primary-color);
+        }
+
+        .blank-question p {
+            font-size: 1.1rem;
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+        }
+
+        .blank-options {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .blank-option {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            cursor: pointer;
+        }
+
+        .blank-option input {
+            margin: 0;
+        }
+
+        .blank-option span {
+            color: var(--text-primary);
+        }
+
+        /* نتائج التمارين */
+        .exercise-results {
+            background: var(--bg-secondary);
+            border-radius: var(--radius-lg);
+            padding: 2rem;
+            margin-top: 2rem;
+            text-align: center;
+        }
+
+        .exercise-results h3 {
+            font-size: 1.3rem;
+            color: var(--text-primary);
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        .results-summary {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .result-item {
+            background: var(--bg-primary);
+            padding: 1.2rem;
+            border-radius: var(--radius-md);
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .result-label {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .result-value {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
+        /* تنسيقات التنقل بين الصفحات */
+        .page-navigation {
+            display: flex;
+            justify-content: space-between;
+            margin: 3rem 0;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(0,0,0,0.1);
+        }
+
+        .nav-link-prev, .nav-link-next {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.8rem 1.5rem;
+            background: var(--bg-secondary);
+            border-radius: var(--radius-md);
+            text-decoration: none;
+            color: var(--text-primary);
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .nav-link-prev:hover, .nav-link-next:hover {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            .page-navigation {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .exercise-tabs {
+                flex-direction: column;
+            }
+            
+            .blank-options {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .results-summary {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+    
+    <!-- Language Integration -->
+    <script type="module" src="language-integration.js"></script>
+    <script type="module" src="script.js"></script>
+</body>
+</html>

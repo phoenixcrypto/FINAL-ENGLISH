@@ -1,0 +1,2089 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Writing - IT English Review</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/codemirror.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/theme/dracula.min.css">
+    <!-- Language System -->
+    <script src="language-system.js"></script>
+    <script src="content-library.js"></script>
+    <script src="progress-tracker.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-brand">
+                <i class="fas fa-arrow-left"></i> <span class="i18n-text" data-i18n="common.back">Back to Home</span>
+            </a>
+            <div class="nav-menu">
+                <a href="#templates" class="nav-link"><span class="i18n-text">Templates</span></a>
+                <a href="#editor" class="nav-link"><span class="i18n-text">Editor</span></a>
+                <a href="#correction" class="nav-link"><span class="i18n-text">Correction</span></a>
+                <div class="language-switcher">
+                    <button id="langSwitcherBtn" class="lang-switcher-btn" aria-label="Switch Language Mode" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-language"></i>
+                        <span id="currentModeDisplay">Exam Mode</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div id="langSwitcherDropdown" class="lang-switcher-dropdown" role="menu">
+                        <div class="lang-mode-option active" data-mode="exam" role="menuitem">
+                            <span class="lang-mode-name">Exam Mode</span>
+                            <span class="lang-mode-desc">Pure English - Real exam simulation</span>
+                        </div>
+                        <div class="lang-mode-option" data-mode="study" role="menuitem">
+                            <span class="lang-mode-name">Study Mode</span>
+                            <span class="lang-mode-desc">English with Arabic help tooltips</span>
+                        </div>
+                        <div class="lang-mode-option" data-mode="beginner" role="menuitem">
+                            <span class="lang-mode-name">Beginner Mode</span>
+                            <span class="lang-mode-desc">Bilingual interface - Arabic primary</span>
+                        </div>
+                    </div>
+                </div>
+                <button id="themeToggle" class="icon-btn" aria-label="Toggle Theme"><i class="fas fa-moon"></i></button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+        <header class="page-header">
+            <h1><i class="fas fa-pen-fancy"></i> الجزء 5: الكتابة (Writing)</h1>
+            <p class="subtitle">تعلم كتابة البراجرافات التقنية مع قوالب جاهزة وتصحيح آلي</p>
+            <div class="header-info">
+                <span class="info-badge"><i class="fas fa-file-alt"></i> 5 قوالب</span>
+                <span class="info-badge"><i class="fas fa-spell-check"></i> تصحيح تلقائي</span>
+                <span class="info-badge"><i class="fas fa-chart-bar"></i> تحليل النص</span>
+            </div>
+        </header>
+
+        <!-- قسم القوالب -->
+        <section id="templates" class="content-section">
+            <h2><i class="fas fa-layer-group"></i> قوالب البراجراف الجاهزة</h2>
+            <p class="section-desc">اختر من القوالب التالية لتبدأ كتابتك بسهولة:</p>
+            
+            <div class="templates-grid">
+                <!-- قالب 1 -->
+                <div class="template-card" data-template="cybersecurity">
+                    <div class="template-header">
+                        <div class="template-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div class="template-info">
+                            <h3>الأمن السيبراني</h3>
+                            <span class="template-difficulty">متوسط</span>
+                        </div>
+                    </div>
+                    <div class="template-content">
+                        <p class="template-desc">براجراف عن العلاقة بين التهديدات ونقاط الضعف والهجمات</p>
+                        <div class="template-stats">
+                            <span><i class="fas fa-ruler"></i> 5-6 جمل</span>
+                            <span><i class="fas fa-clock"></i> 15 دقيقة</span>
+                        </div>
+                        <div class="template-keywords">
+                            <span class="keyword">Threat</span>
+                            <span class="keyword">Vulnerability</span>
+                            <span class="keyword">Attack</span>
+                        </div>
+                    </div>
+                    <button class="use-template" data-template="cybersecurity">
+                        <i class="fas fa-clone"></i> استخدام هذا القالب
+                    </button>
+                </div>
+
+                <!-- قالب 2 -->
+                <div class="template-card" data-template="system-description">
+                    <div class="template-header">
+                        <div class="template-icon">
+                            <i class="fas fa-desktop"></i>
+                        </div>
+                        <div class="template-info">
+                            <h3>وصف النظام</h3>
+                            <span class="template-difficulty">سهل</span>
+                        </div>
+                    </div>
+                    <div class="template-content">
+                        <p class="template-desc">براجراف يصف نظام حاسوب شخصي أو نظام شبكي</p>
+                        <div class="template-stats">
+                            <span><i class="fas fa-ruler"></i> 6-8 جمل</span>
+                            <span><i class="fas fa-clock"></i> 20 دقيقة</span>
+                        </div>
+                        <div class="template-keywords">
+                            <span class="keyword">Hardware</span>
+                            <span class="keyword">Software</span>
+                            <span class="keyword">Network</span>
+                        </div>
+                    </div>
+                    <button class="use-template" data-template="system-description">
+                        <i class="fas fa-clone"></i> استخدام هذا القالب
+                    </button>
+                </div>
+
+                <!-- قالب 3 -->
+                <div class="template-card" data-template="field-introduction">
+                    <div class="template-header">
+                        <div class="template-icon">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <div class="template-info">
+                            <h3>تقديم التخصص</h3>
+                            <span class="template-difficulty">سهل</span>
+                        </div>
+                    </div>
+                    <div class="template-content">
+                        <p class="template-desc">براجراف لتقديم نفسك ومجال تخصصك في التقنية</p>
+                        <div class="template-stats">
+                            <span><i class="fas fa-ruler"></i> 5-7 جمل</span>
+                            <span><i class="fas fa-clock"></i> 15 دقيقة</span>
+                        </div>
+                        <div class="template-keywords">
+                            <span class="keyword">Specialization</span>
+                            <span class="keyword">Expertise</span>
+                            <span class="keyword">Skills</span>
+                        </div>
+                    </div>
+                    <button class="use-template" data-template="field-introduction">
+                        <i class="fas fa-clone"></i> استخدام هذا القالب
+                    </button>
+                </div>
+
+                <!-- قالب 4 -->
+                <div class="template-card" data-template="ai-applications">
+                    <div class="template-header">
+                        <div class="template-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <div class="template-info">
+                            <h3>تطبيقات الذكاء الاصطناعي</h3>
+                            <span class="template-difficulty">متوسط</span>
+                        </div>
+                    </div>
+                    <div class="template-content">
+                        <p class="template-desc">براجراف عن تطبيقات الذكاء الاصطناعي في الحياة اليومية</p>
+                        <div class="template-stats">
+                            <span><i class="fas fa-ruler"></i> 6-8 جمل</span>
+                            <span><i class="fas fa-clock"></i> 20 دقيقة</span>
+                        </div>
+                        <div class="template-keywords">
+                            <span class="keyword">AI</span>
+                            <span class="keyword">Machine Learning</span>
+                            <span class="keyword">Application</span>
+                        </div>
+                    </div>
+                    <button class="use-template" data-template="ai-applications">
+                        <i class="fas fa-clone"></i> استخدام هذا القالب
+                    </button>
+                </div>
+
+                <!-- قالب 5 -->
+                <div class="template-card" data-template="internet-explanation">
+                    <div class="template-header">
+                        <div class="template-icon">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <div class="template-info">
+                            <h3>كيف يعمل الإنترنت</h3>
+                            <span class="template-difficulty">متوسط</span>
+                        </div>
+                    </div>
+                    <div class="template-content">
+                        <p class="template-desc">براجراف يشرح آلية عمل الإنترنت بشكل مبسط</p>
+                        <div class="template-stats">
+                            <span><i class="fas fa-ruler"></i> 5-7 جمل</span>
+                            <span><i class="fas fa-clock"></i> 15 دقيقة</span>
+                        </div>
+                        <div class="template-keywords">
+                            <span class="keyword">Router</span>
+                            <span class="keyword">Server</span>
+                            <span class="keyword">Protocol</span>
+                        </div>
+                    </div>
+                    <button class="use-template" data-template="internet-explanation">
+                        <i class="fas fa-clone"></i> استخدام هذا القالب
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- محرر الكتابة -->
+        <section id="editor" class="content-section">
+            <h2><i class="fas fa-edit"></i> محرر الكتابة التفاعلي</h2>
+            <p class="section-desc">اكتب براجرافك هنا وسيتم تحليله وتصحيحه تلقائيًا</p>
+            
+            <div class="writing-container">
+                <div class="writing-controls">
+                    <div class="control-group">
+                        <label for="timerToggle"><i class="fas fa-clock"></i> المؤقت:</label>
+                        <div class="toggle-switch">
+                            <input type="checkbox" id="timerToggle">
+                            <span class="toggle-slider"></span>
+                        </div>
+                        <div class="timer-display" id="timerDisplay">20:00</div>
+                    </div>
+                    
+                    <div class="control-group">
+                        <label for="wordGoal"><i class="fas fa-bullseye"></i> هدف الكلمات:</label>
+                        <select id="wordGoal" class="control-select">
+                            <option value="80">80 كلمة (الحد الأدنى)</option>
+                            <option value="100" selected>100 كلمة (مثالي)</option>
+                            <option value="120">120 كلمة (ممتاز)</option>
+                        </select>
+                    </div>
+                    
+                    <div class="control-group">
+                        <label><i class="fas fa-magic"></i> أدوات:</label>
+                        <div class="tool-buttons">
+                            <button id="spellCheck" class="tool-btn">
+                                <i class="fas fa-spell-check"></i> تدقيق إملائي
+                            </button>
+                            <button id="analyzeText" class="tool-btn">
+                                <i class="fas fa-chart-bar"></i> تحليل النص
+                            </button>
+                            <button id="clearText" class="tool-btn">
+                                <i class="fas fa-trash"></i> مسح الكل
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="writing-area">
+                    <div class="writing-header">
+                        <h3 id="writingTitle">اكتب براجرافك هنا</h3>
+                        <div class="word-count" id="wordCount">0 كلمة</div>
+                    </div>
+                    
+                    <div class="editor-container">
+                        <textarea id="paragraphEditor" placeholder="ابدأ كتابة براجرافك هنا... حاول استخدام المصطلحات التقنية التي تعلمتها." rows="10"></textarea>
+                        
+                        <div class="editor-suggestions">
+                            <h4><i class="fas fa-lightbulb"></i> اقتراحات للمصطلحات:</h4>
+                            <div class="suggestions-list" id="suggestionsList">
+                                <span class="suggestion-item" data-term="Threat">Threat</span>
+                                <span class="suggestion-item" data-term="Vulnerability">Vulnerability</span>
+                                <span class="suggestion-item" data-term="Algorithm">Algorithm</span>
+                                <span class="suggestion-item" data-term="Encryption">Encryption</span>
+                                <span class="suggestion-item" data-term="Firewall">Firewall</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="writing-stats">
+                        <div class="stat-item">
+                            <div class="stat-label">الكلمات</div>
+                            <div class="stat-value" id="wordsStat">0</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-label">الجمل</div>
+                            <div class="stat-value" id="sentencesStat">0</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-label">المصطلحات</div>
+                            <div class="stat-value" id="termsStat">0</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-label">متوسط طول الجملة</div>
+                            <div class="stat-value" id="avgSentenceStat">0</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="writing-actions">
+                    <button id="saveDraft" class="action-btn save-btn">
+                        <i class="fas fa-save"></i> حفظ المسودة
+                    </button>
+                    <button id="checkWriting" class="action-btn check-btn">
+                        <i class="fas fa-check-circle"></i> تصحيح البراجراف
+                    </button>
+                    <button id="downloadText" class="action-btn download-btn">
+                        <i class="fas fa-download"></i> تحميل كملف نصي
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- قسم التصحيح -->
+        <section id="correction" class="content-section">
+            <h2><i class="fas fa-check-double"></i> تصحيح وتحليل البراجراف</h2>
+            <p class="section-desc">راجع أخطاءك واحصل على تقييم مفصل لكتابتك</p>
+            
+            <div class="correction-container">
+                <div class="correction-header">
+                    <h3>نتائج التصحيح</h3>
+                    <div class="correction-score">
+                        <div class="score-circle">
+                            <svg width="100" height="100">
+                                <circle cx="50" cy="50" r="40" stroke="#e0e0e0" stroke-width="8" fill="none"></circle>
+                                <circle cx="50" cy="50" r="40" stroke="#4cc9f0" stroke-width="8" fill="none" 
+                                        stroke-dasharray="251.2" stroke-dashoffset="175.84" stroke-linecap="round" 
+                                        id="scoreCircle"></circle>
+                            </svg>
+                            <div class="score-text" id="overallScore">70%</div>
+                        </div>
+                        <div class="score-label">التقييم العام</div>
+                    </div>
+                </div>
+                
+                <div class="correction-grid">
+                    <!-- النتيجة التفصيلية -->
+                    <div class="correction-card">
+                        <div class="correction-card-header">
+                            <h4><i class="fas fa-chart-pie"></i> النتيجة التفصيلية</h4>
+                        </div>
+                        <div class="score-details">
+                            <div class="score-item">
+                                <div class="score-info">
+                                    <span class="score-category">المحتوى والأفكار</span>
+                                    <span class="score-value" id="contentScore">7/10</span>
+                                </div>
+                                <div class="score-bar">
+                                    <div class="score-fill" style="width: 70%;"></div>
+                                </div>
+                            </div>
+                            <div class="score-item">
+                                <div class="score-info">
+                                    <span class="score-category">التنظيم والترتيب</span>
+                                    <span class="score-value" id="organizationScore">6/10</span>
+                                </div>
+                                <div class="score-bar">
+                                    <div class="score-fill" style="width: 60%;"></div>
+                                </div>
+                            </div>
+                            <div class="score-item">
+                                <div class="score-info">
+                                    <span class="score-category">المصطلحات التقنية</span>
+                                    <span class="score-value" id="vocabularyScore">8/10</span>
+                                </div>
+                                <div class="score-bar">
+                                    <div class="score-fill" style="width: 80%;"></div>
+                                </div>
+                            </div>
+                            <div class="score-item">
+                                <div class="score-info">
+                                    <span class="score-category">القواعد والتركيب</span>
+                                    <span class="score-value" id="grammarScore">6/10</span>
+                                </div>
+                                <div class="score-bar">
+                                    <div class="score-fill" style="width: 60%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- الأخطاء الشائعة -->
+                    <div class="correction-card">
+                        <div class="correction-card-header">
+                            <h4><i class="fas fa-exclamation-triangle"></i> الأخطاء المكتشفة</h4>
+                        </div>
+                        <div class="errors-list" id="errorsList">
+                            <div class="error-item">
+                                <div class="error-type">
+                                    <i class="fas fa-times-circle"></i>
+                                    <span>قواعد</span>
+                                </div>
+                                <div class="error-details">
+                                    <p class="error-text">"The softwares are" → "The software is"</p>
+                                    <p class="error-explanation">software اسم غير معدود</p>
+                                </div>
+                            </div>
+                            <div class="error-item">
+                                <div class="error-type">
+                                    <i class="fas fa-exclamation-circle"></i>
+                                    <span>تحسين</span>
+                                </div>
+                                <div class="error-details">
+                                    <p class="error-text">"very good" → "excellent" أو "highly effective"</p>
+                                    <p class="error-explanation">استخدم مفردات أكثر قوة</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- المصطلحات المستخدمة -->
+                    <div class="correction-card">
+                        <div class="correction-card-header">
+                            <h4><i class="fas fa-book"></i> المصطلحات التقنية المستخدمة</h4>
+                        </div>
+                        <div class="terms-used" id="termsUsed">
+                            <div class="term-badge correct">
+                                <span>Threat</span>
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div class="term-badge correct">
+                                <span>Vulnerability</span>
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div class="term-badge missing">
+                                <span>Attack</span>
+                                <i class="fas fa-plus"></i>
+                            </div>
+                            <div class="term-badge incorrect">
+                                <span>Softwares</span>
+                                <i class="fas fa-times"></i>
+                            </div>
+                        </div>
+                        <div class="terms-feedback">
+                            <p><strong>ملاحظة:</strong> حاول استخدام 3 مصطلحات تقنية على الأقل في براجرافك.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- اقتراحات للتحسين -->
+                    <div class="correction-card">
+                        <div class="correction-card-header">
+                            <h4><i class="fas fa-magic"></i> اقتراحات للتحسين</h4>
+                        </div>
+                        <div class="improvement-suggestions" id="improvementSuggestions">
+                            <div class="suggestion-item">
+                                <i class="fas fa-check-circle"></i>
+                                <p>أضف جملة ختامية تلخص الفكرة الرئيسية</p>
+                            </div>
+                            <div class="suggestion-item">
+                                <i class="fas fa-check-circle"></i>
+                                <p>استخدم أزمنة متنوعة (حاضر، ماضي، مستقبل)</p>
+                            </div>
+                            <div class="suggestion-item">
+                                <i class="fas fa-check-circle"></i>
+                                <p>ربط الجمل بأدوات ربط مثل "however, therefore, for example"</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- النموذج الصحيح -->
+                <div class="model-answer">
+                    <h4><i class="fas fa-star"></i> نموذج إجابة مقترح</h4>
+                    <div class="model-content" id="modelAnswer">
+                        <p>In cybersecurity, a threat is any potential danger that could harm a computer system. A vulnerability is a weakness, such as an unprotected password, that a hacker can exploit. When the hacker uses that weakness to steal data, it becomes an attack. By fixing vulnerabilities and updating software regularly, organizations can reduce the chance of future attacks. Firewalls and encryption also provide additional layers of protection against cyber threats.</p>
+                    </div>
+                    <div class="model-stats">
+                        <span><strong>الكلمات:</strong> 80</span>
+                        <span><strong>الجمل:</strong> 5</span>
+                        <span><strong>المصطلحات:</strong> 6</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- التنقل بين الأجزاء -->
+        <div class="page-navigation">
+            <a href="grammar.html" class="nav-link-prev">
+                <i class="fas fa-arrow-right"></i> الجزء السابق: القواعد
+            </a>
+            <a href="exam-simulator.html" class="nav-link-next">
+                الجزء التالي: امتحان المحاكاة <i class="fas fa-arrow-left"></i>
+            </a>
+        </div>
+    </main>
+
+    <script type="module">
+        import { initTheme, toggleTheme } from './script.js';
+
+        // بيانات القوالب
+        const templates = {
+            cybersecurity: {
+                title: "العلاقة بين التهديدات ونقاط الضعف والهجمات",
+                description: "اكتب براجرافًا يشرح العلاقة بين threat و vulnerability و attack في الأمن السيبراني",
+                keywords: ["Threat", "Vulnerability", "Attack", "Cybersecurity", "Firewall", "Encryption"],
+                minWords: 80,
+                timeLimit: 15,
+                modelAnswer: `In cybersecurity, a threat is any potential danger that could harm a computer system. A vulnerability is a weakness, such as an unprotected password, that a hacker can exploit. When the hacker uses that weakness to steal data, it becomes an attack. By fixing vulnerabilities and updating software regularly, organizations can reduce the chance of future attacks. Firewalls and encryption also provide additional layers of protection against cyber threats.`
+            },
+            "system-description": {
+                title: "وصف نظام حاسوبي",
+                description: "صف نظام حاسوب شخصي أو نظام شبكي تستخدمه",
+                keywords: ["Hardware", "Software", "CPU", "Operating System", "Network", "Storage"],
+                minWords: 100,
+                timeLimit: 20,
+                modelAnswer: `My computer system consists of several hardware and software components. The hardware includes an Intel Core i5 processor, 8GB of RAM, and a 512GB SSD for storage. I also use a 24-inch monitor, a wireless keyboard, and a mouse. The software includes Windows 11 as the operating system and Microsoft Office for daily work. My computer connects to the internet through a Wi-Fi router. This system is fast and reliable for both study and office tasks.`
+            },
+            "field-introduction": {
+                title: "تقديم مجال تخصصك",
+                description: "قدم نفسك ومجال تخصصك في مجال التقنية",
+                keywords: ["Specialization", "Expertise", "Skills", "Field", "Experience", "Goals"],
+                minWords: 90,
+                timeLimit: 15,
+                modelAnswer: `My field of specialization is Artificial Intelligence with a focus on machine learning. I have expertise in developing predictive models using Python and TensorFlow. My technical skills include programming, data analysis, and algorithm design. I have worked on several projects involving natural language processing and computer vision. My goal is to develop intelligent systems that can solve real-world problems efficiently and ethically.`
+            },
+            "ai-applications": {
+                title: "تطبيقات الذكاء الاصطناعي",
+                description: "ناقش تطبيقات الذكاء الاصطناعي في الحياة اليومية",
+                keywords: ["AI", "Machine Learning", "Application", "Algorithm", "Data", "Automation"],
+                minWords: 100,
+                timeLimit: 20,
+                modelAnswer: `Artificial Intelligence has numerous applications in daily life. AI algorithms power virtual assistants like Siri and Alexa, which help users with tasks and information. Machine learning models are used in recommendation systems on platforms like Netflix and YouTube. In healthcare, AI helps in diagnosing diseases and analyzing medical images. Self-driving cars use AI to navigate roads safely. These applications show how AI is transforming various industries and improving efficiency.`
+            },
+            "internet-explanation": {
+                title: "كيف يعمل الإنترنت",
+                description: "اشرح آلية عمل الإنترنت بشكل مبسط",
+                keywords: ["Internet", "Router", "Server", "IP Address", "DNS", "Protocol"],
+                minWords: 85,
+                timeLimit: 15,
+                modelAnswer: `The Internet connects millions of computers worldwide. When you visit a website, your computer sends data packets through routers to a server. The server stores the website and sends it back to your computer. Your device has a unique IP address for identification. DNS translates website names into numerical IP addresses. Protocols like HTTP and HTTPS ensure secure data transmission. This complex system allows people to communicate and share information globally.`
+            }
+        };
+
+        // المصطلحات التقنية للاقتراحات
+        const technicalTerms = [
+            "Threat", "Vulnerability", "Attack", "Cybersecurity", "Firewall", "Encryption",
+            "Hardware", "Software", "CPU", "Operating System", "Network", "Storage",
+            "AI", "Machine Learning", "Algorithm", "Data", "Database", "Cloud Computing",
+            "Router", "Server", "IP Address", "DNS", "Protocol", "Browser"
+        ];
+
+        document.addEventListener('DOMContentLoaded', () => {
+            initTheme();
+            const themeToggle = document.getElementById('themeToggle');
+            if (themeToggle) {
+                themeToggle.addEventListener('click', toggleTheme);
+            }
+            
+            // تهيئة القوالب
+            setupTemplates();
+            
+            // تهيئة محرر الكتابة
+            setupEditor();
+            
+            // تهيئة نظام التصحيح
+            setupCorrectionSystem();
+            
+            // تهيئة المؤقت
+            setupTimer();
+        });
+
+        // === إعداد القوالب ===
+        function setupTemplates() {
+            document.querySelectorAll('.use-template').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const templateId = this.dataset.template;
+                    const template = templates[templateId];
+                    
+                    if (template) {
+                        // تحديث واجهة المحرر
+                        document.getElementById('writingTitle').textContent = template.title;
+                        document.getElementById('paragraphEditor').placeholder = template.description;
+                        
+                        // تحديث اقتراحات المصطلحات
+                        updateSuggestions(template.keywords);
+                        
+                        // تحديث المؤقت وهدف الكلمات
+                        document.getElementById('wordGoal').value = template.minWords;
+                        document.getElementById('timerDisplay').textContent = 
+                            `${template.timeLimit}:00`;
+                        
+                        // تحديث النموذج الصحيح
+                        document.getElementById('modelAnswer').innerHTML = 
+                            `<p>${template.modelAnswer}</p>`;
+                        
+                        // تمرير إلى قسم المحرر
+                        document.getElementById('editor').scrollIntoView({ behavior: 'smooth' });
+                        
+                        // عرض رسالة تأكيد
+                        showNotification(`تم تحميل قالب "${template.title}"`, 'success');
+                    }
+                });
+            });
+        }
+
+        function updateSuggestions(keywords) {
+            const suggestionsList = document.getElementById('suggestionsList');
+            suggestionsList.innerHTML = '';
+            
+            keywords.forEach(keyword => {
+                const span = document.createElement('span');
+                span.className = 'suggestion-item';
+                span.textContent = keyword;
+                span.dataset.term = keyword;
+                span.addEventListener('click', () => insertTerm(keyword));
+                suggestionsList.appendChild(span);
+            });
+        }
+
+        function insertTerm(term) {
+            const editor = document.getElementById('paragraphEditor');
+            const currentText = editor.value;
+            const cursorPos = editor.selectionStart;
+            
+            const newText = currentText.substring(0, cursorPos) + 
+                           term + 
+                           currentText.substring(cursorPos);
+            
+            editor.value = newText;
+            editor.focus();
+            editor.setSelectionRange(cursorPos + term.length, cursorPos + term.length);
+            
+            // تحديث الإحصائيات
+            updateWritingStats();
+        }
+
+        // === إعداد محرر الكتابة ===
+        function setupEditor() {
+            const editor = document.getElementById('paragraphEditor');
+            
+            // تحديث الإحصائيات أثناء الكتابة
+            editor.addEventListener('input', updateWritingStats);
+            
+            // زر التدقيق الإملائي
+            document.getElementById('spellCheck').addEventListener('click', performSpellCheck);
+            
+            // زر تحليل النص
+            document.getElementById('analyzeText').addEventListener('click', analyzeText);
+            
+            // زر مسح الكل
+            document.getElementById('clearText').addEventListener('click', clearText);
+            
+            // زر حفظ المسودة
+            document.getElementById('saveDraft').addEventListener('click', saveDraft);
+            
+            // زر تصحيح البراجراف
+            document.getElementById('checkWriting').addEventListener('click', checkWriting);
+            
+            // زر تحميل الملف
+            document.getElementById('downloadText').addEventListener('click', downloadText);
+            
+            // تحديث الاقتراحات
+            document.querySelectorAll('.suggestion-item').forEach(item => {
+                item.addEventListener('click', function() {
+                    insertTerm(this.dataset.term);
+                });
+            });
+        }
+
+        function updateWritingStats() {
+            const text = document.getElementById('paragraphEditor').value;
+            
+            // عدد الكلمات
+            const words = text.trim().split(/\s+/).filter(word => word.length > 0);
+            const wordCount = words.length;
+            
+            // عدد الجمل
+            const sentences = text.split(/[.!?]+/).filter(sentence => sentence.trim().length > 0);
+            const sentenceCount = sentences.length;
+            
+            // عدد المصطلحات التقنية
+            let termsCount = 0;
+            technicalTerms.forEach(term => {
+                if (text.toLowerCase().includes(term.toLowerCase())) {
+                    termsCount++;
+                }
+            });
+            
+            // متوسط طول الجملة
+            const avgSentenceLength = sentenceCount > 0 ? 
+                Math.round(wordCount / sentenceCount) : 0;
+            
+            // تحديث العرض
+            document.getElementById('wordCount').textContent = `${wordCount} كلمة`;
+            document.getElementById('wordsStat').textContent = wordCount;
+            document.getElementById('sentencesStat').textContent = sentenceCount;
+            document.getElementById('termsStat').textContent = termsCount;
+            document.getElementById('avgSentenceStat').textContent = avgSentenceLength;
+            
+            // تحديث شريط التقدم
+            const wordGoal = parseInt(document.getElementById('wordGoal').value);
+            const progress = Math.min((wordCount / wordGoal) * 100, 100);
+            
+            // تغيير لون عداد الكلمات بناءً على التقدم
+            const wordCountElement = document.getElementById('wordCount');
+            if (wordCount < wordGoal * 0.8) {
+                wordCountElement.style.color = '#e74c3c'; // أحمر
+            } else if (wordCount < wordGoal) {
+                wordCountElement.style.color = '#f39c12'; // برتقالي
+            } else {
+                wordCountElement.style.color = '#2ecc71'; // أخضر
+            }
+        }
+
+        function performSpellCheck() {
+            const text = document.getElementById('paragraphEditor').value;
+            
+            // قائمة بالأخطاء الشائعة في الإنجليزية التقنية
+            const commonErrors = [
+                { wrong: "softwares", correct: "software" },
+                { wrong: "equipments", correct: "equipment" },
+                { wrong: "informations", correct: "information" },
+                { wrong: "datas", correct: "data" },
+                { wrong: "hardwares", correct: "hardware" },
+                { wrong: "are very good", correct: "are excellent" },
+                { wrong: "very important", correct: "crucial" },
+                { wrong: "a lot of", correct: "numerous" }
+            ];
+            
+            let correctedText = text;
+            let errorsFound = 0;
+            
+            commonErrors.forEach(error => {
+                const regex = new RegExp(`\\b${error.wrong}\\b`, 'gi');
+                if (regex.test(correctedText)) {
+                    correctedText = correctedText.replace(regex, error.correct);
+                    errorsFound++;
+                }
+            });
+            
+            if (errorsFound > 0) {
+                document.getElementById('paragraphEditor').value = correctedText;
+                showNotification(`تم تصحيح ${errorsFound} أخطاء شائعة`, 'success');
+                updateWritingStats();
+            } else {
+                showNotification('لم يتم العثور على أخطاء إملائية شائعة', 'info');
+            }
+        }
+
+        function analyzeText() {
+            const text = document.getElementById('paragraphEditor').value;
+            
+            if (!text.trim()) {
+                showNotification('الرجاء كتابة نص أولاً', 'warning');
+                return;
+            }
+            
+            // تحليل بسيط للنص
+            const words = text.trim().split(/\s+/).filter(word => word.length > 0);
+            const sentences = text.split(/[.!?]+/).filter(sentence => sentence.trim().length > 0);
+            
+            // حساب كثافة المصطلحات التقنية
+            let technicalTermCount = 0;
+            const foundTerms = [];
+            
+            technicalTerms.forEach(term => {
+                if (text.toLowerCase().includes(term.toLowerCase())) {
+                    technicalTermCount++;
+                    foundTerms.push(term);
+                }
+            });
+            
+            const termDensity = words.length > 0 ? 
+                Math.round((technicalTermCount / words.length) * 100) : 0;
+            
+            // حساب تنوع الأزمنة
+            const tenseAnalysis = analyzeTenses(text);
+            
+            // عرض نتائج التحليل
+            const analysisResults = `
+                <div class="analysis-results">
+                    <h4><i class="fas fa-chart-bar"></i> نتائج تحليل النص</h4>
+                    <div class="analysis-grid">
+                        <div class="analysis-item">
+                            <div class="analysis-label">كثافة المصطلحات التقنية</div>
+                            <div class="analysis-value ${termDensity >= 10 ? 'good' : 'needs-improvement'}">
+                                ${termDensity}%
+                            </div>
+                            <div class="analysis-desc">
+                                ${termDensity >= 10 ? 'ممتاز!' : 'حاول إضافة المزيد من المصطلحات التقنية'}
+                            </div>
+                        </div>
+                        <div class="analysis-item">
+                            <div class="analysis-label">المصطلحات المستخدمة</div>
+                            <div class="analysis-value">
+                                ${technicalTermCount}
+                            </div>
+                            <div class="analysis-desc">
+                                ${foundTerms.length > 0 ? foundTerms.join(', ') : 'لم يتم استخدام مصطلحات تقنية'}
+                            </div>
+                        </div>
+                        <div class="analysis-item">
+                            <div class="analysis-label">تنوع الأزمنة</div>
+                            <div class="analysis-value ${tenseAnalysis.diversity >= 2 ? 'good' : 'needs-improvement'}">
+                                ${tenseAnalysis.diversity}
+                            </div>
+                            <div class="analysis-desc">
+                                ${tenseAnalysis.details}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+            
+            // إضافة نتائج التحليل إلى قسم التصحيح
+            const errorsList = document.getElementById('errorsList');
+            errorsList.innerHTML = analysisResults;
+            
+            // تمرير إلى قسم التصحيح
+            document.getElementById('correction').scrollIntoView({ behavior: 'smooth' });
+            
+            showNotification('تم تحليل النص بنجاح', 'success');
+        }
+
+        function analyzeTenses(text) {
+            const tenseMarkers = {
+                present: /\b(am|is|are|do|does|have|has)\s+\w+ing?\b|\b\w+s\b(?!\s+\w+ed)/gi,
+                past: /\b(was|were|did|had)\s+\w+|\b\w+ed\b/gi,
+                future: /\b(will|shall|going to)\s+\w+/gi,
+                continuous: /\b(am|is|are|was|were)\s+\w+ing\b/gi,
+                perfect: /\b(have|has|had)\s+\w+ed\b/gi
+            };
+            
+            let foundTenses = [];
+            let tenseCount = 0;
+            
+            for (const [tense, pattern] of Object.entries(tenseMarkers)) {
+                if (pattern.test(text)) {
+                    foundTenses.push(tense);
+                    tenseCount++;
+                }
+            }
+            
+            return {
+                diversity: tenseCount,
+                details: foundTenses.length > 0 ? 
+                    `تم استخدام: ${foundTenses.join(', ')}` : 
+                    'لم يتم التعرف على أزمنة متنوعة'
+            };
+        }
+
+        function clearText() {
+            if (confirm('هل أنت متأكد من مسح النص؟')) {
+                document.getElementById('paragraphEditor').value = '';
+                updateWritingStats();
+                showNotification('تم مسح النص', 'info');
+            }
+        }
+
+        function saveDraft() {
+            const text = document.getElementById('paragraphEditor').value;
+            
+            if (!text.trim()) {
+                showNotification('الرجاء كتابة نص أولاً', 'warning');
+                return;
+            }
+            
+            localStorage.setItem('writingDraft', text);
+            showNotification('تم حفظ المسودة محليًا', 'success');
+        }
+
+        function checkWriting() {
+            const text = document.getElementById('paragraphEditor').value;
+            
+            if (!text.trim()) {
+                showNotification('الرجاء كتابة نص أولاً', 'warning');
+                return;
+            }
+            
+            // محاكاة نظام التصحيح
+            simulateCorrection(text);
+            
+            // تمرير إلى قسم التصحيح
+            document.getElementById('correction').scrollIntoView({ behavior: 'smooth' });
+            
+            showNotification('جاري تصحيح البراجراف...', 'info');
+        }
+
+        function downloadText() {
+            const text = document.getElementById('paragraphEditor').value;
+            const title = document.getElementById('writingTitle').textContent;
+            
+            if (!text.trim()) {
+                showNotification('الرجاء كتابة نص أولاً', 'warning');
+                return;
+            }
+            
+            const blob = new Blob([`${title}\n\n${text}`], { type: 'text/plain' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `paragraph_${Date.now()}.txt`;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+            
+            showNotification('تم تحميل الملف', 'success');
+        }
+
+        // === إعداد نظام التصحيح ===
+        function setupCorrectionSystem() {
+            // سيتم استدعاء هذه الوظيفة من checkWriting()
+        }
+
+        function simulateCorrection(text) {
+            // هذا نظام تصحيح محاكي (في تطبيق حقيقي، سيتم استخدام API)
+            
+            const words = text.trim().split(/\s+/).filter(word => word.length > 0);
+            const wordCount = words.length;
+            
+            // حساب النقاط بناءً على معايير مختلفة
+            let contentScore = Math.min(Math.round(wordCount / 10), 10);
+            let organizationScore = 6 + Math.floor(Math.random() * 3);
+            let vocabularyScore = 7 + Math.floor(Math.random() * 3);
+            let grammarScore = 6 + Math.floor(Math.random() * 3);
+            
+            // ضبط الدرجات بناءً على جودة النص
+            if (text.length < 50) contentScore = 4;
+            if (text.includes('.')) organizationScore = Math.min(organizationScore + 1, 10);
+            
+            // حساب المصطلحات المستخدمة
+            const foundTerms = [];
+            technicalTerms.forEach(term => {
+                if (text.toLowerCase().includes(term.toLowerCase())) {
+                    foundTerms.push(term);
+                }
+            });
+            
+            // تحديث النتائج
+            const overallScore = Math.round((contentScore + organizationScore + vocabularyScore + grammarScore) / 4);
+            
+            document.getElementById('overallScore').textContent = `${overallScore}%`;
+            document.getElementById('contentScore').textContent = `${contentScore}/10`;
+            document.getElementById('organizationScore').textContent = `${organizationScore}/10`;
+            document.getElementById('vocabularyScore').textContent = `${vocabularyScore}/10`;
+            document.getElementById('grammarScore').textContent = `${grammarScore}/10`;
+            
+            // تحديث دائرة النتيجة
+            const circle = document.getElementById('scoreCircle');
+            const circumference = 251.2; // 2 * π * r
+            const offset = circumference - (overallScore / 100) * circumference;
+            circle.style.strokeDashoffset = offset;
+            
+            // تحديث المصطلحات المستخدمة
+            updateTermsUsed(foundTerms);
+            
+            // تحديث الأخطاء
+            updateErrorsList(text);
+            
+            // تحديث الاقتراحات
+            updateImprovementSuggestions(text);
+        }
+
+        function updateTermsUsed(foundTerms) {
+            const termsUsed = document.getElementById('termsUsed');
+            termsUsed.innerHTML = '';
+            
+            // عرض المصطلحات التي تم العثور عليها
+            foundTerms.forEach(term => {
+                const badge = document.createElement('div');
+                badge.className = 'term-badge correct';
+                badge.innerHTML = `<span>${term}</span><i class="fas fa-check"></i>`;
+                termsUsed.appendChild(badge);
+            });
+            
+            // إضافة بعض المصطلحات المفقودة كمثال
+            const missingTerms = ['Attack', 'Firewall', 'Encryption'];
+            missingTerms.forEach(term => {
+                if (!foundTerms.includes(term)) {
+                    const badge = document.createElement('div');
+                    badge.className = 'term-badge missing';
+                    badge.innerHTML = `<span>${term}</span><i class="fas fa-plus"></i>`;
+                    termsUsed.appendChild(badge);
+                }
+            });
+        }
+
+        function updateErrorsList(text) {
+            const errorsList = document.getElementById('errorsList');
+            errorsList.innerHTML = '';
+            
+            // اكتشاف أخطاء شائعة
+            const errors = [];
+            
+            // التحقق من الأسماء غير المعدودة
+            if (/\bsoftwares\b/i.test(text)) {
+                errors.push({
+                    type: 'قواعد',
+                    text: '"softwares" → "software"',
+                    explanation: 'software اسم غير معدود'
+                });
+            }
+            
+            if (/\bequipments\b/i.test(text)) {
+                errors.push({
+                    type: 'قواعد',
+                    text: '"equipments" → "equipment"',
+                    explanation: 'equipment اسم غير معدود'
+                });
+            }
+            
+            // التحقق من المفردات الضعيفة
+            if (/\bvery good\b/i.test(text)) {
+                errors.push({
+                    type: 'تحسين',
+                    text: '"very good" → "excellent" أو "highly effective"',
+                    explanation: 'استخدم مفردات أكثر قوة'
+                });
+            }
+            
+            if (/\ba lot of\b/i.test(text)) {
+                errors.push({
+                    type: 'تحسين',
+                    text: '"a lot of" → "numerous" أو "many"',
+                    explanation: 'استخدم مفردات أكثر رسمية'
+                });
+            }
+            
+            // عرض الأخطاء
+            if (errors.length > 0) {
+                errors.forEach(error => {
+                    const errorItem = document.createElement('div');
+                    errorItem.className = 'error-item';
+                    errorItem.innerHTML = `
+                        <div class="error-type">
+                            <i class="fas fa-times-circle"></i>
+                            <span>${error.type}</span>
+                        </div>
+                        <div class="error-details">
+                            <p class="error-text">${error.text}</p>
+                            <p class="error-explanation">${error.explanation}</p>
+                        </div>
+                    `;
+                    errorsList.appendChild(errorItem);
+                });
+            } else {
+                errorsList.innerHTML = `
+                    <div class="no-errors">
+                        <i class="fas fa-check-circle"></i>
+                        <p>لا توجد أخطاء كبيرة! أحسنت العمل.</p>
+                    </div>
+                `;
+            }
+        }
+
+        function updateImprovementSuggestions(text) {
+            const suggestions = document.getElementById('improvementSuggestions');
+            suggestions.innerHTML = '';
+            
+            const improvementList = [
+                'أضف جملة ختامية تلخص الفكرة الرئيسية',
+                'استخدم أزمنة متنوعة (حاضر، ماضي، مستقبل)',
+                'ربط الجمل بأدوات ربط مثل "however, therefore, for example"',
+                'تأكد من استخدام 3 مصطلحات تقنية على الأقل',
+                'تحقق من أن كل فقرة تحتوي على جملة رئيسية واحدة'
+            ];
+            
+            improvementList.forEach(suggestion => {
+                const item = document.createElement('div');
+                item.className = 'suggestion-item';
+                item.innerHTML = `
+                    <i class="fas fa-check-circle"></i>
+                    <p>${suggestion}</p>
+                `;
+                suggestions.appendChild(item);
+            });
+        }
+
+        // === إعداد المؤقت ===
+        function setupTimer() {
+            const timerToggle = document.getElementById('timerToggle');
+            const timerDisplay = document.getElementById('timerDisplay');
+            let timerInterval;
+            let timeLeft = 20 * 60; // 20 دقيقة بالثواني
+            
+            timerToggle.addEventListener('change', function() {
+                if (this.checked) {
+                    startTimer();
+                } else {
+                    stopTimer();
+                }
+            });
+            
+            function startTimer() {
+                stopTimer(); // إيقاف أي مؤقت سابق
+                
+                timerInterval = setInterval(() => {
+                    timeLeft--;
+                    
+                    const minutes = Math.floor(timeLeft / 60);
+                    const seconds = timeLeft % 60;
+                    
+                    timerDisplay.textContent = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+                    
+                    // تغيير اللون عند اقتراب النهاية
+                    if (timeLeft <= 300) { // 5 دقائق أو أقل
+                        timerDisplay.style.color = '#e74c3c';
+                        timerDisplay.style.fontWeight = 'bold';
+                    } else if (timeLeft <= 600) { // 10 دقائق أو أقل
+                        timerDisplay.style.color = '#f39c12';
+                    }
+                    
+                    if (timeLeft <= 0) {
+                        stopTimer();
+                        showNotification('انتهى الوقت!', 'warning');
+                        timerDisplay.textContent = '00:00';
+                    }
+                }, 1000);
+            }
+            
+            function stopTimer() {
+                if (timerInterval) {
+                    clearInterval(timerInterval);
+                    timerInterval = null;
+                }
+            }
+            
+            // تحديث المؤقت عند تغيير الهدف
+            document.getElementById('wordGoal').addEventListener('change', function() {
+                const goal = parseInt(this.value);
+                timeLeft = goal === 80 ? 15 * 60 : 
+                          goal === 100 ? 20 * 60 : 
+                          goal === 120 ? 25 * 60 : 20 * 60;
+                
+                const minutes = Math.floor(timeLeft / 60);
+                timerDisplay.textContent = `${minutes}:00`;
+                timerDisplay.style.color = '';
+                timerDisplay.style.fontWeight = '';
+            });
+        }
+
+        // === وظائف مساعدة ===
+        function showNotification(message, type) {
+            // إنشاء عنصر الإشعار
+            const notification = document.createElement('div');
+            notification.className = `notification ${type}`;
+            notification.innerHTML = `
+                <i class="fas fa-${type === 'success' ? 'check-circle' : 
+                                 type === 'warning' ? 'exclamation-triangle' : 
+                                 'info-circle'}"></i>
+                <span>${message}</span>
+            `;
+            
+            // إضافة الإشعار إلى الصفحة
+            document.body.appendChild(notification);
+            
+            // إظهار الإشعار
+            setTimeout(() => {
+                notification.classList.add('show');
+            }, 10);
+            
+            // إخفاء الإشعار بعد 3 ثوان
+            setTimeout(() => {
+                notification.classList.remove('show');
+                setTimeout(() => {
+                    if (notification.parentNode) {
+                        document.body.removeChild(notification);
+                    }
+                }, 300);
+            }, 3000);
+        }
+    </script>
+
+    <style>
+        /* تنسيقات إضافية لصفحة الكتابة */
+        .content-section {
+            background: var(--bg-card);
+            border-radius: var(--radius-lg);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow-md);
+        }
+
+        .section-desc {
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        /* تنسيقات القوالب */
+        .templates-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .templates-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .template-card {
+            background: var(--bg-secondary);
+            border-radius: var(--radius-md);
+            padding: 1.5rem;
+            border: 2px solid transparent;
+            transition: all 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .template-card:hover {
+            border-color: var(--primary-color);
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .template-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .template-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+        }
+
+        .template-info {
+            flex: 1;
+        }
+
+        .template-info h3 {
+            font-size: 1.2rem;
+            color: var(--text-primary);
+            margin-bottom: 0.3rem;
+        }
+
+        .template-difficulty {
+            display: inline-block;
+            padding: 0.2rem 0.6rem;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .template-card:nth-child(1) .template-difficulty {
+            background: rgba(243, 156, 18, 0.2);
+            color: var(--warning-color);
+        }
+
+        .template-card:nth-child(2) .template-difficulty {
+            background: rgba(46, 204, 113, 0.2);
+            color: var(--success-color);
+        }
+
+        .template-card:nth-child(3) .template-difficulty {
+            background: rgba(46, 204, 113, 0.2);
+            color: var(--success-color);
+        }
+
+        .template-card:nth-child(4) .template-difficulty {
+            background: rgba(243, 156, 18, 0.2);
+            color: var(--warning-color);
+        }
+
+        .template-card:nth-child(5) .template-difficulty {
+            background: rgba(243, 156, 18, 0.2);
+            color: var(--warning-color);
+        }
+
+        .template-content {
+            flex: 1;
+            margin-bottom: 1.5rem;
+        }
+
+        .template-desc {
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+            line-height: 1.5;
+            font-size: 0.95rem;
+        }
+
+        .template-stats {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 1rem;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        .template-stats span {
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+
+        .template-keywords {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .keyword {
+            background: var(--bg-primary);
+            padding: 0.3rem 0.6rem;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            color: var(--text-primary);
+            border: 1px solid rgba(0,0,0,0.1);
+        }
+
+        .use-template {
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 0.8rem 1rem;
+            border-radius: var(--radius-md);
+            cursor: pointer;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            transition: all 0.3s;
+            margin-top: auto;
+        }
+
+        .use-template:hover {
+            background: var(--secondary-color);
+            transform: translateY(-2px);
+        }
+
+        /* تنسيقات محرر الكتابة */
+        .writing-container {
+            background: var(--bg-secondary);
+            border-radius: var(--radius-lg);
+            padding: 2rem;
+            margin-top: 1.5rem;
+        }
+
+        .writing-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+        }
+
+        .control-group {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .control-group label {
+            color: var(--text-primary);
+            font-weight: 600;
+            white-space: nowrap;
+        }
+
+        .toggle-switch {
+            position: relative;
+            width: 50px;
+            height: 26px;
+        }
+
+        .toggle-switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .toggle-slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: var(--bg-primary);
+            transition: .4s;
+            border-radius: 34px;
+        }
+
+        .toggle-slider:before {
+            position: absolute;
+            content: "";
+            height: 18px;
+            width: 18px;
+            left: 4px;
+            bottom: 4px;
+            background-color: var(--text-secondary);
+            transition: .4s;
+            border-radius: 50%;
+        }
+
+        input:checked + .toggle-slider {
+            background-color: var(--primary-color);
+        }
+
+        input:checked + .toggle-slider:before {
+            transform: translateX(24px);
+            background-color: white;
+        }
+
+        .timer-display {
+            font-family: 'Courier New', monospace;
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            background: var(--bg-primary);
+            padding: 0.3rem 0.8rem;
+            border-radius: var(--radius-sm);
+            min-width: 70px;
+            text-align: center;
+        }
+
+        .control-select {
+            padding: 0.5rem 0.8rem;
+            border: 2px solid var(--bg-secondary);
+            border-radius: var(--radius-md);
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            font-size: 0.9rem;
+            min-width: 150px;
+            cursor: pointer;
+        }
+
+        .control-select:focus {
+            outline: none;
+            border-color: var(--primary-color);
+        }
+
+        .tool-buttons {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .tool-btn {
+            padding: 0.6rem 0.8rem;
+            background: var(--bg-primary);
+            border: 2px solid var(--bg-secondary);
+            border-radius: var(--radius-md);
+            color: var(--text-primary);
+            cursor: pointer;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.3s;
+        }
+
+        .tool-btn:hover {
+            border-color: var(--primary-color);
+            background: rgba(67, 97, 238, 0.1);
+        }
+
+        .writing-area {
+            background: var(--bg-primary);
+            border-radius: var(--radius-lg);
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .writing-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+        }
+
+        .writing-header h3 {
+            font-size: 1.3rem;
+            color: var(--text-primary);
+            margin: 0;
+        }
+
+        .word-count {
+            background: var(--bg-secondary);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-weight: 600;
+            color: var(--primary-color);
+            font-size: 1.1rem;
+        }
+
+        .editor-container {
+            margin-bottom: 1.5rem;
+        }
+
+        #paragraphEditor {
+            width: 100%;
+            min-height: 200px;
+            padding: 1.5rem;
+            border: 2px solid var(--bg-secondary);
+            border-radius: var(--radius-md);
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            font-size: 1rem;
+            line-height: 1.6;
+            resize: vertical;
+            transition: all 0.3s;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        #paragraphEditor:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.2);
+        }
+
+        .editor-suggestions {
+            margin-top: 1rem;
+        }
+
+        .editor-suggestions h4 {
+            font-size: 1rem;
+            color: var(--text-primary);
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .suggestions-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .suggestion-item {
+            background: rgba(67, 97, 238, 0.1);
+            color: var(--primary-color);
+            padding: 0.4rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            border: 1px solid transparent;
+        }
+
+        .suggestion-item:hover {
+            background: var(--primary-color);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .writing-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(0,0,0,0.1);
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-label {
+            display: block;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            margin-bottom: 0.3rem;
+        }
+
+        .stat-value {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
+        .writing-actions {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .action-btn {
+            padding: 0.8rem 1.5rem;
+            border: none;
+            border-radius: var(--radius-md);
+            cursor: pointer;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.3s;
+            min-width: 180px;
+            justify-content: center;
+        }
+
+        .save-btn {
+            background: rgba(52, 152, 219, 0.2);
+            color: #3498db;
+        }
+
+        .save-btn:hover {
+            background: #3498db;
+            color: white;
+        }
+
+        .check-btn {
+            background: rgba(46, 204, 113, 0.2);
+            color: var(--success-color);
+        }
+
+        .check-btn:hover {
+            background: var(--success-color);
+            color: white;
+        }
+
+        .download-btn {
+            background: rgba(155, 89, 182, 0.2);
+            color: #9b59b6;
+        }
+
+        .download-btn:hover {
+            background: #9b59b6;
+            color: white;
+        }
+
+        /* تنسيقات قسم التصحيح */
+        .correction-container {
+            background: var(--bg-secondary);
+            border-radius: var(--radius-lg);
+            padding: 2rem;
+            margin-top: 1.5rem;
+        }
+
+        .correction-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+        }
+
+        .correction-header h3 {
+            font-size: 1.5rem;
+            color: var(--text-primary);
+            margin: 0;
+        }
+
+        .correction-score {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .score-circle {
+            position: relative;
+            width: 100px;
+            height: 100px;
+        }
+
+        .score-circle svg {
+            transform: rotate(-90deg);
+        }
+
+        .score-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--text-primary);
+        }
+
+        .score-label {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        .correction-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .correction-card {
+            background: var(--bg-primary);
+            border-radius: var(--radius-md);
+            padding: 1.5rem;
+        }
+
+        .correction-card-header {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 1.2rem;
+            padding-bottom: 0.8rem;
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+        }
+
+        .correction-card-header h4 {
+            font-size: 1.1rem;
+            color: var(--text-primary);
+            margin: 0;
+        }
+
+        .score-details {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .score-item {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .score-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .score-category {
+            color: var(--text-primary);
+            font-size: 0.9rem;
+        }
+
+        .score-value {
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .score-bar {
+            height: 6px;
+            background: var(--bg-secondary);
+            border-radius: 3px;
+            overflow: hidden;
+        }
+
+        .score-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+            border-radius: 3px;
+        }
+
+        .errors-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .error-item {
+            display: flex;
+            gap: 1rem;
+            padding: 1rem;
+            background: rgba(231, 76, 60, 0.05);
+            border-radius: var(--radius-sm);
+            border-right: 3px solid var(--danger-color);
+        }
+
+        .error-type {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.3rem;
+            min-width: 60px;
+        }
+
+        .error-type i {
+            color: var(--danger-color);
+            font-size: 1.2rem;
+        }
+
+        .error-type span {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+        }
+
+        .error-details {
+            flex: 1;
+        }
+
+        .error-text {
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 0.3rem;
+        }
+
+        .error-explanation {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        .no-errors {
+            text-align: center;
+            padding: 2rem;
+            color: var(--success-color);
+        }
+
+        .no-errors i {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .no-errors p {
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        .terms-used {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .term-badge {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.4rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .term-badge.correct {
+            background: rgba(46, 204, 113, 0.1);
+            color: var(--success-color);
+            border: 1px solid rgba(46, 204, 113, 0.3);
+        }
+
+        .term-badge.missing {
+            background: rgba(243, 156, 18, 0.1);
+            color: var(--warning-color);
+            border: 1px solid rgba(243, 156, 18, 0.3);
+        }
+
+        .term-badge.incorrect {
+            background: rgba(231, 76, 60, 0.1);
+            color: var(--danger-color);
+            border: 1px solid rgba(231, 76, 60, 0.3);
+        }
+
+        .terms-feedback {
+            padding: 0.8rem;
+            background: var(--bg-secondary);
+            border-radius: var(--radius-sm);
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .improvement-suggestions {
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+        }
+
+        .suggestion-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.8rem;
+        }
+
+        .suggestion-item i {
+            color: var(--primary-color);
+            margin-top: 0.2rem;
+            flex-shrink: 0;
+        }
+
+        .suggestion-item p {
+            margin: 0;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        /* النموذج الصحيح */
+        .model-answer {
+            background: var(--bg-primary);
+            border-radius: var(--radius-md);
+            padding: 1.5rem;
+            margin-top: 2rem;
+            border-right: 4px solid var(--success-color);
+        }
+
+        .model-answer h4 {
+            font-size: 1.1rem;
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .model-content {
+            background: var(--bg-secondary);
+            padding: 1.5rem;
+            border-radius: var(--radius-sm);
+            margin-bottom: 1rem;
+            line-height: 1.6;
+            color: var(--text-primary);
+        }
+
+        .model-stats {
+            display: flex;
+            justify-content: space-around;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        .model-stats span strong {
+            color: var(--text-primary);
+        }
+
+        /* نتائج التحليل */
+        .analysis-results {
+            padding: 1rem;
+        }
+
+        .analysis-results h4 {
+            font-size: 1.1rem;
+            color: var(--text-primary);
+            margin-bottom: 1.2rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .analysis-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+
+        .analysis-item {
+            background: var(--bg-primary);
+            padding: 1rem;
+            border-radius: var(--radius-sm);
+            text-align: center;
+        }
+
+        .analysis-label {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            margin-bottom: 0.5rem;
+        }
+
+        .analysis-value {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 0.3rem;
+        }
+
+        .analysis-value.good {
+            color: var(--success-color);
+        }
+
+        .analysis-value.needs-improvement {
+            color: var(--warning-color);
+        }
+
+        .analysis-desc {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            line-height: 1.4;
+        }
+
+        /* الإشعارات */
+        .notification {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: var(--bg-primary);
+            border-left: 4px solid var(--primary-color);
+            padding: 1rem 1.5rem;
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-lg);
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            z-index: 10000;
+            transform: translateX(120%);
+            transition: transform 0.3s ease-out;
+            max-width: 350px;
+        }
+
+        .notification.show {
+            transform: translateX(0);
+        }
+
+        .notification.success {
+            border-left-color: var(--success-color);
+        }
+
+        .notification.warning {
+            border-left-color: var(--warning-color);
+        }
+
+        .notification.info {
+            border-left-color: var(--primary-color);
+        }
+
+        .notification i {
+            font-size: 1.2rem;
+        }
+
+        .notification.success i {
+            color: var(--success-color);
+        }
+
+        .notification.warning i {
+            color: var(--warning-color);
+        }
+
+        .notification.info i {
+            color: var(--primary-color);
+        }
+
+        .notification span {
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+
+        /* تنسيقات التنقل بين الصفحات */
+        .page-navigation {
+            display: flex;
+            justify-content: space-between;
+            margin: 3rem 0;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(0,0,0,0.1);
+        }
+
+        .nav-link-prev, .nav-link-next {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.8rem 1.5rem;
+            background: var(--bg-secondary);
+            border-radius: var(--radius-md);
+            text-decoration: none;
+            color: var(--text-primary);
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .nav-link-prev:hover, .nav-link-next:hover {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            .page-navigation {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .writing-controls {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            
+            .control-group {
+                justify-content: space-between;
+            }
+            
+            .correction-header {
+                flex-direction: column;
+                gap: 1.5rem;
+                text-align: center;
+            }
+            
+            .writing-actions {
+                flex-direction: column;
+            }
+            
+            .action-btn {
+                width: 100%;
+            }
+        }
+    </style>
+    
+    <!-- Language Integration -->
+    <script type="module" src="language-integration.js"></script>
+    <script type="module" src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,181 @@
+{
+  "nav": {
+    "home": "الرئيسية",
+    "exam": "امتحان تجريبي",
+    "stats": "الإحصائيات",
+    "toggleMenu": "القائمة",
+    "toggleTheme": "تبديل السمة"
+  },
+  "hero": {
+    "title": "مراجعة شاملة للغة الإنجليزية التقنية",
+    "subtitle": "Unit 1 & 2 - تحضير مثالي لامتحان الإنجليزية لتقنية المعلومات",
+    "startExam": "ابدأ امتحان تجريبي",
+    "startReview": "ابدأ المراجعة"
+  },
+  "sections": {
+    "reading": {
+      "title": "الجزء 1: فهم المقروء",
+      "description": "نصوص تقنية + أسئلة اختيارية وصح/خطأ",
+      "link": "اذهب للمراجعة",
+      "texts": "نصوص",
+      "questions": "سؤال"
+    },
+    "synonyms": {
+      "title": "الجزء 2: المرادفات",
+      "description": "جمع كل المرادفات مع أمثلة وتدريبات تفاعلية",
+      "link": "اذهب للمراجعة",
+      "terms": "مصطلح",
+      "exercises": "تمرين"
+    },
+    "terms": {
+      "title": "الجزء 3: المصطلحات التقنية",
+      "description": "تعريفات + أمثلة + بنك أسئلة للمصطلحات",
+      "link": "اذهب للمراجعة",
+      "terms": "مصطلح",
+      "explanation": "شرح تفصيلي"
+    },
+    "grammar": {
+      "title": "الجزء 4: القواعد",
+      "description": "الأزمنة + الأسماء المعدودة/غير المعدودة + تدريبات",
+      "link": "اذهب للمراجعة",
+      "tenses": "أزمنة",
+      "exercises": "تمرين"
+    },
+    "writing": {
+      "title": "الجزء 5: الكتابة",
+      "description": "قوالب براجراف + تصحيح آلي + نماذج جاهزة",
+      "link": "اذهب للمراجعة",
+      "templates": "قوالب",
+      "autoCheck": "تصحيح تلقائي"
+    },
+    "exam": {
+      "title": "محاكاة الامتحان الكامل",
+      "description": "امتحان كامل بمؤقت زمني + تصحيح آلي + نتائج مفصلة",
+      "link": "ابدأ الامتحان",
+      "time": "دقيقة",
+      "questions": "سؤال"
+    }
+  },
+  "stats": {
+    "title": "إحصائيات المحتوى",
+    "technicalTerms": "مصطلح تقني",
+    "practiceQuestions": "سؤال تدريبي",
+    "readingTexts": "نص قرائي",
+    "reviewHours": "ساعة مراجعة"
+  },
+  "footer": {
+    "copyright": "© 2026 IT English Review - تم التطوير لطلاب تقنية المعلومات",
+    "github": "GitHub",
+    "help": "المساعدة",
+    "contact": "اتصل بنا"
+  },
+  "buttons": {
+    "start": "ابدأ",
+    "continue": "متابعة",
+    "back": "رجوع",
+    "next": "التالي",
+    "previous": "السابق",
+    "submit": "إرسال",
+    "cancel": "إلغاء",
+    "save": "حفظ",
+    "load": "تحميل",
+    "download": "تحميل",
+    "share": "مشاركة",
+    "retry": "إعادة المحاولة",
+    "close": "إغلاق"
+  },
+  "exam": {
+    "startScreen": {
+      "title": "امتحان المحاكاة الكامل",
+      "subtitle": "اختبر معرفتك بجميع أجزاء امتحان الإنجليزية التقنية",
+      "totalTime": "الوقت الكلي",
+      "minutes": "دقيقة",
+      "perSection": "دقيقة لكل قسم تقريبًا",
+      "totalQuestions": "عدد الأسئلة",
+      "questions": "سؤال",
+      "perSectionQuestions": "أسئلة لكل قسم",
+      "sections": "أقسام الامتحان",
+      "sectionCount": "أقسام",
+      "passingScore": "درجة النجاح",
+      "percent": "%",
+      "correctAnswers": "إجابة صحيحة من",
+      "sectionsList": "أقسام الامتحان",
+      "section1": "فهم المقروء (Reading)",
+      "section1Desc": "نص تقني + 10 أسئلة (5 اختياري، 5 صح/خطأ)",
+      "section2": "المرادفات (Synonyms)",
+      "section2Desc": "10 أسئلة اختيار مرادف للكلمة",
+      "section3": "المصطلحات التقنية",
+      "section3Desc": "10 أسئلة كتابة المصطلح المناسب للتعريف",
+      "section4": "القواعد (Grammar)",
+      "section4Desc": "10 أسئلة على الأزمنة والأسماء",
+      "section5": "الكتابة (Writing)",
+      "section5Desc": "كتابة براجراف من 5-6 جمل",
+      "instructions": "تعليمات الامتحان",
+      "instruction1": "الامتحان مؤقت، ولن يمكنك العودة للأسئلة السابقة.",
+      "instruction2": "يجب إنهاء كل قسم في الوقت المخصص له.",
+      "instruction3": "سيتم تصحيح الامتحان تلقائيًا بعد الانتهاء.",
+      "instruction4": "حاول استخدام المصطلحات التقنية في قسم الكتابة.",
+      "instruction5": "يمكنك حفظ وتحميل النتائج في النهاية.",
+      "startButton": "بدء الامتحان",
+      "loadPrevious": "تحميل محاولة سابقة"
+    },
+    "examScreen": {
+      "currentSection": "القسم",
+      "question": "سؤال",
+      "of": "من",
+      "timeRemaining": "الوقت المتبقي",
+      "perQuestion": "لكل سؤال",
+      "flagQuestion": "وضع علامة",
+      "removeFlag": "إزالة العلامة",
+      "endSection": "إنهاء القسم",
+      "answered": "الأسئلة المجابة",
+      "flagged": "الأسئلة المعلّمة",
+      "currentSectionLabel": "القسم الحالي",
+      "warning": "انتبه! لا يمكنك العودة للقسم بعد إنهائه."
+    },
+    "results": {
+      "title": "نتائج الامتحان",
+      "subtitle": "أداؤك في امتحان المحاكاة الكامل",
+      "excellent": "ممتاز!",
+      "excellentMsg": "أداء رائع! أنت مستعد تمامًا للامتحان.",
+      "veryGood": "جيد جدًا!",
+      "veryGoodMsg": "أداء قوي، لكن هناك بعض النقاط للتحسين.",
+      "good": "جيد!",
+      "goodMsg": "أداء مقبول، تحتاج للمراجعة في بعض المجالات.",
+      "acceptable": "مقبول",
+      "acceptableMsg": "اجتزت الامتحان، لكن تحتاج لمزيد من التحضير.",
+      "needsImprovement": "يحتاج للتحسين",
+      "needsImprovementMsg": "تحتاج للمراجعة الشاملة قبل الامتحان الحقيقي.",
+      "details": "النتائج التفصيلية",
+      "summary": "ملخص النتائج",
+      "correctAnswers": "إجابات صحيحة",
+      "wrongAnswers": "إجابات خاطئة",
+      "timeTaken": "الوقت المستغرق",
+      "grade": "التقدير",
+      "analysis": "تحليل الأداء",
+      "strengths": "نقاط القوة",
+      "improvements": "مجالات التحسين",
+      "recommendations": "توصيات للمراجعة",
+      "reviewErrors": "مراجعة الأخطاء",
+      "retake": "إعادة الامتحان",
+      "download": "تحميل النتائج",
+      "share": "مشاركة النتائج",
+      "backHome": "العودة للرئيسية"
+    }
+  },
+  "language": {
+    "modes": {
+      "exam": "Exam Mode",
+      "study": "Study Mode",
+      "beginner": "Beginner Mode"
+    },
+    "descriptions": {
+      "exam": "Pure English - Real exam simulation",
+      "study": "English with Arabic help tooltips",
+      "beginner": "Bilingual interface - Arabic primary"
+    },
+    "switch": "Switch Language Mode",
+    "current": "Current Mode"
+  }
+}
+

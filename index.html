@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مراجعة الإنجليزية التقنية - Unit 1 & 2</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="manifest" href="data/manifest.json">
+    <meta name="theme-color" content="#2c3e50">
+    <!-- Language System -->
+    <script src="language-system.js"></script>
+    <script src="content-library.js"></script>
+</head>
+<body>
+    <!-- شريط التنقل العلوي -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-brand">
+                <i class="fas fa-laptop-code"></i> IT English Review
+            </a>
+            <div class="nav-menu">
+                <a href="#dashboard" class="nav-link active" data-i18n="nav.home"><i class="fas fa-home"></i> <span class="i18n-text">الرئيسية</span></a>
+                <a href="#exam" class="nav-link" data-i18n="nav.exam"><i class="fas fa-clock"></i> <span class="i18n-text">امتحان تجريبي</span></a>
+                <a href="#stats" class="nav-link" data-i18n="nav.stats"><i class="fas fa-chart-bar"></i> <span class="i18n-text">الإحصائيات</span></a>
+                <div class="language-switcher">
+                    <button id="langSwitcherBtn" class="lang-switcher-btn" aria-label="Switch Language Mode" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-language"></i>
+                        <span id="currentModeDisplay">Exam Mode</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div id="langSwitcherDropdown" class="lang-switcher-dropdown" role="menu">
+                        <div class="lang-mode-option active" data-mode="exam" role="menuitem">
+                            <span class="lang-mode-name">Exam Mode</span>
+                            <span class="lang-mode-desc">Pure English - Real exam simulation</span>
+                        </div>
+                        <div class="lang-mode-option" data-mode="study" role="menuitem">
+                            <span class="lang-mode-name">Study Mode</span>
+                            <span class="lang-mode-desc">English with Arabic help tooltips</span>
+                        </div>
+                        <div class="lang-mode-option" data-mode="beginner" role="menuitem">
+                            <span class="lang-mode-name">Beginner Mode</span>
+                            <span class="lang-mode-desc">Bilingual interface - Arabic primary</span>
+                        </div>
+                    </div>
+                </div>
+                <button id="themeToggle" class="icon-btn" aria-label="Toggle Theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+            <button class="nav-toggle" aria-label="القائمة">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- المحتوى الرئيسي -->
+    <main class="container">
+        <!-- قسم الترحيب -->
+        <section id="dashboard" class="dashboard-section">
+            <header class="hero">
+                <h1 class="hero-title" data-i18n="hero.title">مراجعة شاملة للغة الإنجليزية التقنية</h1>
+                <p class="hero-subtitle" data-i18n="hero.subtitle">Unit 1 & 2 - تحضير مثالي لامتحان الإنجليزية لتقنية المعلومات</p>
+                <div class="hero-actions">
+                    <a href="exam-simulator.html" class="btn btn-primary btn-lg" data-i18n="hero.startExam">
+                        <i class="fas fa-play-circle"></i> <span class="i18n-text">ابدأ امتحان تجريبي</span>
+                    </a>
+                    <a href="#sections" class="btn btn-outline btn-lg" data-i18n="hero.startReview">
+                        <i class="fas fa-book-open"></i> <span class="i18n-text">ابدأ المراجعة</span>
+                    </a>
+                </div>
+            </header>
+
+            <!-- بطاقات الأقسام -->
+            <div id="sections" class="sections-grid">
+                <article class="section-card" data-section="reading">
+                    <div class="card-icon">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <h3 class="card-title" data-i18n="sections.reading.title">الجزء 1: فهم المقروء</h3>
+                    <p class="card-desc" data-i18n="sections.reading.description">نصوص تقنية + أسئلة اختيارية وصح/خطأ</p>
+                    <a href="reading.html" class="card-link" data-i18n="sections.reading.link"><span class="i18n-text">اذهب للمراجعة</span> →</a>
+                    <div class="card-stats">
+                        <span><i class="fas fa-text-height"></i> <span class="i18n-text">3 نصوص</span></span>
+                        <span><i class="fas fa-question-circle"></i> <span class="i18n-text">30 سؤال</span></span>
+                    </div>
+                </article>
+
+                <article class="section-card" data-section="synonyms">
+                    <div class="card-icon">
+                        <i class="fas fa-exchange-alt"></i>
+                    </div>
+                    <h3 class="card-title" data-i18n="sections.synonyms.title">الجزء 2: المرادفات</h3>
+                    <p class="card-desc" data-i18n="sections.synonyms.description">جمع كل المرادفات مع أمثلة وتدريبات تفاعلية</p>
+                    <a href="synonyms.html" class="card-link" data-i18n="sections.synonyms.link"><span class="i18n-text">اذهب للمراجعة</span> →</a>
+                    <div class="card-stats">
+                        <span><i class="fas fa-words"></i> <span class="i18n-text">50+ مصطلح</span></span>
+                        <span><i class="fas fa-puzzle-piece"></i> <span class="i18n-text">20 تمرين</span></span>
+                    </div>
+                </article>
+
+                <article class="section-card" data-section="terms">
+                    <div class="card-icon">
+                        <i class="fas fa-terminal"></i>
+                    </div>
+                    <h3 class="card-title" data-i18n="sections.terms.title">الجزء 3: المصطلحات التقنية</h3>
+                    <p class="card-desc" data-i18n="sections.terms.description">تعريفات + أمثلة + بنك أسئلة للمصطلحات</p>
+                    <a href="technical-terms.html" class="card-link" data-i18n="sections.terms.link"><span class="i18n-text">اذهب للمراجعة</span> →</a>
+                    <div class="card-stats">
+                        <span><i class="fas fa-database"></i> <span class="i18n-text">70+ مصطلح</span></span>
+                        <span><i class="fas fa-lightbulb"></i> <span class="i18n-text">شرح تفصيلي</span></span>
+                    </div>
+                </article>
+
+                <article class="section-card" data-section="grammar">
+                    <div class="card-icon">
+                        <i class="fas fa-language"></i>
+                    </div>
+                    <h3 class="card-title" data-i18n="sections.grammar.title">الجزء 4: القواعد</h3>
+                    <p class="card-desc" data-i18n="sections.grammar.description">الأزمنة + الأسماء المعدودة/غير المعدودة + تدريبات</p>
+                    <a href="grammar.html" class="card-link" data-i18n="sections.grammar.link"><span class="i18n-text">اذهب للمراجعة</span> →</a>
+                    <div class="card-stats">
+                        <span><i class="fas fa-clock"></i> <span class="i18n-text">6 أزمنة</span></span>
+                        <span><i class="fas fa-edit"></i> <span class="i18n-text">40 تمرين</span></span>
+                    </div>
+                </article>
+
+                <article class="section-card" data-section="writing">
+                    <div class="card-icon">
+                        <i class="fas fa-pen-fancy"></i>
+                    </div>
+                    <h3 class="card-title" data-i18n="sections.writing.title">الجزء 5: الكتابة</h3>
+                    <p class="card-desc" data-i18n="sections.writing.description">قوالب براجراف + تصحيح آلي + نماذج جاهزة</p>
+                    <a href="writing.html" class="card-link" data-i18n="sections.writing.link"><span class="i18n-text">اذهب للمراجعة</span> →</a>
+                    <div class="card-stats">
+                        <span><i class="fas fa-file-signature"></i> <span class="i18n-text">5 قوالب</span></span>
+                        <span><i class="fas fa-spell-check"></i> <span class="i18n-text">تصحيح تلقائي</span></span>
+                    </div>
+                </article>
+
+                <article class="section-card" data-section="exam">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title" data-i18n="sections.exam.title">محاكاة الامتحان الكامل</h3>
+                    <p class="card-desc" data-i18n="sections.exam.description">امتحان كامل بمؤقت زمني + تصحيح آلي + نتائج مفصلة</p>
+                    <a href="exam-simulator.html" class="card-link" data-i18n="sections.exam.link"><span class="i18n-text">ابدأ الامتحان</span> →</a>
+                    <div class="card-stats">
+                        <span><i class="fas fa-stopwatch"></i> <span class="i18n-text">90 دقيقة</span></span>
+                        <span><i class="fas fa-tasks"></i> <span class="i18n-text">50 سؤال</span></span>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- قسم الإحصائيات -->
+        <section id="stats" class="stats-section">
+            <h2 class="section-title" data-i18n="stats.title">📊 إحصائيات المحتوى</h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3 class="stat-value" id="totalTerms">120+</h3>
+                        <p class="stat-label" data-i18n="stats.technicalTerms">مصطلح تقني</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-question"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3 class="stat-value" id="totalQuestions">200+</h3>
+                        <p class="stat-label" data-i18n="stats.practiceQuestions">سؤال تدريبي</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3 class="stat-value" id="totalTexts">5</h3>
+                        <p class="stat-label" data-i18n="stats.readingTexts">نصوص قرائية</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3 class="stat-value" id="totalTime">8</h3>
+                        <p class="stat-label" data-i18n="stats.reviewHours">ساعات مراجعة</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- الفوتر -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p class="footer-text">
+                © 2026 IT English Review - تم التطوير لطلاب تقنية المعلومات
+            </p>
+            <div class="footer-links">
+                <a href="#" class="footer-link" onclick="return false;" aria-label="GitHub (Coming soon)"><i class="fab fa-github"></i> <span class="i18n-text">GitHub</span></a>
+                <a href="#" class="footer-link" onclick="return false;" aria-label="Help (Coming soon)"><i class="fas fa-question-circle"></i> <span class="i18n-text" data-i18n="footer.help">المساعدة</span></a>
+                <a href="#" class="footer-link" onclick="return false;" aria-label="Contact (Coming soon)"><i class="fas fa-envelope"></i> <span class="i18n-text" data-i18n="footer.contact">اتصل بنا</span></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="progress-tracker.js"></script>
+    <script type="module" src="script.js"></script>
+    <script type="module" src="language-integration.js"></script>
+</body>
+</html>

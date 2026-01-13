@@ -1,0 +1,128 @@
+{
+  "tense_exercises": [
+    {
+      "id": 1,
+      "question": "The AI model usually __________ (analyze) data from multiple sources.",
+      "options": [
+        {
+          "text": "analyzes (Present Simple)",
+          "value": "present",
+          "correct": true
+        },
+        {
+          "text": "is analyzing (Present Continuous)",
+          "value": "continuous",
+          "correct": false
+        },
+        {
+          "text": "analyzed (Past Simple)",
+          "value": "past",
+          "correct": false
+        },
+        {
+          "text": "has analyzed (Present Perfect)",
+          "value": "perfect",
+          "correct": false
+        }
+      ],
+      "explanation": "يستخدم المضارع البسيط لوصف الحقائق والوظائف الثابتة للأنظمة التقنية."
+    },
+    {
+      "id": 2,
+      "question": "Yesterday, the cybersecurity team __________ (detect) a serious threat.",
+      "options": [
+        {
+          "text": "detects (Present Simple)",
+          "value": "present",
+          "correct": false
+        },
+        {
+          "text": "is detecting (Present Continuous)",
+          "value": "continuous",
+          "correct": false
+        },
+        {
+          "text": "detected (Past Simple)",
+          "value": "past",
+          "correct": true
+        },
+        {
+          "text": "has detected (Present Perfect)",
+          "value": "perfect",
+          "correct": false
+        }
+      ],
+      "explanation": "يستخدم الماضي البسيط للأحداث المكتملة في وقت محدد في الماضي (yesterday)."
+    },
+    {
+      "id": 3,
+      "question": "By next year, machine learning __________ (transform) many industries.",
+      "options": [
+        {
+          "text": "transforms (Present Simple)",
+          "value": "present",
+          "correct": false
+        },
+        {
+          "text": "is transforming (Present Continuous)",
+          "value": "continuous",
+          "correct": false
+        },
+        {
+          "text": "will transform (Future)",
+          "value": "future",
+          "correct": true
+        },
+        {
+          "text": "has transformed (Present Perfect)",
+          "value": "perfect",
+          "correct": false
+        }
+      ],
+      "explanation": "يستخدم المستقبل للتنبؤات أو الخطط المستقبلية (by next year)."
+    }
+  ],
+  "noun_exercises": [
+    {
+      "id": 1,
+      "wrong_sentence": "I need to buy new equipments for the lab.",
+      "correct_sentence": "I need to buy new equipment for the lab.",
+      "explanation": "'equipment' اسم غير معدود، لا يأتي بصيغة الجمع."
+    },
+    {
+      "id": 2,
+      "wrong_sentence": "We have many important informations to analyze.",
+      "correct_sentence": "We have a lot of important information to analyze.",
+      "explanation": "'information' اسم غير معدود، يستخدم مع 'a lot of' بدلاً من 'many'."
+    },
+    {
+      "id": 3,
+      "wrong_sentence": "This softwares are very expensive.",
+      "correct_sentence": "This software is very expensive.",
+      "explanation": "'software' اسم غير معدود، يستخدم مع الفعل المفرد 'is'."
+    }
+  ],
+  "blank_exercises": [
+    {
+      "id": 1,
+      "sentence": "We need __________ (much/many) storage for our data.",
+      "correct": "much",
+      "options": ["much", "many"],
+      "explanation": "'storage' اسم غير معدود، يستخدم مع 'much'."
+    },
+    {
+      "id": 2,
+      "sentence": "There are __________ (a few/a little) computers in the classroom.",
+      "correct": "a few",
+      "options": ["a few", "a little"],
+      "explanation": "'computers' اسم معدود، يستخدم مع 'a few'."
+    },
+    {
+      "id": 3,
+      "sentence": "I installed __________ (some/a) new software yesterday.",
+      "correct": "some",
+      "options": ["some", "a"],
+      "explanation": "'software' اسم غير معدود، يستخدم مع 'some'."
+    }
+  ]
+}

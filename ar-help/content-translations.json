@@ -1,0 +1,83 @@
+{
+  "reading": {
+    "title": "فهم المقروء",
+    "subtitle": "تدريب على القطع القرائية مع أسئلة اختيارية وصح/خطأ",
+    "suggestedTime": "الوقت المقترح",
+    "minutes": "دقيقة",
+    "questions": "سؤال",
+    "level": "المستوى",
+    "medium": "متوسط",
+    "text1": {
+      "title": "كيف يعمل الإنترنت",
+      "source": "مصدر: Unit 2.4"
+    },
+    "text2": {
+      "title": "الأمن السيبراني",
+      "source": "مصدر: Unit 1.3"
+    },
+    "text3": {
+      "title": "الذكاء الاصطناعي",
+      "source": "مصدر: Unit 1.1"
+    }
+  },
+  "synonyms": {
+    "title": "المرادفات",
+    "subtitle": "تعلم المرادفات الشائعة في اللغة الإنجليزية التقنية",
+    "term": "المصطلح",
+    "synonyms": "المرادفات",
+    "definition": "التعريف",
+    "example": "مثال",
+    "practice": "تمرين",
+    "selectSynonym": "اختر المرادف الصحيح"
+  },
+  "technicalTerms": {
+    "title": "المصطلحات التقنية",
+    "subtitle": "تعلم المصطلحات التقنية الأساسية",
+    "term": "المصطلح",
+    "definition": "التعريف",
+    "example": "مثال",
+    "synonyms": "مرادفات",
+    "category": "الفئة",
+    "difficulty": "الصعوبة",
+    "easy": "سهل",
+    "medium": "متوسط",
+    "hard": "صعب"
+  },
+  "grammar": {
+    "title": "القواعد",
+    "subtitle": "تدريب على الأزمنة والقواعد النحوية",
+    "tenses": "الأزمنة",
+    "countable": "الأسماء المعدودة",
+    "uncountable": "الأسماء غير المعدودة",
+    "exercise": "تمرين",
+    "explanation": "شرح",
+    "check": "تحقق",
+    "correct": "صحيح",
+    "incorrect": "غير صحيح"
+  },
+  "writing": {
+    "title": "الكتابة",
+    "subtitle": "تدريب على كتابة البراجرافات",
+    "template": "قالب",
+    "topic": "الموضوع",
+    "requirements": "المتطلبات",
+    "wordCount": "عدد الكلمات",
+    "technicalTerms": "المصطلحات التقنية",
+    "suggestions": "اقتراحات",
+    "check": "تحقق من الأخطاء",
+    "save": "حفظ"
+  },
+  "common": {
+    "back": "العودة للرئيسية",
+    "next": "التالي",
+    "previous": "السابق",
+    "submit": "إرسال",
+    "loading": "جاري التحميل...",
+    "error": "حدث خطأ",
+    "success": "نجح",
+    "cancel": "إلغاء",
+    "confirm": "تأكيد",
+    "close": "إغلاق"
+  }
+}
+
