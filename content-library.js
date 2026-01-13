@@ -458,7 +458,81 @@ class ContentLibrary {
 }
 
 // Create and export singleton instance
-const contentLibrary = new ContentLibrary();
+// ... existing code ...
+
+    /**
+     * Batch load multiple content items
+     * @param {Array<string>} keys - Array of content keys
+     * @param {string} mode - Language mode
+     * @returns {Promise<Object>}
+     */
+    async batchLoad(keys, mode = null) {
+        const promises = keys.map(key => this.getContent(key, null, mode));
+        const results = await Promise.all(promises);
+        
+        const batch = {};
+        keys.forEach((key, index) => {
+            batch[key] = results[index];
+        });
+
+        return batch;
+    }
+
+    /**
+     * Cache management methods
+     */
+    getCacheKey(key, context, mode) {
+        return `${mode}:${key}:${context || 'default'}`;
+    }
+
+    getFromCache(cacheKey) {
+        const cached = this.cache.get(cacheKey);
+        if (!cached) {
+            return null;
+        }
+
+        // Check TTL
+        const timestamp = this.cacheTimestamps.get(cacheKey);
+        if (timestamp && Date.now() - timestamp > this.CACHE_TTL) {
+            this.cache.delete(cacheKey);
+            this.cacheTimestamps.delete(cacheKey);
+            return null;
+        }
+
+        return cached;
+    }
+
+    addToCache(cacheKey, content) {
+        // LRU: Remove oldest if cache is full
+        if (this.cache.size >= this.CACHE_SIZE) {
+            const firstKey = this.cache.keys().next().value;
+            this.cache.delete(firstKey);
+            this.cacheTimestamps.delete(firstKey);
+        }
+
+        this.cache.set(cacheKey, content);
+        this.cacheTimestamps.set(cacheKey, Date.now());
+    }
+
+    clearCache() {
+        this.cache.clear();
+        this.cacheTimestamps.clear();
+    }
+
+    /**
+     * Get cache statistics (for debugging)
+     * @returns {Object}
+     */
+    getCacheStats() {
+        return {
+            size: this.cache.size,
+            maxSize: this.CACHE_SIZE,
+            loadedTranslations: Object.keys(this.loadedTranslations).filter(
+                key => this.loadedTranslations[key] !== null
+            )
+        };
+    }
+}
 
 // Auto-initialize when DOM is ready
 if (typeof document !== 'undefined') {
@@ -477,7 +551,12 @@ if (typeof module !== 'undefined' && module.exports) {
 }
 
 // Make available globally
+// أضف إنشاء الـ Singleton والربط بالنافذة/الوحدة
+const contentLibrary = new ContentLibrary();
 if (typeof window !== 'undefined') {
     window.ContentLibrary = contentLibrary;
+}
+if (typeof module !== 'undefined' && module.exports) {
+    module.exports = contentLibrary;
 }
 

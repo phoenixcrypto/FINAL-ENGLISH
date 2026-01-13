@@ -238,27 +238,54 @@ class LanguageIntegration {
             const textElement = element.querySelector('.i18n-text') || element;
 
             if (mode === 'exam') {
-                // Exam mode: English only
-                const englishText = this.getEnglishText(key);
+                // English only
+                const englishText =
+                    this.selectEnglish(content?.english) ||
+                    this.selectEnglish(content?.main) ||
+                    this.selectEnglish(content) ||
+                    this.extractText(content, key);
+
                 if (textElement === element) {
                     element.textContent = englishText;
                 } else {
                     textElement.textContent = englishText;
                 }
+                // Ensure any tooltips are removed in exam mode
+                this.removeTooltips();
             } else if (mode === 'study') {
-                // Study mode: English with Arabic available
-                const englishText = this.getEnglishText(key);
+                // English only + Arabic help tooltip (if available)
+                const englishText =
+                    this.selectEnglish(content?.english) ||
+                    this.selectEnglish(content?.main) ||
+                    this.selectEnglish(content) ||
+                    this.extractText(content, key);
+
                 if (textElement === element) {
                     element.textContent = englishText;
                 } else {
                     textElement.textContent = englishText;
                 }
-                // Add help indicator
-                this.addHelpIndicator(element, content.help);
+
+                // Help tooltip (Arabic text)
+                const helpText =
+                    this.selectArabic(content?.help) ||
+                    this.extractText(content?.help);
+                this.addHelpIndicator(element, helpText);
+
+                // Optional example (English)
+                this.addExample(element, this.selectEnglish(content?.example) || null);
             } else if (mode === 'beginner') {
-                // Beginner mode: Bilingual
-                const arabicText = content.main || this.getArabicText(key);
-                const englishText = content.english || this.getEnglishText(key);
+                // Bilingual: Arabic + English
+                const arabicText =
+                    this.selectArabic(content?.main) ||
+                    this.selectArabic(content) ||
+                    this.getArabicText(key);
+
+                const englishText =
+                    this.selectEnglish(content?.english) ||
+                    this.selectEnglish(content?.main) ||
+                    this.selectEnglish(content) ||
+                    this.extractText(content, key);
 
                 if (textElement === element) {
                     element.innerHTML = `
@@ -271,23 +298,40 @@ class LanguageIntegration {
                         <span class="english-text">${englishText}</span>
                     `;
                 }
+
+                // In beginner mode, no tooltip indicator
+                this.removeTooltips();
+            } else if (mode === 'arabic') {
+                // Arabic only (if this mode exists)
+                const arabicText =
+                    this.selectArabic(content?.main) ||
+                    this.selectArabic(content) ||
+                    this.getArabicText(key);
+
+                if (textElement === element) {
+                    element.textContent = arabicText;
+                } else {
+                    textElement.textContent = arabicText;
+                }
+
+                // No tooltips in pure Arabic mode
+                this.removeTooltips();
+            } else {
+                // Fallback: keep current behavior
+                const defaultText = this.extractText(content, key);
+                if (textElement === element) {
+                    element.textContent = defaultText;
+                } else {
+                    textElement.textContent = defaultText;
+                }
             }
         } catch (error) {
             console.warn(`LanguageIntegration: Failed to update element ${key}:`, error);
         }
     }
 
-    /**
-     * Get English text for a key
-     */
     getEnglishText(key) {
-        // Try to get from translations
-        const translation = this.getNestedValue(this.translations, key);
-        if (translation) {
-            return translation;
-        }
-
-        // Fallback: return key or existing text
+        // استخدم النص الافتراضي الموجود في DOM (إنجليزي)
         return this.getDefaultText(key);
     }
 
@@ -319,6 +363,72 @@ class LanguageIntegration {
         return path.split('.').reduce((current, key) => {
             return current && current[key] !== undefined ? current[key] : null;
         }, obj);
+    }
+
+    // NEW: دالة مساعدة داخلية لاستخراج النص من هيكل المحتوى
+    extractText(value, key = null) {
+        if (typeof value === 'string') return value;
+        if (value && typeof value === 'object') {
+            if (typeof value.text === 'string') return value.text;
+            if (typeof value.term === 'string') return value.term;
+            if (typeof value.definition === 'string') return value.definition;
+        }
+        return key ? this.getDefaultText(key) : '';
+    }
+
+    // NEW: انتقاء النص العربي من هيكل المحتوى إن وُجد (داخل الكلاس)
+    selectArabic(value) {
+        if (!value) return null;
+        if (typeof value === 'string') return value;
+        if (typeof value === 'object') {
+            return (
+                value.ar ||
+                value.arabic ||
+                value.text_ar ||
+                value.textAr ||
+                value.arText ||
+                value['ar-text'] ||
+                value['arabic-text'] ||
+                value.text ||
+                null
+            );
+        }
+        return null;
+    }
+
+    // NEW: انتقاء النص الإنجليزي من هيكل المحتوى إن وُجد (داخل الكلاس)
+    selectEnglish(value) {
+        if (!value) return null;
+        if (typeof value === 'string') return value;
+        if (typeof value === 'object') {
+            return (
+                value.en ||
+                value.english ||
+                value.text_en ||
+                value.textEn ||
+                value.enText ||
+                value['en-text'] ||
+                value['english-text'] ||
+                value.text ||
+                null
+            );
+        }
+        return null;
+    }
+
+    // NEW: إضافة مثال إنجليزي أسفل النص الرئيسي في وضع الدراسة (داخل الكلاس)
+    addExample(element, exampleText) {
+        if (!exampleText) return;
+
+        // إزالة أي مثال سابق
+        const existing = element.querySelector('.example-text');
+        if (existing) existing.remove();
+
+        const exampleEl = document.createElement('span');
+        exampleEl.className = 'example-text';
+        exampleEl.textContent = `Example: ${exampleText}`;
+
+        element.appendChild(exampleEl);
     }
 
     /**
